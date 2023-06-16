@@ -1,0 +1,55 @@
+﻿td a {
+    font-size: 22px;
+    cursor:pointer;
+}
+
+.create {
+    font-size: 24px;
+}
+td .image{
+    width:100px;
+    height:100px;
+}
+.image{
+    width:300px;
+}
+
+
+.label-style{
+    color:black;
+    font-weight:700;
+    font-size:22px;
+}
+
+
+.active-status {
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.de-active {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.img-detail {
+    width: 500px;
+}
+.delete-image{
+    font-size:18px;
+}
+
+.statutes {
+    width: 60px !important;
+}
+

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Slider>
+@{
+    ViewData["Title"] = "Index";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                   @* @if (User.IsInRole("SuperAdmin"))
+                    {*@
+                        <div class="card-header">
+                        <a style="display:flex;align-items:center;justify-content:space-between;" asp-action="Create" data-toggle="tooltip" data-original-title="Create" class="create"><i class="fa-solid fa-folder-plus fa-lg" style="color: red;display:flex;justify-content:flex-end"></i>Create</a>
+                    </div>
+                    @*}*@
+                    <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                            @if(Model.Count() > 0)
+                            {
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Title</th>
+                                            <th>Offer</th>
+                                            <th>Description</th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var slider in Model)
+                                        {
+                                            <tr data-id="@slider.Id">
+                                                <td>
+                                                    <div class="image">
+                                                        <img class="img-fluid" src="~/assets/img/home/Slider/@slider.Image" />
+                                                    </div>
+                                                </td>
+                                                <td style="font-weight:800">@slider.Title</td>
+                                                <td>@slider.Heading</td>
+                                                <td>@slider.Desc</td>
+                                                <td>
+                                                    <a asp-action="Info" asp-route-id="@slider.Id" data-toggle="tooltip" data-original-title="Info" class="Info">
+                                                        <i class="fa-solid fa-circle-info" style="color:blue"></i>
+                                                    </a>
+                                                    <a asp-action="Edit" asp-route-id="@slider.Id" data-toggle="tooltip" data-original-title="Edit" class="edit">
+                                                        <i class="fa-solid fa-pencil" style="color: #665100;"></i>
+                                                    </a>
+                                                    <a class="delete-slider" data-toggle="tooltip" data-original-title="Remove">
+                                                        <i class="fa-solid fa-trash" style="color: red;"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Script{
+    <script src="~/admin/assets/js/index.js"></script>
+}
