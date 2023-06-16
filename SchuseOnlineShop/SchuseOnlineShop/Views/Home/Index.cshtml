@@ -1,23 +1,26 @@
-﻿
+﻿@model HomeVM
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
 <main>
     <section id="main-slider">
         <div class="slider">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active sldr">
-                        <img src="./assets/img/home/main-banner-1_2048x.webp" class="d-block w-100" alt="...">
-                        <h4 class="title">THE SALE WILL TAKE PLACE THIS WEEK.</h4>
-                        <h2 class="heading">Up To 50% Off</h2>
-                        <h2 class="desc">First Order</h2>
+                    @foreach (var slider in Model.Sliders)
+                    {
+                        <div class="carousel-item active sldr">
+                        <img src="./assets/img/home/Slider/@slider.Image" class="d-block w-100" alt="...">
+                        <h4 class="title">@slider.Title.</h4>
+                        <h2 class="heading">@slider.Heading</h2>
+                        <h2 class="desc">@slider.Desc</h2>
                         <button type="submit" class="shopNow-btn">SHOP NOW</button>
                     </div>
-                    <div class="carousel-item sldr">
-                        <img src="./assets/img/home/main-banner-2_2048x.webp" class="d-block w-100" alt="...">
-                        <h4 class="title">THE SALE WILL TAKE PLACE THIS WEEK.</h4>
-                        <h2 class="heading">Up To 35% Off</h2>
-                        <h2 class="desc">First Order</h2>
-                        <button type="submit" class="shopNow-btn">SHOP NOW</button>
-                    </div>
+                    }
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide="prev">

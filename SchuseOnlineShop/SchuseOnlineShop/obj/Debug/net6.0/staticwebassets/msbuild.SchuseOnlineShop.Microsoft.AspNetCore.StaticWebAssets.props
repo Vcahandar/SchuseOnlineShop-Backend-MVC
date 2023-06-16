@@ -11552,12 +11552,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\ProductImg\product9-5.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\Slider\2696af59-5c38-4976-ae81-28a0802b60461-1-770x300.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\Slider\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>SchuseOnlineShop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SchuseOnlineShop</BasePath>
-      <RelativePath>assets/img/home/Slider/2696af59-5c38-4976-ae81-28a0802b60461-1-770x300.jpg</RelativePath>
+      <RelativePath>assets/img/home/Slider/24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -11566,7 +11566,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\Slider\2696af59-5c38-4976-ae81-28a0802b60461-1-770x300.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\Slider\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\Slider\3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg))">
       <SourceType>Package</SourceType>

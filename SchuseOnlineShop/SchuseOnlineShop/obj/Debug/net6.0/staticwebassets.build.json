@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r+88JOVa3GqR779QMYH46qNdaUMNHgOFvFuL9D0lMTc=",
+  "Hash": "PHUQcuamx05cuA9aBrmHK5PvdBMoIRuF4x3aPAiPcaA=",
   "Source": "SchuseOnlineShop",
   "BasePath": "_content/SchuseOnlineShop",
   "Mode": "Default",
@@ -12325,12 +12325,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product9-5.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\2696af59-5c38-4976-ae81-28a0802b60461-1-770x300.jpg",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Slider/2696af59-5c38-4976-ae81-28a0802b60461-1-770x300.jpg",
+      "RelativePath": "assets/img/home/Slider/24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12339,7 +12339,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\2696af59-5c38-4976-ae81-28a0802b60461-1-770x300.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg",
