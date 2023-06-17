@@ -86,6 +86,9 @@
 						<a asp-controller="Size" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Sizes</span></a>
 					</li>
 					<li class="nav-item">
+						<a asp-controller="BrandLogo" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Brand Logo</span></a>
+					</li>
+					<li class="nav-item">
 						<a asp-controller="Color" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Colors</span></a>
 					</li>
 					<li class="nav-item">
@@ -100,10 +103,10 @@
 					<li class="nav-item">
 						<a asp-controller="SectionHeader" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">SectionHeaders</span></a>
 					</li>
-						<li class="nav-item">
+					<li class="nav-item">
 						<a asp-controller="SectionBackground" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">SectionBackgrounds</span></a>
 					</li>
-						<li class="nav-item">
+					<li class="nav-item">
 						<a asp-controller="Brand" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Brands</span></a>
 					</li>
 					<li class="nav-item">
@@ -112,7 +115,8 @@
 					<li class="nav-item">
 						<a asp-controller="BlogComment" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Blog Comments</span></a>
 					</li>
-					
+
+
 				</ul>
 			</div>
 		</div>
@@ -302,7 +306,7 @@
 
 	</header>
 	<!-- [ Header ] end -->
-        @RenderBody()
+	@RenderBody()
 	<!-- Required Js -->
 	<script src="~/admin/assets/js/vendor-all.min.js"></script>
 	<script src="~/admin/assets/js/plugins/bootstrap.min.js"></script>

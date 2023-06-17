@@ -1,0 +1,67 @@
+﻿@model List<Setting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Key</th>
+                                        <th>Value</th>
+                                        <th>Option</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="font-weight:800">
+                                                @item.Key
+                                            </td>
+                                            @if (item.Value.Contains(".png") || item.Value.Contains(".jpg") || item.Value.Contains(".jpeg") || item.Value.Contains(".webp"))
+                                            {
+                                                <td>
+                                                    <div class="image"><img class="img-fluid" src="~/assets/img/logo/@item.Value" /></div>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    @item.Value
+                                                </td>
+                                            }
+                                            <td>
+                                                <a asp-action="Detail" asp-route-id="@item.Id" data-toggle="tooltip" data-original-title="Info" class="Info">
+                                                    <i class="fa-solid fa-circle-info" style="color:blue"></i>
+                                                </a>
+                                                <a asp-action="Edit" asp-route-id=" @item.Id" data-toggle="tooltip" data-original-title="Edit" class="edit">
+                                                    <i class="fa-solid fa-pencil" style="color: #0b3481;"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Script{
+    <script src="~/admin/assets/js/index.js"></script>
+}
+

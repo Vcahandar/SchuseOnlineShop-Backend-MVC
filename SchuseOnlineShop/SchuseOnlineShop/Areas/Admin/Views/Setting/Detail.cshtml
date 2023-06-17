@@ -1,0 +1,41 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Edit";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <span class="text-danger">@ViewBag.error</span>
+                <form method="post" enctype="multipart/form-data" asp-action="Edit">
+                    @if (Model.Value.Contains(".web") || Model.Value.Contains(".jpg") || Model.Value.Contains(".jpeg") || Model.Value.Contains(".png"))
+                    {
+                        <div class="image"><img class="img-fluid" src="~/assets/img/logo/@Model.Value" /></div>
+                        <div class="form-group">
+                            <input disabled class="form-control" asp-for="CompanyLogoPhoto">
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="form-group">
+                            <input disabled class="form-control" asp-for="@Model.Value">
+                        </div>
+                    }
+                    <a asp-action="Index" class="btn btn-danger"><i class="feather mr-2 icon-check-circle"></i>  Cancel</a>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+

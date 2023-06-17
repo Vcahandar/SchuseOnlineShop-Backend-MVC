@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PHUQcuamx05cuA9aBrmHK5PvdBMoIRuF4x3aPAiPcaA=",
+  "Hash": "wYlvibt5kU+fWtE+kJnCLTpd4EoryImZAKJ9HPmad44=",
   "Source": "SchuseOnlineShop",
   "BasePath": "_content/SchuseOnlineShop",
   "Mode": "Default",
@@ -11679,12 +11679,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\team33.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Background\\background.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\background\\background.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Background/background.webp",
+      "RelativePath": "assets/img/home/background/background.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11693,15 +11693,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Background\\background.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\background\\background.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Blog\\blog-1_1170x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-1_1170x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Blog/blog-1_1170x.webp",
+      "RelativePath": "assets/img/home/blog/blog-1_1170x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11710,15 +11710,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Blog\\blog-1_1170x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\blog\\blog-1_1170x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Blog\\blog-2_1170x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-2_1170x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Blog/blog-2_1170x.webp",
+      "RelativePath": "assets/img/home/blog/blog-2_1170x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11727,15 +11727,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Blog\\blog-2_1170x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\blog\\blog-2_1170x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Blog\\blog-3_1170x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-3_1170x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Blog/blog-3_1170x.webp",
+      "RelativePath": "assets/img/home/blog/blog-3_1170x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11744,15 +11744,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Blog\\blog-3_1170x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\blog\\blog-3_1170x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Blog\\blog-4_1170x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-4_1170x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Blog/blog-4_1170x.webp",
+      "RelativePath": "assets/img/home/blog/blog-4_1170x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11761,15 +11761,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Blog\\blog-4_1170x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\blog\\blog-4_1170x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Blog\\blog-5_1170x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-5_1170x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Blog/blog-5_1170x.webp",
+      "RelativePath": "assets/img/home/blog/blog-5_1170x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11778,15 +11778,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Blog\\blog-5_1170x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\blog\\blog-5_1170x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Blog\\blog-6_1170x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-6_1170x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Blog/blog-6_1170x.webp",
+      "RelativePath": "assets/img/home/blog/blog-6_1170x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11795,15 +11795,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Blog\\blog-6_1170x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\blog\\blog-6_1170x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\BrandLogo\\brand1.png",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand1.png",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/BrandLogo/brand1.png",
+      "RelativePath": "assets/img/home/brandlogo/brand1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11812,15 +11812,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\BrandLogo\\brand1.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\brandlogo\\brand1.png"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\BrandLogo\\brand2.png",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand2.png",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/BrandLogo/brand2.png",
+      "RelativePath": "assets/img/home/brandlogo/brand2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11829,15 +11829,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\BrandLogo\\brand2.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\brandlogo\\brand2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\BrandLogo\\brand3.png",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand3.png",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/BrandLogo/brand3.png",
+      "RelativePath": "assets/img/home/brandlogo/brand3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11846,15 +11846,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\BrandLogo\\brand3.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\brandlogo\\brand3.png"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\BrandLogo\\brand4.png",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand4.png",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/BrandLogo/brand4.png",
+      "RelativePath": "assets/img/home/brandlogo/brand4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11863,15 +11863,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\BrandLogo\\brand4.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\brandlogo\\brand4.png"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\BrandLogo\\brand5.png",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand5.png",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/BrandLogo/brand5.png",
+      "RelativePath": "assets/img/home/brandlogo/brand5.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11880,15 +11880,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\BrandLogo\\brand5.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\brandlogo\\brand5.png"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\CategoryImg\\sub-banner-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\categoryImg\\sub-banner-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/CategoryImg/sub-banner-1.webp",
+      "RelativePath": "assets/img/home/categoryImg/sub-banner-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11897,15 +11897,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\CategoryImg\\sub-banner-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\categoryImg\\sub-banner-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\CategoryImg\\sub-banner-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\categoryImg\\sub-banner-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/CategoryImg/sub-banner-2.webp",
+      "RelativePath": "assets/img/home/categoryImg/sub-banner-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11914,15 +11914,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\CategoryImg\\sub-banner-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\categoryImg\\sub-banner-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Logo\\logo_200x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product10-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Logo/logo_200x.webp",
+      "RelativePath": "assets/img/home/productImg/product10-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11931,15 +11931,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Logo\\logo_200x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product10-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product10-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product10-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product10-1.webp",
+      "RelativePath": "assets/img/home/productImg/product10-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11948,15 +11948,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product10-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product10-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product10-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product1-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product10-2.webp",
+      "RelativePath": "assets/img/home/productImg/product1-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11965,15 +11965,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product10-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product1-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product1-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product1-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product1-1.webp",
+      "RelativePath": "assets/img/home/productImg/product1-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11982,15 +11982,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product1-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product1-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product1-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product2-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product1-2.webp",
+      "RelativePath": "assets/img/home/productImg/product2-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11999,15 +11999,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product1-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product2-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product2-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product2-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product2-1.webp",
+      "RelativePath": "assets/img/home/productImg/product2-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12016,15 +12016,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product2-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product2-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product2-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product3-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product2-2.webp",
+      "RelativePath": "assets/img/home/productImg/product3-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12033,15 +12033,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product2-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product3-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product3-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product3-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product3-1.webp",
+      "RelativePath": "assets/img/home/productImg/product3-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12050,15 +12050,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product3-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product3-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product3-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product4-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product3-2.webp",
+      "RelativePath": "assets/img/home/productImg/product4-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12067,15 +12067,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product3-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product4-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product4-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product4-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product4-1.webp",
+      "RelativePath": "assets/img/home/productImg/product4-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12084,15 +12084,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product4-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product4-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product4-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product5-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product4-2.webp",
+      "RelativePath": "assets/img/home/productImg/product5-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12101,15 +12101,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product4-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product5-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product5-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product5-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product5-1.webp",
+      "RelativePath": "assets/img/home/productImg/product5-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12118,15 +12118,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product5-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product5-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product5-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product6-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product5-2.webp",
+      "RelativePath": "assets/img/home/productImg/product6-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12135,15 +12135,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product5-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product6-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product6-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product6-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product6-1.webp",
+      "RelativePath": "assets/img/home/productImg/product6-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12152,15 +12152,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product6-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product6-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product6-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product7-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product6-2.webp",
+      "RelativePath": "assets/img/home/productImg/product7-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12169,15 +12169,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product6-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product7-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product7-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product7-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product7-1.webp",
+      "RelativePath": "assets/img/home/productImg/product7-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12186,15 +12186,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product7-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product7-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product7-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product8-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product7-2.webp",
+      "RelativePath": "assets/img/home/productImg/product8-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12203,15 +12203,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product7-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product8-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product8-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product8-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product8-1.webp",
+      "RelativePath": "assets/img/home/productImg/product8-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12220,15 +12220,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product8-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product8-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product8-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product9-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product8-2.webp",
+      "RelativePath": "assets/img/home/productImg/product9-1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12237,15 +12237,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product8-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product9-1.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product9-1.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product9-2.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product9-1.webp",
+      "RelativePath": "assets/img/home/productImg/product9-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12254,15 +12254,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product9-1.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product9-2.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product9-2.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product9-3.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product9-2.webp",
+      "RelativePath": "assets/img/home/productImg/product9-3.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12271,15 +12271,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product9-2.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product9-3.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product9-3.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product9-4.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product9-3.webp",
+      "RelativePath": "assets/img/home/productImg/product9-4.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12288,15 +12288,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product9-3.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product9-4.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product9-4.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\productImg\\product9-5.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product9-4.webp",
+      "RelativePath": "assets/img/home/productImg/product9-5.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12305,15 +12305,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product9-4.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\productImg\\product9-5.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\ProductImg\\product9-5.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/ProductImg/product9-5.webp",
+      "RelativePath": "assets/img/home/slider/24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12322,15 +12322,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\ProductImg\\product9-5.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\slider\\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Slider/24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
+      "RelativePath": "assets/img/home/slider/3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12339,15 +12339,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\24e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\slider\\3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Slider/3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg",
+      "RelativePath": "assets/img/home/slider/4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12356,15 +12356,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\3f4dfcf4-a7b7-4f74-985c-4509fd0934062-2-570x235.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\slider\\4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\main-banner-1_2048x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Slider/4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg",
+      "RelativePath": "assets/img/home/slider/main-banner-1_2048x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12373,15 +12373,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\slider\\main-banner-1_2048x.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\main-banner-1_2048x.webp",
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\main-banner-2_2048x.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
       "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Slider/main-banner-1_2048x.webp",
+      "RelativePath": "assets/img/home/slider/main-banner-2_2048x.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -12390,24 +12390,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\main-banner-1_2048x.webp"
-    },
-    {
-      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\Slider\\main-banner-2_2048x.webp",
-      "SourceId": "SchuseOnlineShop",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
-      "BasePath": "_content/SchuseOnlineShop",
-      "RelativePath": "assets/img/home/Slider/main-banner-2_2048x.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\Slider\\main-banner-2_2048x.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\slider\\main-banner-2_2048x.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\img-discount.jpg!w700wp",
@@ -12493,6 +12476,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\login\\wp7838324.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\logo\\b1ff5b1c-8ec5-4f3a-b012-54db5e805a92logo_200x.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/logo/b1ff5b1c-8ec5-4f3a-b012-54db5e805a92logo_200x.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\logo\\b1ff5b1c-8ec5-4f3a-b012-54db5e805a92logo_200x.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\logo\\logo_200x.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/logo/logo_200x.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\logo\\logo_200x.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product10-3.webp",

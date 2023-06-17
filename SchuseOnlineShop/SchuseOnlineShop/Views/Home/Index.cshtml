@@ -1,4 +1,6 @@
-﻿@model HomeVM
+﻿
+@model HomeVM
+@inject ILayoutService layout
 
 @{
     ViewData["Title"] = "Home Page";
@@ -119,10 +121,10 @@
         <div class="container">
             <div class="product-text">
                 <div class="title">
-                    <h2>Recent Arrivals</h2>
+                    <h2>@layout.GetSectionsHeaders()["RecentProductTitle"]</h2>
                 </div>
                 <div class="desc">
-                    <p>A good pair of shoes can take you to the best places</p>
+                    <p>@layout.GetSectionsHeaders()["RecentProductDesc"]</p>
                 </div>
             </div>
             <div class="row">
@@ -555,10 +557,10 @@
         <div class="container">
             <div class="product-text">
                 <div class="title">
-                    <h2>Trending Product</h2>
+                    <h2>@layout.GetSectionsHeaders()["TrendingProductTitle"]</h2>
                 </div>
                 <div class="desc">
-                    <p>A good pair of shoes can take you to the best places</p>
+                    <p>@layout.GetSectionsHeaders()["RecentProductDesc"]</p>
                 </div>
             </div>
             <section class="slider">
@@ -868,10 +870,10 @@
             <div class="container">
                 <div class="product-text">
                     <div class="title">
-                        <h2>From The Blog</h2>
+                        <h2>@layout.GetSectionsHeaders()["BlogTitle"]</h2>
                     </div>
                     <div class="desc">
-                        <p>A good pair of shoes can take you to the best places</p>
+                        <p>@layout.GetSectionsHeaders()["BlogDesc"]</p>
                     </div>
                 </div>
                 <div class="row">
