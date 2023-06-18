@@ -31,6 +31,10 @@ namespace SchuseOnlineShop.Data
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Shipping> Shippings { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)

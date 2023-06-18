@@ -116,7 +116,6 @@
 
     </section>
 
-
     <section id="recent-arrivals" class="mt-5">
         <div class="container">
             <div class="product-text">
@@ -547,11 +546,10 @@
         </div>
     </section>
 
-    <section id="background-img" class="mt-5">
+    <section  id="background-img" class="mt-5">
         <div class="multicolumn-content">
         </div>
     </section>
-
 
     <section id="trending-product" class="mt-5">
         <div class="container">
@@ -877,77 +875,35 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-card">
-                            <div class="blog-img">
-                                <a href=""><img src="./assets/img/home/blog-1_1170x.webp" alt=""></a>
-                            </div>
-                            <div class="create-time">
-                                <span>19 Dec, 2022</span>
-                            </div>
-                            <div class="blog-title">
-                                <a href="">Our reputation shines as brightly as our...</a>
-                            </div>
-                            <div class="blog-description">
-                                <p>
-                                    Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget..
-                                </p>
-                            </div>
-                            <div class="blog-button">
-                                <a href="">READ MORE</a>
-                            </div>
+                    @foreach (var blog in Model.Blogs)
+                    {
+                        <div class="col-lg-4 col-md-6">
+                       
+                            <div class="blog-card">
+                                <div class="blog-img">
+                                    <a href=""><img src="./assets/img/home/blog/@blog.Image" alt=""></a>
+                                </div>
+                                <div class="create-time">
+                                    <span>@blog.CreatedDate.ToString("dd MMMM yyyy")</span>
+                                </div>
+                                <div class="blog-title">
+                                    <a href="">@blog.Title</a>
+                                </div>
+                                <div class="blog-description">
+                                    <p>
+                                        @blog.Description.Substring(0,35) ...
+                                    </p>
+                                </div>
+                                <div class="blog-button">
+                                    <a href="">READ MORE</a>
+                                </div>
 
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-card">
-                            <div class="blog-img">
-                                <a href=""><img src="./assets/img/home/blog-2_1170x.webp" alt=""></a>
                             </div>
-                            <div class="create-time">
-                                <span>19 Dec, 2022</span>
-                            </div>
-                            <div class="blog-title">
-                                <a href="">Our reputation shines as brightly as our...</a>
-                            </div>
-                            <div class="blog-description">
-                                <p>
-                                    Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget..
-                                </p>
-                            </div>
-                            <div class="blog-button">
-                                <a href="">READ MORE</a>
-                            </div>
-
-                        </div>
 
                     </div>
+                    }
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-card">
-                            <div class="blog-img">
-                                <a href=""><img src="./assets/img/home/blog-3_1170x.webp" alt=""></a>
-                            </div>
-                            <div class="create-time">
-                                <span>19 Dec, 2022</span>
-                            </div>
-                            <div class="blog-title">
-                                <a href="">Our reputation shines as brightly as our...</a>
-                            </div>
-                            <div class="blog-description">
-                                <p>
-                                    Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget..
-                                </p>
-                            </div>
-                            <div class="blog-button">
-                                <a href="">READ MORE</a>
-                            </div>
 
-                        </div>
-
-                    </div>
                 </div>
             </div>
 
@@ -977,13 +933,12 @@
     <section id="brand">
         <div class="container">
             <section class="customer-logos slider">
-                <div class="slide"><img src="./assets/img/home/brand1.png"></div>
-                <div class="slide"><img src="./assets/img/home/brand2.png"></div>
-                <div class="slide"><img src="./assets/img/home/brand3.png"></div>
-                <div class="slide"><img src="./assets/img/home/brand4.png"></div>
-                <div class="slide"><img src="./assets/img/home/brand5.png"></div>
-                <div class="slide"><img src="./assets/img/home/brand2.png"></div>
-                <div class="slide"><img src="./assets/img/home/brand3.png"></div>
+                @foreach (var brandLogo in Model.BrandLogos)
+                {
+                    <div class="slide"><img src="./assets/img/home/brandlogo/@brandLogo.Image"></div>
+
+                }
+             
 
             </section>
         </div>

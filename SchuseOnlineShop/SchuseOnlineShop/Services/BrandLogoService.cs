@@ -15,7 +15,12 @@ namespace SchuseOnlineShop.Services
 
         public async Task<IEnumerable<BrandLogo>> GetBrandLogosAll()
         {
-            return await _context.BrandLogos.Where(m => !m.SoftDelete).ToListAsync();
+            return await _context.BrandLogos.ToListAsync();
+        }
+
+        public async Task<BrandLogo> GetByIdAsync(int? id)
+        {
+            return await _context.BrandLogos.FirstOrDefaultAsync(m => m.Id == id);
         }
     }
 }

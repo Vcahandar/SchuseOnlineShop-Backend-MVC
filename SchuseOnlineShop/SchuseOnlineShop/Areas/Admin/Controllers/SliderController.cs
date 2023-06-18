@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Slider;
+using SchuseOnlineShop.Data;
 using SchuseOnlineShop.Helpers;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
@@ -12,15 +14,19 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         private readonly IWebHostEnvironment _env;
         private readonly ISliderService _sliderService;
         private readonly ICrudService<Slider> _crudService;
+        private readonly AppDbContext _context;
+
 
 
         public SliderController(IWebHostEnvironment env,
                                 ISliderService sliderService,
-                                ICrudService<Slider> crudService)
+                                ICrudService<Slider> crudService,
+                                AppDbContext context)
         {
             _env = env;
             _sliderService = sliderService;
             _crudService = crudService;
+            _context = context;
 
         }
 
@@ -130,7 +136,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                         ModelState.AddModelError("Photo", "Image size must be max 200kb");
                         return View(sliderUpdateVM);
                     }
-                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home/Slider", sliderUpdateVM.Image);
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home/slider", sliderUpdateVM.Image);
                     FileHelper.DeleteFile(path);
 
                     dbSlider.Image = model.Photo.CreateFile(_env, "assets/img/home/slider");
@@ -166,7 +172,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 Slider dbSlider = await _sliderService.GetByIdAsync((int)id);
                 if (dbSlider is null) return NotFound();
 
-                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/home/slider", dbSlider.Image);
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home/slider", dbSlider.Image);
                 FileHelper.DeleteFile(path);
 
                 _crudService.Delete(dbSlider);

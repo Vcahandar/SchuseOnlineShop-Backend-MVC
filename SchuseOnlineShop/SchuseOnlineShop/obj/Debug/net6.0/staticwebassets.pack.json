@@ -2745,6 +2745,14 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\background\\background.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\5a4e4f04-0dae-44e3-a34d-fd20f360a88eblog-2_1170x.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\blog\\5a4e4f04-0dae-44e3-a34d-fd20f360a88eblog-2_1170x.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\616c54ab-fe31-40e1-823b-39a208198c5dblog-5_1170x.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\blog\\616c54ab-fe31-40e1-823b-39a208198c5dblog-5_1170x.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\blog\\blog-1_1170x.webp",
       "PackagePath": "staticwebassets\\assets\\img\\home\\blog\\blog-1_1170x.webp"
     },
@@ -2769,6 +2777,26 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\blog\\blog-6_1170x.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\0204b887-8d30-4318-9842-62bc3649e389db16be44-399a-44f5-979d-25fbfbfe1275brand1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\0204b887-8d30-4318-9842-62bc3649e389db16be44-399a-44f5-979d-25fbfbfe1275brand1.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\63cb6f35-fe07-4e47-8294-44f5674761e6brand5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\63cb6f35-fe07-4e47-8294-44f5674761e6brand5.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\6ff67cbe-afce-4d3b-a789-98d5aac08702brand4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\6ff67cbe-afce-4d3b-a789-98d5aac08702brand4.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\79b5f740-b566-428f-a750-cf02faf0d99abrand5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\79b5f740-b566-428f-a750-cf02faf0d99abrand5.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\b17a004d-8f31-4595-94bb-ff2a8e1c0aacbrand3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\b17a004d-8f31-4595-94bb-ff2a8e1c0aacbrand3.png"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand1.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\brand1.png"
     },
@@ -2787,6 +2815,14 @@
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\brand5.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\brand5.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\db16be44-399a-44f5-979d-25fbfbfe1275brand1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\db16be44-399a-44f5-979d-25fbfbfe1275brand1.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\brandlogo\\ef9a0a7f-e896-44f5-be49-55a435d6add5brand2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brandlogo\\ef9a0a7f-e896-44f5-be49-55a435d6add5brand2.png"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\categoryImg\\sub-banner-1.webp",
@@ -2899,6 +2935,14 @@
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home\\slider\\4b977236-317f-48d1-92bb-b10d06d84d4d2-2-570x235.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\c7cbf749-a694-468f-9df6-3bf116afe06324e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\slider\\c7cbf749-a694-468f-9df6-3bf116afe06324e176d6-e5ef-457a-880f-a6fcc26579622-3-570x235.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\e37d9c40-63aa-48f8-b64c-33e484129a1emain-banner-1_2048x.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\slider\\e37d9c40-63aa-48f8-b64c-33e484129a1emain-banner-1_2048x.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\slider\\main-banner-1_2048x.webp",

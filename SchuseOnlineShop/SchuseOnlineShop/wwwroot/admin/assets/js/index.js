@@ -2,6 +2,7 @@
     //delete 
 
     RemoveItem(".delete-slider", "/Admin/Slider/Delete");
+    RemoveItem(".delete-brandlogo", "/Admin/BrandLogo/Delete");
     RemoveItem(".delete-advert", "/Admin/Advert/Delete");
     RemoveItem(".delete-category", "/Admin/Category/Delete");
     RemoveItem(".delete-size", "/Admin/Size/Delete");

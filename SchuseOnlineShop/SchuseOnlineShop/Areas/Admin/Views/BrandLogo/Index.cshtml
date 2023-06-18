@@ -33,19 +33,14 @@
                                             <tr data-id="@brandLogo.Id">
                                                 <td>
                                                     <div class="image">
-                                                        <img class="img-fluid" src="~/assets/img/logo/@brandLogo.Image" />
+                                                        <img class="img-fluid" src="~/assets/img/home/brandlogo/@brandLogo.Image" />
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <a asp-action="Detail" asp-route-id="@brandLogo.Id" data-toggle="tooltip" data-original-title="Info" class="Info">
-                                                        <i class="fa-solid fa-circle-info" style="color:blue"></i>
-                                                    </a>
-                                                    <a asp-action="Edit" asp-route-id="@brandLogo.Id" data-toggle="tooltip" data-original-title="Edit" class="edit">
-                                                        <i class="fa-solid fa-pencil" style="color: #665100;"></i>
-                                                    </a>
-                                                    <a class="delete-slider" data-toggle="tooltip" data-original-title="Remove">
-                                                        <i class="fa-solid fa-trash" style="color: red;"></i>
-                                                    </a>
+                                                <td style="display:flex;gap:7px;">
+                                                    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@brandLogo.Id">Edit</a>
+                                                    <form asp-action="Delete" method="post" asp-route-id="@brandLogo.Id">
+                                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         }
@@ -61,6 +56,6 @@
 </section>
 
 
-@section Script{
+@*@section Script{
     <script src="~/admin/assets/js/index.js"></script>
-}
+}*@
