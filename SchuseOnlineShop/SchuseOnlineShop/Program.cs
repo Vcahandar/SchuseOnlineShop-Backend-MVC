@@ -22,6 +22,7 @@ builder.Services.AddScoped(typeof(ICrudService<>), typeof(CrudService<>));
 builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<IBrandLogoService, BrandLogoService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IHomeCategoryService, HomeCategoryService>();
 
 
 

@@ -11064,11 +11064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\SchuseOnlineShop.csproj",
+      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\SchuseOnlineShop.csproj",
       "projectName": "SchuseOnlineShop",
-      "projectPath": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\SchuseOnlineShop.csproj",
+      "projectPath": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\SchuseOnlineShop.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\obj\\",
+      "outputPath": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

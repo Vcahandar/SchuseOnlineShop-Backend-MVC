@@ -42,31 +42,25 @@
     <section id="shopify-section" class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-1 mt-3 shopify-mob">
-                    <div class="banner-man geeks">
-                        <img src="./assets/img/home/sub-banner-1.webp" alt="">
-                        <div class="banner-description">
-                            <div class="title">Men’s Collection</div>
-                            <div class="text-button">
-                                <a href="">Shop Now</a>
+
+                @foreach (var homeCategory in Model.HomeCategories.Take(2))
+                {
+                    <div class="col-lg-6 col-md-6 col-sm-1 mt-3 shopify-mob">
+                        <div class="banner-man geeks">
+                            <img src="./assets/img/home/categoryImg/@homeCategory.Image" alt="">
+                            <div class="banner-description">
+                                <div class="title">@homeCategory.Name</div>
+                                <div class="text-button">
+                                    <a href="">Shop Now</a>
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
 
+                }
 
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-1 mt-3 shopify-mob">
-                    <div class="banner-women geeks">
-                        <img src="./assets/img/home/sub-banner-2.webp" alt="">
-                        <div class="banner-description">
-                            <div class="title">Women Collection</div>
-                            <div class="text-button">
-                                <a href="">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
     </section>
@@ -875,7 +869,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach (var blog in Model.Blogs)
+                    @foreach (var blog in Model.Blogs.OrderByDescending(m=>m.CreatedDate).Take(3))
                     {
                         <div class="col-lg-4 col-md-6">
                        

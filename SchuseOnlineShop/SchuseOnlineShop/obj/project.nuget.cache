@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J53a9ApgzdI23DyuDzut5EoVBTVCi9zYj4l4A6q5FaE07dx9QRRIRa+N3WpvUTKkphKcSPqde6iGjrrfvNSEUA==",
+  "dgSpecHash": "jNGXLlu0O8bBYqGXuA0z81IUfbC3YxzRr+kQDGHX9dng36jD/AMYDJcNVlpxA48xY12ElBmkT315xu0XpUPfiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-Project-BackEnd\\SchuseOnlineShop\\SchuseOnlineShop\\SchuseOnlineShop.csproj",
+  "projectFilePath": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\SchuseOnlineShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

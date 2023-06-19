@@ -1,0 +1,31 @@
+﻿@model HomeCategory
+@{
+    ViewData["Title"] = "Edit";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="image "><img class="img-fluid" src="~/assets/img/home/categoryImg/@Model.Image" /></div>
+
+                <form method="post" enctype="multipart/form-data" asp-action="Edit">
+                    <span class="text-danger">@ViewBag.error</span>
+
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input disabled type="text" class="form-control" asp-for="Name">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                
+                    <a asp-action="Index" style="background-color:red" class="btn btn-danger"><i class="fa-solid fa-backward"></i>  Cancel</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+

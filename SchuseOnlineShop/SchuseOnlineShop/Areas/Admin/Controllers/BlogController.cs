@@ -179,6 +179,31 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                Blog dbBlog = await _blogService.GetByIdAsync((int)id);
+                if (dbBlog is null) return NotFound();
+
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home/blog", dbBlog.Image);
+                FileHelper.DeleteFile(path);
+
+                _crudService.Delete(dbBlog);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
+
+
+
+
 
     }
 }

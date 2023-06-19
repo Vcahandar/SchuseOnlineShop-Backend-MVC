@@ -34,6 +34,7 @@ namespace SchuseOnlineShop.Data
         public DbSet<Team> Teams { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
+        public DbSet<HomeCategory> HomeCategories { get; set; }
 
 
 
