@@ -251,7 +251,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Blog", b =>
@@ -287,7 +287,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Brand", b =>
@@ -312,7 +312,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.BrandLogo", b =>
@@ -337,7 +337,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BrandLogos");
+                    b.ToTable("BrandLogos", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Cart", b =>
@@ -367,7 +367,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("AppUserId1");
 
-                    b.ToTable("Carts");
+                    b.ToTable("Carts", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.CartProduct", b =>
@@ -402,7 +402,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("CartProducts");
+                    b.ToTable("CartProducts", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Category", b =>
@@ -427,7 +427,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.CategorySubCategory", b =>
@@ -464,7 +464,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("SubCategoryId");
 
-                    b.ToTable("CategorySubCategories");
+                    b.ToTable("CategorySubCategories", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Color", b =>
@@ -489,7 +489,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colors");
+                    b.ToTable("Colors", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Contact", b =>
@@ -526,7 +526,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contacts", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Product", b =>
@@ -574,7 +574,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("BrandId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductColor", b =>
@@ -606,7 +606,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductColors");
+                    b.ToTable("ProductColors", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductComment", b =>
@@ -653,7 +653,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductComments");
+                    b.ToTable("ProductComments", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductImage", b =>
@@ -689,7 +689,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductSize", b =>
@@ -721,7 +721,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("SizeId");
 
-                    b.ToTable("ProductSizes");
+                    b.ToTable("ProductSizes", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductVideo", b =>
@@ -754,7 +754,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductVideos");
+                    b.ToTable("ProductVideos", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.SectionHeader", b =>
@@ -782,7 +782,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SectionHeaders");
+                    b.ToTable("SectionHeaders", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Setting", b =>
@@ -810,7 +810,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Shipping", b =>
@@ -841,7 +841,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shippings");
+                    b.ToTable("Shippings", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Size", b =>
@@ -866,7 +866,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sizes");
+                    b.ToTable("Sizes", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Slider", b =>
@@ -900,7 +900,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.SubCategory", b =>
@@ -928,7 +928,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SubCategories");
+                    b.ToTable("SubCategories", (string)null);
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Team", b =>
@@ -962,7 +962,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Teams");
+                    b.ToTable("Teams", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

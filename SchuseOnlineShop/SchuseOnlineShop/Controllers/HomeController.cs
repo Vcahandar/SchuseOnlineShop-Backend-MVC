@@ -31,8 +31,6 @@ namespace SchuseOnlineShop.Controllers
                 BrandLogos = await _brandLogoService.GetBrandLogosAll(),
                 Blogs = await _blogService.GetAllAsync(),
                 HomeCategories = await _homeCategory.GetAllAsync()
-                
-                
             };
 
             return View(model);

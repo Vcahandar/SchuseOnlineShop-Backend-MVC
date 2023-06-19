@@ -33,7 +33,10 @@ namespace SchuseOnlineShop.Services
             entities.Update(entity);
             _context.SaveChanges();
         }
-
+        //public async Task<T> GetByIdWithTrack(int? id)
+        //{
+        //    return await entities.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
+        //}
         public async Task SaveAsync()
         {
             await _context.SaveChangesAsync();

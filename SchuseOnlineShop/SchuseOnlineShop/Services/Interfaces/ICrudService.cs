@@ -8,5 +8,6 @@ namespace SchuseOnlineShop.Services.Interfaces
         void Delete(T entity);
         Task SaveAsync();
         void Edit(T entity);
+        //Task<T> GetByIdWithTrack(int? id);
     }
 }

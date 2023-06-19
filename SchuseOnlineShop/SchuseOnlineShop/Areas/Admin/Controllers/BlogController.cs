@@ -142,7 +142,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 }
                 else
                 {
-                    Slider newSlider = new()
+                    Blog newBlog = new()
                     {
                         Image = dbBlog.Image
                     };

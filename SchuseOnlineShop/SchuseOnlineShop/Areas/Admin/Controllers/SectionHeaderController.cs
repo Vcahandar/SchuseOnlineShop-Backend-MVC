@@ -35,13 +35,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
-        {
-            return View(await _layoutService.GetSectionAsync((int)id));
-        }
-
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -68,6 +61,13 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
                 throw;
             }
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            return View(await _layoutService.GetSectionAsync((int)id));
         }
     }
 }
