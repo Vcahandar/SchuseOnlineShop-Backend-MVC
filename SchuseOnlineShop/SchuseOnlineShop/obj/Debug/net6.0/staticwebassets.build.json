@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B3GwkLJYQgE8lBxGcPT14xoxkr+9sggbs1tu5F8lEG4=",
+  "Hash": "0yme4taA+rKJx41zP4hTiwVSDi1GM3YPkiY/pqhSt74=",
   "Source": "SchuseOnlineShop",
   "BasePath": "_content/SchuseOnlineShop",
   "Mode": "Default",
@@ -12068,6 +12068,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\home\\categoryImg\\734e93f7-72c2-4188-bf3a-186002385857sub-banner-1.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\categoryImg\\e05f7d11-5270-4ccd-9abb-2d1fa81b7bf23925b553-1a80-41a5-9e5c-a96eccf28850sub-banner-2.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/home/categoryImg/e05f7d11-5270-4ccd-9abb-2d1fa81b7bf23925b553-1a80-41a5-9e5c-a96eccf28850sub-banner-2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\categoryImg\\e05f7d11-5270-4ccd-9abb-2d1fa81b7bf23925b553-1a80-41a5-9e5c-a96eccf28850sub-banner-2.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\categoryImg\\fd8078c1-d1f4-4c09-b17e-726ea47160e5sub-banner-1.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/home/categoryImg/fd8078c1-d1f4-4c09-b17e-726ea47160e5sub-banner-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\categoryImg\\fd8078c1-d1f4-4c09-b17e-726ea47160e5sub-banner-1.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\home\\categoryImg\\sub-banner-1.webp",

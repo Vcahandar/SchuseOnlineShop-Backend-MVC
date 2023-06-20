@@ -1,4 +1,5 @@
-﻿using SchuseOnlineShop.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using SchuseOnlineShop.Data;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
 
@@ -14,17 +15,17 @@ namespace SchuseOnlineShop.Services
 
         public bool CheckByName(string name)
         {
-            return _context.SubCategories.Any(c => c.Name.Trim().ToLower() == name.Trim().ToLower());
+            return _context.SubCategories.Any(m => m.Name.Trim().ToLower() == name.Trim().ToLower());
         }
 
-        public Task<List<SubCategory>> GetAllAsync()
+        public async Task<List<SubCategory>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.SubCategories.Include(m=>m.CategorySubCategories).ToListAsync();
         }
 
-        public Task<SubCategory> GetByIdAsync(int? id)
+        public async Task<SubCategory> GetByIdAsync(int? id)
         {
-            throw new NotImplementedException();
+            return await _context.SubCategories.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
         }
     }
 }

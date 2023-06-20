@@ -24,6 +24,7 @@ builder.Services.AddScoped<IBrandLogoService, BrandLogoService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IHomeCategoryService, HomeCategoryService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 
 
 

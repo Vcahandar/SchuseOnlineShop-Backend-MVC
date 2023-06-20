@@ -18,7 +18,6 @@ namespace SchuseOnlineShop.Models
 
         public ICollection<ProductImage> ProductImages { get; set; }
         public ICollection<ProductVideo> ProductVideos { get; set; }
-        public ICollection<CategorySubCategory> CategorySubCategories { get; set; }
         public ICollection<ProductSize> ProductSizes { get; set; }
         public ICollection<ProductColor> ProductColors { get; set; }
         public ICollection<ProductComment> ProductComments { get; set; }

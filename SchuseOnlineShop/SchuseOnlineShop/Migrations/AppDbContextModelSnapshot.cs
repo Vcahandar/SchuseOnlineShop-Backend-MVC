@@ -251,7 +251,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors", (string)null);
+                    b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Blog", b =>
@@ -287,7 +287,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Blogs", (string)null);
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Brand", b =>
@@ -312,7 +312,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.BrandLogo", b =>
@@ -337,7 +337,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BrandLogos", (string)null);
+                    b.ToTable("BrandLogos");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Cart", b =>
@@ -348,10 +348,7 @@ namespace SchuseOnlineShop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AppUserId1")
+                    b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedDate")
@@ -365,9 +362,9 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId1");
+                    b.HasIndex("AppUserId");
 
-                    b.ToTable("Carts", (string)null);
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.CartProduct", b =>
@@ -402,7 +399,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("CartProducts", (string)null);
+                    b.ToTable("CartProducts");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Category", b =>
@@ -427,7 +424,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.CategorySubCategory", b =>
@@ -444,9 +441,6 @@ namespace SchuseOnlineShop.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
@@ -460,11 +454,9 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("ProductId");
-
                     b.HasIndex("SubCategoryId");
 
-                    b.ToTable("CategorySubCategories", (string)null);
+                    b.ToTable("CategorySubCategories");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Color", b =>
@@ -489,7 +481,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colors", (string)null);
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Contact", b =>
@@ -526,7 +518,35 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts", (string)null);
+                    b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("SchuseOnlineShop.Models.HomeCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeCategories");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Product", b =>
@@ -574,7 +594,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("BrandId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductColor", b =>
@@ -606,7 +626,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductColors", (string)null);
+                    b.ToTable("ProductColors");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductComment", b =>
@@ -653,7 +673,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductComments", (string)null);
+                    b.ToTable("ProductComments");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductImage", b =>
@@ -689,7 +709,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages", (string)null);
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductSize", b =>
@@ -721,7 +741,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("SizeId");
 
-                    b.ToTable("ProductSizes", (string)null);
+                    b.ToTable("ProductSizes");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.ProductVideo", b =>
@@ -754,7 +774,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductVideos", (string)null);
+                    b.ToTable("ProductVideos");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.SectionHeader", b =>
@@ -782,7 +802,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SectionHeaders", (string)null);
+                    b.ToTable("SectionHeaders");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Setting", b =>
@@ -810,7 +830,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings", (string)null);
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Shipping", b =>
@@ -841,7 +861,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shippings", (string)null);
+                    b.ToTable("Shippings");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Size", b =>
@@ -866,7 +886,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sizes", (string)null);
+                    b.ToTable("Sizes");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Slider", b =>
@@ -900,7 +920,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders", (string)null);
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.SubCategory", b =>
@@ -914,9 +934,6 @@ namespace SchuseOnlineShop.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("IsSelected")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -928,7 +945,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SubCategories", (string)null);
+                    b.ToTable("SubCategories");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Team", b =>
@@ -962,7 +979,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Teams", (string)null);
+                    b.ToTable("Teams");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1027,7 +1044,7 @@ namespace SchuseOnlineShop.Migrations
                 {
                     b.HasOne("SchuseOnlineShop.Models.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId1");
+                        .HasForeignKey("AppUserId");
 
                     b.Navigation("AppUser");
                 });
@@ -1058,10 +1075,6 @@ namespace SchuseOnlineShop.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("SchuseOnlineShop.Models.Product", null)
-                        .WithMany("CategorySubCategories")
-                        .HasForeignKey("ProductId");
 
                     b.HasOne("SchuseOnlineShop.Models.SubCategory", "SubCategory")
                         .WithMany("CategorySubCategories")
@@ -1190,8 +1203,6 @@ namespace SchuseOnlineShop.Migrations
             modelBuilder.Entity("SchuseOnlineShop.Models.Product", b =>
                 {
                     b.Navigation("CartProducts");
-
-                    b.Navigation("CategorySubCategories");
 
                     b.Navigation("ProductColors");
 

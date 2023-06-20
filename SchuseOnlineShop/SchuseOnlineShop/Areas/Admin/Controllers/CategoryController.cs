@@ -15,17 +15,14 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
     {
         private readonly AppDbContext _context;
         private readonly ICategoryService _category;
-        private readonly IWebHostEnvironment _env;
         private readonly ICrudService<Category> _crudService;
 
         public CategoryController(AppDbContext context, 
                                     ICategoryService category, 
-                                    IWebHostEnvironment env, 
                                     ICrudService<Category> crudService)
         {
             _context = context;
             _category = category;
-            _env = env;
             _crudService = crudService;
         }
 
@@ -144,6 +141,9 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 return View();
             }
         }
+
+
+
     }
 
 }
