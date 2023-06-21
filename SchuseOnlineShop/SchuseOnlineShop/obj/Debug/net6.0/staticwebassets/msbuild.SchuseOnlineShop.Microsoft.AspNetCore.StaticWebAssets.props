@@ -11120,6 +11120,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\BrandLogo\0204b887-8d30-4318-9842-62bc3649e389db16be44-399a-44f5-979d-25fbfbfe1275brand1.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\BrandLogo\60400dfa-6bd4-460c-a6d5-8202eda628aabrand4.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>SchuseOnlineShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SchuseOnlineShop</BasePath>
+      <RelativePath>assets/img/home/BrandLogo/60400dfa-6bd4-460c-a6d5-8202eda628aabrand4.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\BrandLogo\60400dfa-6bd4-460c-a6d5-8202eda628aabrand4.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\home\BrandLogo\63cb6f35-fe07-4e47-8294-44f5674761e6brand5.png))">
       <SourceType>Package</SourceType>
       <SourceId>SchuseOnlineShop</SourceId>

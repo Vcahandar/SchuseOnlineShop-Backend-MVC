@@ -33,6 +33,7 @@
 
                                             <td style="font-weight:800">@subCategory.Name</td>
                                             <td style="display:flex;gap:7px;">
+                                                <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@subCategory.Id">Info</a>
                                                 <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@subCategory.Id">Edit</a>
                                                 <form asp-action="Delete" method="post" asp-route-id="@subCategory.Id">
                                                     <button type="submit" class="btn btn-outline-danger">Delete</button>

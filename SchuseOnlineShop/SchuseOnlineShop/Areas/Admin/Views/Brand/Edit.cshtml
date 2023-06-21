@@ -1,0 +1,29 @@
+﻿
+
+@model BrandVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <form method="post" asp-action="Edit">
+                    <span class="text-danger">@ViewBag.error</span>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" asp-for="Name">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                    <a asp-action="Index" style="background-color:red" class="btn btn-danger"><i class="fa-solid fa-backward"></i>  Cancel</a>
+                    <button type="submit" style="background-color:#05b505" class="btn btn-success"><i class="feather mr-2 icon-check-circle"></i>Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+

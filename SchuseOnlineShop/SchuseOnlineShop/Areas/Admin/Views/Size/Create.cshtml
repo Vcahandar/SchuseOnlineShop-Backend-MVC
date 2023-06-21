@@ -1,0 +1,27 @@
+﻿﻿
+@model SizeVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+
+        <div class="row">
+            <div class="col-12">
+                <form method="post" asp-action="Create">
+                    <span class="text-danger">@ViewBag.error</span>
+                    <div class="form-group">
+                        <label>Size Number</label>
+                        <input type="text" class="form-control" asp-for="Number">
+                        <span class="text-danger" asp-validation-for="Number"></span>
+                    </div>
+                    <button type="submit" class="btn btn-success"><i class="feather mr-2 icon-check-circle"></i>Submit</button>
+                    <a asp-action="Index" class="btn btn-danger"><i class="feather mr-2 icon-check-circle"></i>Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+

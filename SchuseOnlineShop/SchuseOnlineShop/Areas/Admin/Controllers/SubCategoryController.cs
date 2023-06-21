@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Category;
 using SchuseOnlineShop.Areas.Admin.ViewModels.SubCategory;
 using SchuseOnlineShop.Data;
@@ -124,10 +125,10 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
                 if (dbSubCategory is null) return NotFound();
 
-                if (dbSubCategory.Name.Trim().ToLower() == model.Name.Trim().ToLower())
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+                //if (dbSubCategory.Name.Trim().ToLower() == model.Name.Trim().ToLower())
+                //{
+                //    return RedirectToAction(nameof(Index));
+                //}
 
                 SubCategory subCategory = new()
                 {
@@ -136,6 +137,17 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 };
 
                 _crudService.Edit(subCategory);
+
+                foreach (var cateId in model.CategoryIds)
+                {
+                    CategorySubCategory categorySub = new()
+                    {
+                        CategoryId = cateId,
+                        SubCategoryId = subCategory.Id
+                    };
+
+                    _crudCateSub.Edit(categorySub);
+                }
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -174,12 +186,20 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
             if (id == null) return BadRequest();
 
-            SubCategory subCategory = await _subCategory.GetByIdAsync((int)id);
+            SubCategory subCategory = await _context.SubCategories.Where(m => m.Id == id).FirstOrDefaultAsync();
+
 
             if (subCategory is null) return NotFound();
 
+            SubCategory sub = new()
+            {
+                Id = subCategory.Id,
+                Name = subCategory.Name,
+                
+            };
 
-            return View(subCategory);
+
+            return View(sub);
         }
 
 
