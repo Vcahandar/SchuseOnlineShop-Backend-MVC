@@ -16,6 +16,7 @@ namespace SchuseOnlineShop.Models
         //public int SubCategoryId { get; set; }
         //public SubCategory SubCategory { get; set; }
 
+        public ICollection<CategorySubCategory> CategorySubCategories { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
         public ICollection<ProductVideo> ProductVideos { get; set; }
         public ICollection<ProductSize> ProductSizes { get; set; }
