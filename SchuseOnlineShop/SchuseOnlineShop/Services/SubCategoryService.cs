@@ -20,7 +20,7 @@ namespace SchuseOnlineShop.Services
 
         public async Task<List<SubCategory>> GetAllAsync()
         {
-            return await _context.SubCategories.Include(m=>m.CategorySubCategories).ToListAsync();
+            return await _context.SubCategories.ToListAsync();
         }
 
         public async Task<SubCategory> GetByIdAsync(int? id)

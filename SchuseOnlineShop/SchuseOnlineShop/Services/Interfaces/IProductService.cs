@@ -9,6 +9,8 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<Product> GetByIdAsync(int? id);
         Task<List<Product>> GetFullDataAsync();
         Task<Product> GetFullDataByIdAsync(int? id);
+
+        Task<IEnumerable<ProductVM>> GetDatasAsync();
         Task<ProductImage> GetImageById(int? id);
         Task<Product> GetProductByImageId(int? id);
         void RemoveImage(ProductImage image);
@@ -20,7 +22,17 @@ namespace SchuseOnlineShop.Services.Interfaces
 
         Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page, int take);
         Task<List<ProductVM>> GetProductsByColorIdAsync(int? id);
-        Task<List<ProductVM>> GetProductsByTagIdAsync(int? id);
+        Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id);
+
+        Task<int> GetProductsCountByColorAsync(int? colorId);
+        Task<int> GetProductsCountBySizeAsync(int? sizeId);
+
+        Task<int> GetProductsCountByBrandAsync(int? brandId);
+
+        Task<List<Product>> GetAllBySearchText(string searchText);
+        Task<List<ProductComment>> GetComments();
+        Task<ProductComment> GetCommentByIdWithProduct(int? id);
+        Task<ProductComment> GetCommentById(int? id);
 
 
 

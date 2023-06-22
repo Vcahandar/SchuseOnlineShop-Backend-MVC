@@ -1,0 +1,86 @@
+﻿@model Paginate<ProductListVM>
+@{
+    ViewData["Title"] = "Index";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+               @*     @if (User.IsInRole("SuperAdmin"))
+                    {*@
+                    <div class="card-header">
+                        <a style="display:flex;align-items:center;justify-content:space-between;" asp-action="Create" data-toggle="tooltip" data-original-title="Create" class="create"><i class="fa-solid fa-folder-plus fa-lg" style="color: red;display:flex;justify-content:flex-end"></i>Create</a>
+                    </div>
+                    @*}*@
+                    <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                            @if (Model.Datas.Count() > 0)
+                            {
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Main Image</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var product in Model.Datas)
+                                        {
+                                            <tr data-id="@product.Id">
+                                                <td>@product.SKU</td>
+                                                <td>
+                                                    <div class="image"><img class="img-fluid" src="~/assets/img/home/ProductImg/@product.Images.Where(i=>i.IsMain).FirstOrDefault()?.ImgName" /></div>
+                                                </td>
+                                                <td>@product.Name</td>
+                                                <td>@product.Price</td>
+                                                <td>
+                                                    <a asp-action="Detail" asp-route-id="@product.Id" data-toggle="tooltip" asp-route-page="@Model.CurrentPage" data-original-title="Detail" class="detail">
+                                                        <i class="fa-solid fa-circle-info" style="color: #d8d10e;"></i>
+                                                    </a>
+                                                    <a asp-action="Edit" asp-route-id="@product.Id" asp-route-page="@Model.CurrentPage" data-toggle="tooltip" data-original-title="Edit" class="edit">
+                                                        <i class="fa-solid fa-pen-to-square" style="color: #2bca16;"></i>
+                                                    </a>
+                                                    <a class="delete-product" data-toggle="tooltip" data-original-title="Remove">
+                                                        <i class="fa-solid fa-trash" style="color: #c81921;"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <nav class="paginate-area" aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="page-item @(Model.HasPrevious ? " " : "disabled")">
+                                            <a asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)">
+                                                <span class="page-link @(Model.HasNext ? " " : "disabled")">Previous</span>
+                                            </a>
+                                        </li>
+                                        @for (int i = 1; i <= Model.TotalPage; i++)
+                                        {
+                                            <li class="page-item  @(Model.CurrentPage == i ? "disabled" : "") ">
+                                                <a asp-action="Index" asp-route-page="@i"><span class="page-link">@i</span></a>
+                                            </li>
+                                        }
+                                        <li class="page-item @(Model.HasNext ? " " : "disabled")">
+                                            <a asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)" class="page-link ">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

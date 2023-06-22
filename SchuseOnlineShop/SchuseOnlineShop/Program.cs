@@ -28,6 +28,7 @@ builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IColorService, ColorService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 
 
