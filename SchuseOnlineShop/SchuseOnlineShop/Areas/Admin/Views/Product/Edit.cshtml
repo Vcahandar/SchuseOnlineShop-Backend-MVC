@@ -1,0 +1,93 @@
+﻿@model ProductUpdateVM
+@{
+    ViewData["Title"] = "Create";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <span class="text-danger">@ViewBag.error</span>
+                <div class="d-flex align-items-center images">
+                    @foreach (var item in Model.ProductImages)
+                    {
+                        <div style="width:200px; margin-right:10px;" data-id="@item.Id">
+                            <img class="img-fluid" src="~/assets/img/shoes/product-img/@item.ImgName" />
+                            <div class=" d-flex align-items-center justify-content-center" data-id="@item.Id">
+                                <a class="delete-image"><i class="fa-solid fa-trash" style="color: #c60101; cursor:pointer;"></i></a>
+                                <div class="statuses" style=" margin-left:10px;">
+                                    @if (item.IsMain)
+                                    {
+                                        <div class="active-status image-status"></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="de-active image-status"></div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <form method="post" enctype="multipart/form-data" asp-action="Edit" >
+                    <span class="text-danger">@ViewBag.error</span>
+                    <div class="form-group">
+                        <label>Images</label>
+                        <input class="form-control" asp-for="Photos">
+                        <span class="text-danger" asp-validation-for="Photos"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" asp-for="Name">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input class="form-control" asp-for="Price" type="number" step=".01" />
+                        <span class="text-danger" asp-validation-for="Price"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="3" asp-for="Description"></textarea>
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Stock Count</label>
+                        <input class="form-control" asp-for="StockCount" type="number" />
+                        <span class="text-danger" asp-validation-for="StockCount"></span>
+                    </div>
+                  
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <select class="form-control" asp-for="BrandId" asp-items="@ViewBag.brands"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Color</label>
+                        <select class="form-control" asp-for="ColorIds" asp-items="@ViewBag.colors"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Sizes</label>
+                        <select class="form-control" asp-for="SizeIds" asp-items="@ViewBag.sizes"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Categories</label>
+                        <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.categories"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>SubCategories</label>
+                        <select class="form-control" asp-for="SubCategoryId" asp-items="@ViewBag.subcategories"></select>
+                    </div>
+                    <a asp-action="Index" style="background-color:red" class="btn btn-danger"><i class="fa-solid fa-backward"></i>  Cancel</a>
+                    <button type="submit" style="background-color:#05b505" class="btn btn-success"><i class="feather mr-2 icon-check-circle"></i>Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@section Script{
+    <script src="~/admin/assets/js/index.js"></script>
+}

@@ -121,311 +121,54 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" data-id="1" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img src="./assets/img/home/product1-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product1-1.webp" class="card-img-top top" alt="...">
-                        </div>
-                        <div class="discount">
-                            <span class="badge">-7%</span>
-                        </div>
+                @foreach (var product in Model.Products.OrderByDescending(m=>m.CreatedDate))
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card" data-id="1" style="width: 18rem;">
+                            <div class="produc-imgs">
+                                <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
+                                <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+                            </div>
+                            <div class="discount">
+                                <span class="badge">-7%</span>
+                            </div>
 
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Wild Taps Sneakers</p>
-                            </a>
+                            <div class="product-hover d-flex">
+                                <button type="submit">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <button type="submit" class="d-lg-block d-none">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                                <button type="submit">
+                                    <i class="bi bi-bag"></i>
+                                </button>
+                            </div>
+                            <div class="star-product">
+                                @for (int i = 0; i < product.Rating; i++)
+                                {
+                                    <i class="bi bi-star-fill"></i>
+                                }
+                                @for (int c = 0; c < 5 - product.Rating; c++)
+                                {
+                                    <i class="bi bi-star"></i>
+                                }
+                            
+                        
+                            </div>
+                            <div class="card-body">
+                                <a href="">
+                                    <p>@product.Name</p>
+                                </a>
 
-                            <p class="card-text price"> <span>$</span>90.00</p>
-                            <del>$97.00</del>
+                                <p class="card-text price"> $@product.Price</p>
+                                <del>$97.00</del>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
+          
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" data-d="2" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product2-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product2-1.webp" class="card-img-top top" alt="...">
-                        </div>
-                        <div class="discount">
-                            <span class="badge">-12%</span>
-                        </div>
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Style Black Sneakers</p>
-                            </a>
-
-                            <p class="card-text price">$85.00</p>
-                            <del>$97.00</del>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product3-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product3-2.webp" class="card-img-top top" alt="...">
-                        </div>
-                        <div class="discount">
-                            <span class="badge">-25%</span>
-                        </div>
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Splendid Navy Blue</p>
-                            </a>
-
-                            <p class="card-text price">$9.00</p>
-                            <del>$12.00</del>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product4-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product4-2.webp" class="card-img-top top" alt="...">
-                        </div>
-                        <div class="discount">
-                            <span class="badge">-6%</span>
-                        </div>
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Sneakers Fly White</p>
-                            </a>
-
-                            <p class="card-text price">$70.00</p>
-                            <del>$75.00</del>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product5-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product5-2.webp" class="card-img-top top" alt="...">
-                        </div>
-
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Retro Black Soles</p>
-                            </a>
-
-                            <p class="card-text price">$235.00</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product6-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product6-2.webp" class="card-img-top top" alt="...">
-                        </div>
-                        <div class="discount">
-                            <span class="badge">-13%</span>
-                        </div>
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Red Sneakers Kings</p>
-                            </a>
-
-                            <p class="card-text price">$200.00</p>
-                            <del>$230.00</del>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product7-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product7-2.webp" class="card-img-top top" alt="...">
-                        </div>
-                        <div class="discount">
-                            <span class="badge">-25%</span>
-                        </div>
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Platform Pop Sneakers</p>
-                            </a>
-
-                            <p class="card-text price">$300.00</p>
-                            <del>$390.00</del>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card" style="width: 18rem;">
-                        <div class="produc-imgs">
-                            <img cla src="./assets/img/home/product8-1.webp" class="card-img-top basic" alt="...">
-                            <img src="./assets/img/home/product8-2.webp" class="card-img-top top" alt="...">
-                        </div>
-
-
-                        <div class="product-hover d-flex">
-                            <button type="submit">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="submit" class="d-lg-block d-none">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                            <button type="submit">
-                                <i class="bi bi-bag"></i>
-                            </button>
-                        </div>
-                        <div class="star-product">
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                            <i class="bi bi-star"></i>
-                        </div>
-                        <div class="card-body">
-                            <a href="">
-                                <p>Perfect Pace Grey</p>
-                            </a>
-
-                            <p class="card-text price">$250.00</p>
-                        </div>
-                    </div>
-                </div>
 
 
             </div>

@@ -43,7 +43,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int page = 1,int take = 5)
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null,null);
-            List<ProductListVM> mappedDatas = addGetDatas(datas);
+            List<ProductListVM> mappedDatas = GetDatas(datas);
 
             int pageCount = await GetPageCountAsync(take);
 
@@ -58,7 +58,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
             var productCount = await _productService.GetCountAsync();
             return (int)Math.Ceiling((decimal)productCount / take);
         }
-        private List<ProductListVM> addGetDatas(List<Product> products)
+        private List<ProductListVM> GetDatas(List<Product> products)
         {
             List<ProductListVM> mappedDatas = new();
             foreach (var product in products)
@@ -139,7 +139,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 {
                     ProductImage productImage = new()
                     {
-                        ImgName = photo.CreateFile(_env, "assets/img/home/product-img")
+                        ImgName = photo.CreateFile(_env, "assets/img/shoes/product-img")
                     };
                     productImages.Add(productImage);
                 }
@@ -225,17 +225,246 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 newProduct.CategoryId = model.CategoryId;
                 newProduct.SubCategoryId = model.SubCategoryId;
                 newProduct.Rating = model.Rating;
-                newProduct.SaleCount = model.SaleCount;
 
                 await _crudService.CreateAsync(newProduct);
                 await _crudService.SaveAsync();
 
                 return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
 
-                throw;
+
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id, int page)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                Product dbProduct = await _productService.GetFullDataByIdAsync((int)id);
+                if (dbProduct is null) return NotFound();
+
+                ViewBag.colors = await GetColorsAsync();
+                ViewBag.brands = await GetBrandsAsync();
+                ViewBag.sizes = await GetSizesAsync();
+                ViewBag.categories = await GetCategoriesAsync();
+                ViewBag.subcategories = await GetSubCategoriesAsync();
+                ViewBag.page = page;
+
+
+                ProductUpdateVM model = new()
+                {
+                    Id = dbProduct.Id,
+                    Name = dbProduct.Name,
+                    Description = dbProduct.Description,
+                    Price = dbProduct.Price,
+                    SKU = dbProduct.SKU,
+                    Rating = dbProduct.Rating,
+                    StockCount = dbProduct.StockCount,
+                    ProductImages = dbProduct.ProductImages,
+                    CategoryId = dbProduct.CategoryId,
+                    SubCategoryId = dbProduct.SubCategoryId,
+                    BrandId = dbProduct.BrandId,
+                    ColorIds = dbProduct.ProductColors.Select(t => t.Color.Id).ToList(),
+                    SizeIds = dbProduct.ProductSizes.Select(s => s.Size.Id).ToList(),
+                };
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, int page, ProductUpdateVM model)
+        {
+            try
+            {
+                ViewBag.colors = await GetColorsAsync();
+                ViewBag.brands = await GetBrandsAsync();
+                ViewBag.sizes = await GetSizesAsync();
+                ViewBag.categories = await GetCategoriesAsync();
+                ViewBag.subcategories = await GetSubCategoriesAsync();
+
+                if (id is null) return BadRequest();
+                Product dbProduct = await _productService.GetFullDataByIdAsync((int)id);
+                if (dbProduct is null) return NotFound();
+
+                if (!ModelState.IsValid)
+                {
+                    model.ProductImages = dbProduct.ProductImages;
+                    return View(model);
+                }
+
+
+                int canUploadImg = 6 - dbProduct.ProductImages.Count;
+                if (model.Photos is not null)
+                {
+                    List<ProductImage> productImages = new();
+
+                    if (model.Photos.Count > canUploadImg)
+                    {
+                        ModelState.AddModelError("Photos", $"The maximum number of images you can upload is {canUploadImg}");
+                        model.ProductImages = dbProduct.ProductImages;
+                        return View(model);
+                    }
+
+                    foreach (var photo in model.Photos)
+                    {
+                        if (!photo.CheckFileType("image/"))
+                        {
+                            ModelState.AddModelError("Photos", "File type must be image");
+                            model.ProductImages = dbProduct.ProductImages;
+                            return View(model);
+                        }
+                        if (!photo.CheckFileSize(200))
+                        {
+                            ModelState.AddModelError("Photos", "Image size must be max 200kb");
+                            model.ProductImages = dbProduct.ProductImages;
+                            return View(model);
+                        }
+                    }
+
+                    foreach (var photo in model.Photos)
+                    {
+                        ProductImage productImage = new()
+                        {
+                            ImgName = photo.CreateFile(_env, "assets/img/shoes/product-img")
+                        };
+                        productImages.Add(productImage);
+                    }
+                    dbProduct.ProductImages = productImages;
+                    dbProduct.ProductImages.FirstOrDefault().IsMain = true;
+                    dbProduct.ProductImages.Skip(1).FirstOrDefault().IsHover = true;
+                }
+                else
+                {
+                    model.ProductImages = dbProduct.ProductImages;
+                }
+
+                if (model.ColorIds.Count > 0)
+                {
+                    List<ProductColor> productColors = new();
+
+                    foreach (var item in model.ColorIds)
+                    {
+                        ProductColor productColor = new()
+                        {
+                            ColorId = item
+                        };
+                        productColors.Add(productColor);
+                    }
+                    dbProduct.ProductColors = productColors;
+                }
+
+                if (model.SizeIds.Count > 0)
+                {
+                    List<ProductSize> productSizes = new();
+
+                    foreach (var item in model.SizeIds)
+                    {
+                        ProductSize productSize = new()
+                        {
+                            SizeId = item
+                        };
+                        productSizes.Add(productSize);
+                    }
+                    dbProduct.ProductSizes = productSizes;
+                }
+
+
+
+                dbProduct.Name = model.Name;
+                dbProduct.Description = model.Description;
+                dbProduct.Price = model.Price;
+                dbProduct.StockCount = model.StockCount;
+                dbProduct.BrandId = model.BrandId;
+                dbProduct.Rating = model.Rating;
+                dbProduct.CategoryId = model.CategoryId;
+                dbProduct.SubCategoryId = model.SubCategoryId;
+
+
+                await _crudService.SaveAsync();
+
+                return RedirectToAction(nameof(Index), new { page });
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                Product dbProduct = await _productService.GetByIdAsync((int)id);
+                if (dbProduct is null) return NotFound();
+
+                foreach (var productImage in dbProduct.ProductImages)
+                {
+                    string imagePath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/shoes/product-img", productImage.ImgName);
+                    FileHelper.DeleteFile(imagePath);
+                }
+
+                _crudService.Delete(dbProduct);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id, int page)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                Product dbProduct = await _productService.GetFullDataByIdAsync((int)id);
+                if (dbProduct is null) return NotFound();
+                ViewBag.page = page;
+
+                ProductDetailsVM model = new()
+                {
+                    Id = dbProduct.Id,
+                    SKU = dbProduct.SKU,
+                    Name = dbProduct.Name,
+                    Description = dbProduct.Description,
+                    Price = dbProduct.Price,
+                    StockCount = dbProduct.StockCount,
+                    SaleCount = dbProduct.SaleCount,
+                    Images = dbProduct.ProductImages,
+                    CategoryNames = dbProduct.Category.Name,
+                    SubCategoryNames = dbProduct.SubCategory.Name,
+                    ColorNames = dbProduct.ProductColors,
+                    SizeNames = dbProduct.ProductSizes,
+                    BrandName = dbProduct.Brand.Name,
+                    Rating = dbProduct.Rating,
+                };
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
             }
         }
 
@@ -244,18 +473,87 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
 
 
+        [HttpPost]
+        public async Task<IActionResult> DeleteProductImage(int? id)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                ProductImage image = await _productService.GetImageById((int)id);
+
+                if (image is null) return NotFound();
+                Product dbProduct = await _productService.GetProductByImageId((int)id);
+                if (dbProduct is null) return NotFound();
+
+                DeleteResponse response = new();
+                response.Result = false;
+
+                if (dbProduct.ProductImages.Count > 1)
+                {
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/shoes/product-img", image.ImgName);
+                    FileHelper.DeleteFile(path);
+                    _productService.RemoveImage(image);
+
+                    await _crudService.SaveAsync();
+                    response.Result = true;
+                }
+
+                dbProduct.ProductImages.FirstOrDefault().IsMain = true;
+
+                response.Id = dbProduct.ProductImages.FirstOrDefault().Id;
+
+                await _crudService.SaveAsync();
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
 
 
 
+        [HttpPost]
+        public async Task<IActionResult> SetStatus(int? id)
+        {
+            try
+            {
+                if (id == null) return BadRequest();
 
+                ProductImage image = await _productService.GetImageById((int)id);
 
+                if (image is null) return NotFound();
 
+                Product dbProduct = await _productService.GetProductByImageId((int)id);
+                if (dbProduct is null) return NotFound();
 
+                if (!image.IsMain)
+                {
+                    image.IsMain = true;
+                    await _crudService.SaveAsync();
+                }
 
+                var images = dbProduct.ProductImages.Where(m => m.Id != id).ToList();
 
+                foreach (var item in images)
+                {
+                    if (item.IsMain)
+                    {
+                        item.IsMain = false;
+                        await _crudService.SaveAsync();
+                    }
+                }
 
-
-
+                return Ok(image.IsMain);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
 
 
 

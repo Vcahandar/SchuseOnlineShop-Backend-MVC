@@ -10,62 +10,58 @@
                 <form method="post" enctype="multipart/form-data" asp-action="Create">
                     <span class="text-danger">@ViewBag.error</span>
                     <div class="form-group">
-                        <label>Images</label>
+                        <label style="font-weight:800">Images</label>
                         <input class="form-control" asp-for="Photos">
                         <span class="text-danger" asp-validation-for="Photos"></span>
                     </div>
                     <div class="form-group">
-                        <label>Title</label>
+                        <label style="font-weight:800">Title</label>
                         <input type="text" class="form-control" asp-for="Name">
                         <span class="text-danger" asp-validation-for="Name"></span>
                     </div>
                     <div class="form-group">
-                        <label>Price</label>
+                        <label style="font-weight:800">Price</label>
                         <input class="form-control" asp-for="Price" type="number" step=".01" />
                         <span class="text-danger" asp-validation-for="Price"></span>
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label style="font-weight:800">Description</label>
                         <textarea class="form-control" rows="3" asp-for="Description"></textarea>
                         <span class="text-danger" asp-validation-for="Description"></span>
                     </div>
                     <div class="form-group">
-                        <label>Stock Count</label>
+                        <label style="font-weight:800">Stock Count</label>
                         <input class="form-control" asp-for="StockCount" type="number" />
                         <span class="text-danger" asp-validation-for="StockCount"></span>
                     </div>
+          
                     <div class="form-group">
-                        <label>Sale Count</label>
-                        <input class="form-control" asp-for="SaleCount" type="number" />
-                        <span class="text-danger" asp-validation-for="SaleCount"></span>
-                    </div>
-                    <div class="form-group">
-                        <label>Rating</label>
+                        <label style="font-weight:800">Rating</label>
                         <input class="form-control" asp-for="Rating" />
                         <span class="text-danger" asp-validation-for="Rating"></span>
                     </div>
                     <div class="form-group">
-                        <label>Color</label>
+                        <label style="font-weight:800">Color</label>
                         <select class="form-control" asp-for="ColorIds" asp-items="@ViewBag.colors"></select>
                         <span class="text-danger" asp-validation-for="ColorIds"></span>
                     </div>
                     <div class="form-group">
-                        <label>brands</label>
+                        <label style="font-weight:800">Brands</label>
                         <select class="form-control" asp-for="BrandId" asp-items="@ViewBag.brands"></select>
                         <span class="text-danger" asp-validation-for="BrandId"></span>
                     </div>
                     <div class="form-group">
-                        <label>Sizes</label>
+                        <label style="font-weight:800">Sizes</label>
                         <select class="form-control" asp-for="SizeIds" asp-items="@ViewBag.sizes"></select>
                         <span class="text-danger" asp-validation-for="SizeIds"></span>
                     </div>
                     <div class="form-group">
-                        <label>Categories</label>
+                        <label style="font-weight:800">Categories</label>
                         <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.categories"></select>
                         <span class="text-danger" asp-validation-for="CategoryId"></span>
                     </div>
                     <div class="form-group">
-                        <label>SubCategoryIds</label>
+                        <label style="font-weight:800">SubCategoryIds</label>
                         <select class="form-control" asp-for="SubCategoryId" asp-items="@ViewBag.subcategories"></select>
                         <span class="text-danger" asp-validation-for="SubCategoryId"></span>
                     </div>
