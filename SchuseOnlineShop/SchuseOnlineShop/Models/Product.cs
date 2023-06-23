@@ -13,10 +13,12 @@ namespace SchuseOnlineShop.Models
         public int StockCount { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
-        //public int SubCategoryId { get; set; }
-        //public SubCategory SubCategory { get; set; }
+        public int SubCategoryId { get; set; }
+        public SubCategory SubCategory { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
 
-        public ICollection<CategorySubCategory> CategorySubCategories { get; set; }
+        //public ICollection<CategorySubCategory> CategorySubCategories { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
         public ICollection<ProductVideo> ProductVideos { get; set; }
         public ICollection<ProductSize> ProductSizes { get; set; }

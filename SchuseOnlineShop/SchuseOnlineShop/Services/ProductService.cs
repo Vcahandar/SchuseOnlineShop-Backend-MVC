@@ -28,8 +28,8 @@ namespace SchuseOnlineShop.Services
         public async Task<Product> GetByIdAsync(int? id)
         {
             return await _context.Products
-                  .Include(m => m.CategorySubCategories)
-                  .ThenInclude(m => m.Category).Include(m=>m.CategorySubCategories).ThenInclude(m=>m.SubCategory)
+                  .Include(m => m.Category)
+                  .Include(m => m.SubCategory)
                   .Include(m => m.ProductImages)
                   .Include(m => m.ProductVideos)
                   .Include(m => m.ProductColors)
@@ -45,10 +45,8 @@ namespace SchuseOnlineShop.Services
                  .Include(m => m.ProductVideos)
                  .Include(m => m.ProductImages)
                  .Include(m => m.ProductComments)
-                 .Include(m => m.CategorySubCategories)
-                 .ThenInclude(m => m.Category)
-                 .Include(m => m.CategorySubCategories)
-                 .ThenInclude(m => m.SubCategory)
+                   .Include(m => m.Category)
+                  .Include(m => m.SubCategory)
                  .Include(m => m.ProductColors)
                  .ThenInclude(m => m.Color)
                  .Include(m => m.ProductSizes)
@@ -66,10 +64,8 @@ namespace SchuseOnlineShop.Services
               .Include(m => m.ProductVideos)
               .Include(m => m.ProductImages)
               .Include(m => m.ProductComments)
-              .Include(m => m.CategorySubCategories)
-              .ThenInclude(m => m.Category)
-              .Include(m => m.CategorySubCategories)
-              .ThenInclude(m => m.SubCategory)
+                .Include(m => m.Category)
+                  .Include(m => m.SubCategory)
               .Include(m => m.ProductColors)
               .ThenInclude(m => m.Color)
               .Include(m => m.ProductSizes)
@@ -138,13 +134,13 @@ namespace SchuseOnlineShop.Services
 
             if (subCategoryId != null)
             {
-                products = await _context.Products
-                    .Include(m=>m.ProductImages)
-                    .Include(m => m.CategorySubCategories)
-                    .Where(m => m.CategorySubCategories.FirstOrDefault().SubCategoryId == subCategoryId)
-                    .Skip((page * take) - take)
-                    .Take(take)
-                    .ToListAsync();
+                //products = await _context.Products
+                //    .Include(m=>m.ProductImages)
+                //    .Include(m => m.CategorySubCategories)
+                //    .Where(m => m.CategorySubCategories.FirstOrDefault().SubCategoryId == subCategoryId)
+                //    .Skip((page * take) - take)
+                //    .Take(take)
+                //    .ToListAsync();
 
                 //return await _context.Products
                 //.Include(m => m.CategorySubCategories)
@@ -195,20 +191,19 @@ namespace SchuseOnlineShop.Services
             }
             else
             {
-                //products _context.Products
-                //    .Include(m => m.CategorySubCategories)
-                //    .ThenInclude(m => m.SubCategory)
-                //    .Include(m => m.CategorySubCategories)
-                //    .ThenInclude(m => m.Category)
-                //    .Include(m => m.ProductImages)
-                //    .Include(m => m.ProductColors)
-                //    .ThenInclude(m => m.Color)
-                //    .Include(m => m.ProductSizes)
-                //    .ThenInclude(m => m.Size)
-                //    .Include(m => m.Brand)
-                //    .Skip((page * take) - take)
-                //    .Take(take)
-                //    .ToListAsync();
+                products = await _context.Products
+                    
+                    .Include(m => m.SubCategory)
+                    .Include(m => m.Category)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.ProductColors)
+                    .ThenInclude(m => m.Color)
+                    .Include(m => m.ProductSizes)
+                    .ThenInclude(m => m.Size)
+                    .Include(m => m.Brand)
+                    .Skip((page * take) - take)
+                    .Take(take)
+                    .ToListAsync();
             }
 
             return products;
@@ -221,8 +216,9 @@ namespace SchuseOnlineShop.Services
             List<ProductVM> model = new();
             var products = await _context.Products
                  .Include(m => m.ProductImages)
-                 .Include(m => m.CategorySubCategories)
-                 .Where(m => m.CategorySubCategories.FirstOrDefault().SubCategoryId == id)
+                 .Include(m => m.Category)
+                 .Include(m => m.SubCategory)
+                 .Where(m => m.CategoryId == id && m.SubCategoryId == id)
                  .Skip((page * take) - take)
                  .Take(take)
                  .ToListAsync();

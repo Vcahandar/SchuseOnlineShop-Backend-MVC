@@ -31,9 +31,9 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
         public List<int> ColorIds { get; set; } = new();
 
         [Required(ErrorMessage = "Don`t be empty")]
-        public List<int> CategoryIds { get; set; } = new();
+        public int CategoryId { get; set; }
         [Required(ErrorMessage = "Don`t be empty")]
-        public List<int> SubCategoryIds { get; set; } = new();
+        public int SubCategoryId { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
         public List<int> SizeIds { get; set; } = new();

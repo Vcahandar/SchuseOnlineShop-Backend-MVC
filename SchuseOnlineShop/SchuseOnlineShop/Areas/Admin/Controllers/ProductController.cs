@@ -43,7 +43,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int page = 1,int take = 5)
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null,null);
-            List<ProductListVM> mappedDatas = GetDatas(datas);
+            List<ProductListVM> mappedDatas = addGetDatas(datas);
 
             int pageCount = await GetPageCountAsync(take);
 
@@ -58,7 +58,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
             var productCount = await _productService.GetCountAsync();
             return (int)Math.Ceiling((decimal)productCount / take);
         }
-        private List<ProductListVM> GetDatas(List<Product> products)
+        private List<ProductListVM> addGetDatas(List<Product> products)
         {
             List<ProductListVM> mappedDatas = new();
             foreach (var product in products)
@@ -105,10 +105,10 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
                 Product newProduct = new();
                 List<ProductImage> productImages = new();
-                List<ProductVideo> prod = new();
                 List<ProductColor> productColors = new();
                 List<ProductSize> productSizes = new();
-                List<CategorySubCategory> categorySubCategories = new();
+                Category newCategory = new();
+                SubCategory newSubCategory = new();
 
                 //List<Category> categories = new();
                 //List<SubCategory> Subcategories = new();
@@ -184,44 +184,34 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                     return View();
                 }
 
-                if (model.CategoryIds.Count > 0)
-                {
-                    foreach (var item in model.CategoryIds)
-                    {
-                        CategorySubCategory categorySubCategory = new()
-                        {
-                            CategoryId = item
-                        };
+                
+                    //foreach (var item in model.CategoryIds)
+                    //{
+                    //    Category category = new()
+                    //    {
+                    //        Id = item
+                    //    };
 
-                        categorySubCategories.Add(categorySubCategory);
-                    }
-                    newProduct.CategorySubCategories = categorySubCategories;
-                }
-                else
-                {
-                    ModelState.AddModelError("CategoryIds", "Don`t be empty");
-                    return View();
-                }
+                    //    newCategory.Add(category);
+                    //}
+                    //newProduct.Category = newCategory;
+                
+            
 
 
-                if (model.SubCategoryIds.Count > 0)
-                {
-                    foreach (var item in model.SubCategoryIds)
-                    {
-                        CategorySubCategory categorySubCategory = new()
-                        {
-                            SubCategoryId = item
-                        };
+              
+                    //foreach (var item in model.SubCategoryId)
+                    //{
+                    //    SubCategory subCategory = new()
+                    //    {
+                    //        Id = item
+                    //    };
 
-                        categorySubCategories.Add(categorySubCategory);
-                    }
-                    newProduct.CategorySubCategories = categorySubCategories;
-                }
-                else
-                {
-                    ModelState.AddModelError("SubCategoryIds", "Don`t be empty");
-                    return View();
-                }
+                    //    newSubCategory = subCategory;
+                    //}
+                    //newProduct.SubCategory = newSubCategory;
+                
+               
 
                 var convertedPrice = decimal.Parse(model.Price);
                 Random random = new();
@@ -232,10 +222,13 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 newProduct.StockCount = model.StockCount;
                 newProduct.SKU = model.Name.Substring(0, 3) + "-" + random.Next();
                 newProduct.BrandId = model.BrandId;
+                newProduct.CategoryId = model.CategoryId;
+                newProduct.SubCategoryId = model.SubCategoryId;
                 newProduct.Rating = model.Rating;
                 newProduct.SaleCount = model.SaleCount;
 
                 await _crudService.CreateAsync(newProduct);
+                await _crudService.SaveAsync();
 
                 return RedirectToAction(nameof(Index));
             }
