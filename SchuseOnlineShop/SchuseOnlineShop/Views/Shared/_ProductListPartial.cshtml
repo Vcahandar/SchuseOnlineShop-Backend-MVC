@@ -1,0 +1,63 @@
+﻿@model Paginate<ProductVM>
+
+ @foreach (var product in Model.Datas)
+{
+    <div class="col-lg-4 col-md-6">
+        <div class="card" data-id="1" style="width: 18rem;">
+            <div class="produc-imgs">
+                <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
+                   <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
+                    <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+                </a>
+           
+            </div>
+            <div class="discount">
+                <span class="badge">sale</span>
+            </div>
+
+            <div class="product-hover d-flex">
+                <button type="submit">
+                    <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <button type="submit" class="d-lg-block d-none">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+                <button type="submit">
+                    <i class="bi bi-bag"></i>
+                </button>
+            </div>
+            <div class="star-product">
+                @for (int i = 0; i < product.Rating; i++)
+                {
+                    <i class="bi bi-star-fill"></i>
+                }
+                @for (int c = 0; c < 5 - product.Rating; c++)
+                {
+                    <i class="bi bi-star"></i>
+                }
+            </div>
+            <div class="card-body">
+                <a href="~/product-details.html">
+                    <p>@product.Name</p>
+                </a>
+                <p class="card-text price"> <span>$</span>@product.DiscountPrice</p>
+                <del>$@product.Price</del>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="pagination-shoes">
+    <nav class="pagination-container">
+        <div class="pagination">
+
+            <span class="pagination-inner">
+                
+                <a class="pagination-active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+            </span>
+            <a class="pagination-older" href="#">NEXT</a>
+        </div>
+    </nav>
+</div>

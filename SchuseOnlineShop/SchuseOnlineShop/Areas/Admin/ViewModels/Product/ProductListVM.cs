@@ -8,6 +8,7 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
         public string SKU { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
         public ICollection<ProductImage> Images { get; set; }
     }
 }

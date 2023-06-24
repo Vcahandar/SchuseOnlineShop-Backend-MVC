@@ -1,4 +1,6 @@
-﻿@model LayoutVM
+﻿
+@model LayoutVM
+@inject UserManager<AppUser> userManager;
 
 
 
@@ -116,9 +118,9 @@
         </div>
         <div class="down-navbar">
             <ul>
-                <li><a href="~/home.html">Home</a></li>
-                <li><a href="~/shoes.html">Shoes</a></li>
-                <li><a href="~/man-shoes.html">Man Shoes</a></li>
+                <li><a asp-controller="Home" asp-action="Index">">Home</a></li>
+                <li><a asp-controller="Shop" asp-action="Index">Shoes</a></li>
+                <li><a asp-controller="Shop" asp-action="Index">>Man Shoes</a></li>
                 <li><a href="">Women Shoes</a></li>
                 <li><a href="~/contact.html">Contact</a></li>
                 <li><a href="~/blog.html">Blog</a></li>
@@ -193,7 +195,7 @@
                             <a href="~/home.html">Home</a>
                         </li>
                         <li>
-                            <a href="~/shoes.html">Shoes</a>
+                            <a asp-controller="Shop" asp-action="Index">Shoes</a>
                         </li>
                         <li>
                             <a href="">Men Shoes</a>

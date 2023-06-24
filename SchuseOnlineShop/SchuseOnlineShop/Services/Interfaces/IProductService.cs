@@ -27,12 +27,15 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<int> GetProductsCountByColorAsync(int? colorId);
         Task<int> GetProductsCountBySizeAsync(int? sizeId);
 
+        Task<int> GetProductsCountByCategoryAsync(int? catId);
         Task<int> GetProductsCountByBrandAsync(int? brandId);
 
         Task<List<Product>> GetAllBySearchText(string searchText);
         Task<List<ProductComment>> GetComments();
         Task<ProductComment> GetCommentByIdWithProduct(int? id);
         Task<ProductComment> GetCommentById(int? id);
+
+        Task<IQueryable<Product>> FilterByName(string? name);
 
 
 

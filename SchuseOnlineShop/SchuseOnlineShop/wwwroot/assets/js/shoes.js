@@ -64,7 +64,7 @@ $(function(){
 //-------price filtre --star------------
 
 let minValue = document.getElementById("min-value");
-// console.log(minValue);
+//console.log(minValue);
 let maxValue = document.getElementById("max-value");
 
 function validateRange(minPrice, maxPrice) {
@@ -94,7 +94,8 @@ validateRange(inputElements[0].value, inputElements[1].value);
 //-------price filtre --end------------
 
 
-$('.pagination-inner a').on('click', function() {
+$('.pagination-inner a').on('click', function () {
+   
   $(this).siblings().removeClass('pagination-active');
   $(this).addClass('pagination-active');
 })

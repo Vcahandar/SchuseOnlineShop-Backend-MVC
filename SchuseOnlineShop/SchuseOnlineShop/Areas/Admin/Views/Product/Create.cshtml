@@ -25,6 +25,11 @@
                         <span class="text-danger" asp-validation-for="Price"></span>
                     </div>
                     <div class="form-group">
+                        <label style="font-weight:800">DistCount Price</label>
+                        <input class="form-control" asp-for="DiscountPrice" type="number" step=".01" />
+                        <span class="text-danger" asp-validation-for="DiscountPrice"></span>
+                    </div>
+                    <div class="form-group">
                         <label style="font-weight:800">Description</label>
                         <textarea class="form-control" rows="3" asp-for="Description"></textarea>
                         <span class="text-danger" asp-validation-for="Description"></span>

@@ -29,6 +29,7 @@ builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IColorService, ColorService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICartService, CartService>();
 
 
 

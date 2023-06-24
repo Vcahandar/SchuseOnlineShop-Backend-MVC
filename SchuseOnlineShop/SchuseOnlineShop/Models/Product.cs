@@ -6,6 +6,8 @@ namespace SchuseOnlineShop.Models
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
+
         public string SKU { get; set; }
         public string Description { get; set; }
         public int Rating { get; set; } = 5;

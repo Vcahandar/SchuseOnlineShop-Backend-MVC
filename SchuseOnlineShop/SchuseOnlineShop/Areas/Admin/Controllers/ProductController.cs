@@ -214,11 +214,14 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                
 
                 var convertedPrice = decimal.Parse(model.Price);
+                var convertedDiscountPrice = decimal.Parse(model.DiscountPrice);
+
                 Random random = new();
 
                 newProduct.Name = model.Name;
                 newProduct.Description = model.Description;
                 newProduct.Price = convertedPrice;
+                newProduct.DiscountPrice = convertedDiscountPrice;
                 newProduct.StockCount = model.StockCount;
                 newProduct.SKU = model.Name.Substring(0, 3) + "-" + random.Next();
                 newProduct.BrandId = model.BrandId;
@@ -263,6 +266,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                     Name = dbProduct.Name,
                     Description = dbProduct.Description,
                     Price = dbProduct.Price,
+                    DiscountPrice = dbProduct.DiscountPrice,
                     SKU = dbProduct.SKU,
                     Rating = dbProduct.Rating,
                     StockCount = dbProduct.StockCount,
@@ -387,6 +391,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 dbProduct.Name = model.Name;
                 dbProduct.Description = model.Description;
                 dbProduct.Price = model.Price;
+                dbProduct.DiscountPrice = model.DiscountPrice;
                 dbProduct.StockCount = model.StockCount;
                 dbProduct.BrandId = model.BrandId;
                 dbProduct.Rating = model.Rating;
@@ -449,6 +454,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                     Name = dbProduct.Name,
                     Description = dbProduct.Description,
                     Price = dbProduct.Price,
+                    DiscountPrice = dbProduct.DiscountPrice,
                     StockCount = dbProduct.StockCount,
                     SaleCount = dbProduct.SaleCount,
                     Images = dbProduct.ProductImages,

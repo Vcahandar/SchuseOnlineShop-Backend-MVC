@@ -370,5 +370,23 @@ namespace SchuseOnlineShop.Services
         {
             return await _context.ProductComments.FirstOrDefaultAsync(m => m.Id == id);
         }
+
+        public async Task<int> GetProductsCountByCategoryAsync(int? id)
+        {
+            return await _context.Products
+                 .Include(p => p.SubCategory)
+                 .Include(p => p.ProductImages)
+                 .Where(pc => pc.SubCategory.Id == id)
+                 .CountAsync();
+        }
+
+        public async Task<IQueryable<Product>> FilterByName(string name)
+        {
+            return _context.Products
+                .Include(pr => pr.ProductColors)
+                .Include(pr => pr.ProductSizes)
+                .Include(pr => pr.Brand)
+                .Where(pr => !string.IsNullOrEmpty(name) ? pr.Name.ToLower().Contains(name.ToLower()) : true);
+        }
     }
 }

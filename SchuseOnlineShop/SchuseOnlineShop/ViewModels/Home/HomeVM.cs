@@ -5,6 +5,7 @@ namespace SchuseOnlineShop.ViewModels.Home
 {
     public class HomeVM
     {
+        public int Id { get; set; }
         public IEnumerable<Slider> Sliders { get; set; }
         public IEnumerable<BrandLogo> BrandLogos { get; set; }
         public IEnumerable<Blog> Blogs { get; set; }

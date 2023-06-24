@@ -9,6 +9,7 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
         public string SKU { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
         public int SaleCount { get; set; }
         public int Rating { get; set; }
         public int StockCount { get; set; }

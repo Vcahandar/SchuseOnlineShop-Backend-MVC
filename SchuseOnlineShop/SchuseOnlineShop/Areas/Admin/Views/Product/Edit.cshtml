@@ -49,6 +49,11 @@
                         <span class="text-danger" asp-validation-for="Price"></span>
                     </div>
                     <div class="form-group">
+                        <label>DiscountPrice</label>
+                        <input class="form-control" asp-for="DiscountPrice" type="number" step=".01" />
+                        <span class="text-danger" asp-validation-for="DiscountPrice"></span>
+                    </div>
+                    <div class="form-group">
                         <label>Description</label>
                         <textarea class="form-control" rows="3" asp-for="Description"></textarea>
                         <span class="text-danger" asp-validation-for="Description"></span>

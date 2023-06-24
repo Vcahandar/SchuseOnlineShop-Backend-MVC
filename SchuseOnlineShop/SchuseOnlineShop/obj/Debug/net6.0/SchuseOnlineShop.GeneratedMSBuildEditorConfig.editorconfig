@@ -208,8 +208,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Shared/_ProductListPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0TGlzdFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Shop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/_ViewImports.cshtml]

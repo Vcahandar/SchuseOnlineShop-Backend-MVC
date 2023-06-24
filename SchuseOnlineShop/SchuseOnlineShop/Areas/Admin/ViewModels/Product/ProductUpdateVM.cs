@@ -15,6 +15,8 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
 
         [Required(ErrorMessage = "Don`t be empty")]
         public string Description { get; set; }
+        [Required(ErrorMessage = "Don`t be empty")]
+        public decimal DiscountPrice { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
         public decimal Price { get; set; }
