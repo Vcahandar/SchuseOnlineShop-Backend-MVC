@@ -1,0 +1,350 @@
+﻿
+@model  ProductDetailVM
+
+@section Links{
+
+    <link rel="stylesheet" href="~/assets/css/product-details/product-details.css">
+    <title>Shop</title>
+}
+
+
+@{
+    ViewData["Title"] = "ProductDetail";
+}
+
+
+
+<main>
+
+    <section id="top-column-content">
+        <div class="column-content">
+            <div class="title">
+                <h2>Products</h2>
+            </div>
+            <div class="choose">
+                <a asp-controller="Home" asp-action="Index">Home |</a>
+                <span>Product Name</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-details-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="product-details-inner mt-5">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="product-img">
+
+
+                                @*    <img src="~/assets/img/shoes/product-img/@Model.ProductImages.Where(m=>m.IsMain).First().ImgName
+                                         alt="Product Image" />*@
+                                    
+                                    
+                                    <video playsinline="" loop="" muted="" autoplay="" class="product-grid__video" poster="https://cdn.media.amplience.net/v/office/4142867799_vd1" src="https://cdn.media.amplience.net/v/office/4142867799_vd1/mp4_720p" type="video/mp4">
+                                    </video>
+
+                                </div>
+                                <div class="small-carousel">
+                                    <section class="slider">
+                                        <button class="slider__control prev">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider__control next">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </button>
+                                        <div class="slider__container" data-multislide="true" data-step="4">
+
+                                            @foreach (var productImage in Model.ProductImages)
+                                            {
+                                                <div class="slider__item">
+                                                    <img src="~/assets/img/shoes/product-img/@productImage.ImgName" alt="" width="100%">
+                                                </div>
+
+                                            }
+
+
+                                        </div>
+                                    </section>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-7">
+                                <div class="product-details-des">
+                                    <div class="pro-det-title">
+                                        <h3>@Model.ProductName</h3>
+                                    </div>
+                                    <div class="star-product">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <div class="pro-price">
+                                        <span class="regular-price">$ @Model.DiscountPrice</span>
+                                        <span class=""><del>$@Model.Price</del></span>
+                                    </div>
+                                    <div class="pro-desc">
+                                        <p>
+                                          @Model.Description
+                                        </p>
+                                    </div>
+
+                                    <div class="pro-type">
+                                        <span class="type-title">Sku</span>
+                                        <span class="pro-variant-sku">: @Model.SKU</span>
+                                    </div>
+                                    <div class="pro-type">
+                                        <span class="type-title">Categorie</span>
+                                        <span class="pro-variant-sku">: @Model.SubCategories.Name</span>
+                                    </div>
+                                    <div class="pro-type">
+                                        <span class="type-title">Brand</span>
+                                        <span class="pro-variant-text">: @Model.BrandName</span>
+                                    </div>
+                                    <div class="pro-type-size">
+                                        <span class="type-title">Size</span>
+                                        <div class="shoes-size">
+                                            @foreach (var item in Model.ProductSizes)
+                                            {
+                                                <span class="size-number">@item.Size.Number</span>
+
+                                            }
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="pro-type-color">
+                                        <span class="type-title">Color</span>
+                                        <div class="shoes-color">
+                                            <span style="background-color: red;" class="product-color active"></span>
+                                            <span style="background-color: white; color: black;" class="product-color"></span>
+                                            <span style="background-color: black;" class="product-color"></span>
+                                            <span style="background-color: green;" class="product-color"></span>
+                                            <span style="background-color: blue;" class="product-color"></span>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="pro-type-quantity">
+                                        <span class="type-title">Quantity</span>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input type="text" value="1" />
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                    <div class="add-buttons">
+                                        <div class="click-btn right">
+                                            <button class="btn btn-warning">ADD TO CARD</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-accordion">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <i class="fa-solid fa-truck-fast"></i>
+                                                    <h4>Shipping & Returns</h4>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                 aria-labelledby="flush-headingOne"
+                                                 data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Free shipping and returns available on all orders!
+                                                        We ship all US domestic orders within <b>
+                                                            5-10 business
+                                                            days!
+                                                        </b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                        aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    <i class="fa-solid fa-shirt"></i>
+                                                    <h4>Materials</h4>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                 aria-labelledby="flush-headingTwo"
+                                                 data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Running Shoes cushions your stride with soft foam to
+                                                        keep you running in comfort. Lightweight knit material wraps
+                                                        your
+                                                        foot in breathable support, while a minimalist design fits
+                                                        in just about anywhere your day takes you.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                        aria-expanded="false" aria-controls="flush-collapseThree">
+
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <h4>Care Instructions</h4>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                 aria-labelledby="flush-headingThree"
+                                                 data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Use a soft damp cloth and a drop of mild soap to remove any
+                                                        haze. Air dry.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-widget">
+        <div class="container">
+            <div class="prod-tab-menu">
+                <ul class="menu__tabs">
+                    <li><a class="active" href="#item-1"> Description</a></li>
+                    <li><a href="#item-2"><i class="fa-regular fa-comment-dots"></i> Reviews</a></li>
+
+
+                </ul>
+                <section class="menu__wrapper">
+                    <article id="item-1" class="menu__item item-active">
+                        <h3>Product Description</h3>
+                        <p>
+                            Elegant and comfy, this embroidered A-line dress which has a round neck, and
+                            three-quarter sleeves is all you need to ensure your wardrobe is up to date. Browse
+                            through the latest collection of various ethnic dresses with cap sleeve sleeve designs
+                            to give a flawless desi look. Stay up to date with the great selection of attractive
+                            traditional ethnic dresses made with the perfect blend and modern style.
+                        </p>
+                        <ul>
+                            <li>
+                                <p>Type : A-Line Dresses</p>
+                            </li>
+                            <li>
+                                <p>Design : Embroidered</p>
+                            </li>
+                            <li>
+                                <p>Fabric : Cotton</p>
+                            </li>
+                            <li>
+                                <p>Length : Calf-Length</p>
+                            </li>
+                            <li>
+                                <p>Model Wears : Size S,has Height 5'7",Chest 33",and Waist 28"</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article id="item-2" class="menu__item">
+                        <h3>Contenido Dos</h3>
+                        <div class="product-review-body">
+                            <div class="blog-comment mt-0">
+                                <h4 class="heading">Comments (03)</h4>
+                                <div class="blog-comment-item">
+
+                                    <div class="blog-comment-content">
+                                        <div class="user-meta">
+                                            <h2 class="user-name">Donald Chavez</h2>
+                                            <span class="date">21 July 2021</span>
+                                        </div>
+                                        <p class="user-comment">
+                                            Lorem ipsum dolor sit amet, consectetur adipisi
+                                            elit, sed do eiusmod tempor incidid ut labore etl
+                                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitati ullamco laboris nisi ut
+                                            aliquiex ea commodo consequat.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="feedback-area">
+                                <h2 class="heading">Leave a comment</h2>
+                                <form class="feedback-form" action="#">
+                                    <div class="group-input">
+                                        <div class="form-field me-md-30 mb-30 mb-md-0">
+                                            <input type="text" name="name" placeholder="Your Name*"
+                                                   class="input-field" />
+                                        </div>
+                                        <div class="form-field">
+                                            <input type="text" name="email" placeholder="Your Email*"
+                                                   class="input-field" />
+                                        </div>
+                                    </div>
+                                    <div class="form-field mt-30">
+                                        <input type="text" name="subject" placeholder="Subject (Optinal)"
+                                               class="input-field" />
+                                    </div>
+                                    <div class="form-field mt-30">
+                                        <textarea name="message" placeholder="Message"
+                                                  class="textarea-field"></textarea>
+                                    </div>
+                                    <div class="button-wrap pt-5">
+                                        <button type="submit" value="submit"
+                                                class="btn btn-custom-size xl-size btn-my-primary" name="submit">
+                                            Post Comment
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
+
+                </section>
+                <div class="menu--shadow"></div>
+            </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+@section Script{
+
+    <script src="https://kit.fontawesome.com/b01bc4ce26.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="~/assets/js/product-details.js"></script>
+    }

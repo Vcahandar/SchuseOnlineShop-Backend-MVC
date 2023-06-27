@@ -180,6 +180,73 @@ $(document).ready(function () {
 // --------------- Modul END --------------------
 
 
+//$(document).on("click", ".category", function (e) {
+//    e.preventDefault();
+//    let categoryId = $(this).attr("data-id");
+//    let parent = $(".pro-list")
+
+
+//    $.ajax({
+//        type: "Get",
+//        url: `shop/GetProductCategory?id=${categoryId}`,
+//        success: function (res) {
+//            $(parent).html(res);
+//        }
+
+//    })
+//})
+
+
+$(function () {
+
+
+    GetProducts(".all", "/Shop/GetProducts")
+
+    function GetProducts(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            e.preventDefault();
+            let parent = $(".pro-list")
+            console.log(parent)
+            $.ajax({
+                url: url,
+                type: "Get",
+                success: function (res) {
+                    $(parent).html(res);
+                }
+            })
+        })
+
+    }
+
+
+
+    function GetProductsById(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            e.preventDefault();
+            let id = $(this).attr("data-id");
+            let data = { id: id };
+            let parent = $(".pro-list")
+            $.ajax({
+                url: url,
+                type: "Get",
+                data: data,
+                success: function (res) {
+                    $(parent).html(res);
+                }
+            })
+        })
+
+    }
+
+
+    GetProductsById(".sub-category", "/Shop/GetProductsBySubCategory")
+    GetProductsById(".color", "/Shop/GetProductsByColor")
+    GetProductsById(".size", "/Shop/GetProductsByColor")
+
+})
+
+
+
 
 
 

@@ -217,14 +217,13 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 6)
+        public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 5)
         {
             List<ProductVM> model = new();
             var products = await _context.Products
                  .Include(m => m.ProductImages)
-                 .Include(m => m.Category)
                  .Include(m => m.SubCategory)
-                 .Where(m => m.CategoryId == id && m.SubCategoryId == id)
+                 .Where(m => m.SubCategoryId == id)
                  .Skip((page * take) - take)
                  .Take(take)
                  .ToListAsync();
@@ -235,6 +234,7 @@ namespace SchuseOnlineShop.Services
                 {
                     Id = item.Id,
                     Price = item.Price,
+                    DiscountPrice = item.DiscountPrice,
                     Name = item.Name,
                     ProductImages = item.ProductImages,
                     Rating = item.Rating
@@ -261,6 +261,7 @@ namespace SchuseOnlineShop.Services
                 {
                     Id = item.Id,
                     Price = item.Price,
+                    DiscountPrice = item.DiscountPrice,
                     Name = item.Name,
                     ProductImages = item.ProductImages,
                     Rating = item.Rating
@@ -268,6 +269,32 @@ namespace SchuseOnlineShop.Services
             }
             return model;
         }
+
+        public async Task<List<ProductVM>> GetProductsBySizeIdAsync(int? id)
+        {
+            List<ProductVM> model = new();
+            var products = await _context.ProductSizes
+                .Include(m => m.Product)
+                .ThenInclude(m => m.ProductImages)
+                .Where(m => m.Size.Id == id)
+                .Select(m => m.Product)
+                .ToListAsync();
+
+            foreach (var item in products)
+            {
+                model.Add(new ProductVM
+                {
+                    Id = item.Id,
+                    Price = item.Price,
+                    DiscountPrice = item.DiscountPrice,
+                    Name = item.Name,
+                    ProductImages = item.ProductImages,
+                    Rating = item.Rating
+                });
+            }
+            return model;
+        }
+
 
         public async Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id)
         {
@@ -284,6 +311,7 @@ namespace SchuseOnlineShop.Services
                 {
                     Id = item.Id,
                     Price = item.Price,
+                    DiscountPrice= item.DiscountPrice,
                     Name = item.Name,
                     ProductImages = item.ProductImages,
                     Rating = item.Rating
@@ -302,6 +330,7 @@ namespace SchuseOnlineShop.Services
                 {
                     Id = item.Id,
                     Price = item.Price,
+                    DiscountPrice= item.DiscountPrice,
                     Name = item.Name,
                     ProductImages = item.ProductImages,
                     Rating = item.Rating
@@ -371,7 +400,7 @@ namespace SchuseOnlineShop.Services
             return await _context.ProductComments.FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task<int> GetProductsCountByCategoryAsync(int? id)
+        public async Task<int> GetProductsCountBySubCategoryAsync(int? id)
         {
             return await _context.Products
                  .Include(p => p.SubCategory)

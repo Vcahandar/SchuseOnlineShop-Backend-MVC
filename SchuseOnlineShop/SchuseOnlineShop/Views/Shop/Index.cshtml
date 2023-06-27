@@ -39,11 +39,11 @@
                                 </div>
                                 <div class="sidebar-body">
                                     <ul class="categorie-list">
-                                        <li><a href="">All</a></li>
+                                    <li><a class="all" href="">All</a></li>
                                         @foreach (var item in Model.SubCategories)
                                     {
                                         <li>
-                                            <a style="cursor:pointer"  data-id="@item.Id">@item.Name</a>
+                                            <a style="cursor:pointer" class="sub-category" data-id="@item.Id">@item.Name</a>
                                         </li>
                                     }
                                     </ul>
@@ -117,7 +117,7 @@
                                         @foreach (var colors in Model.Colors)
                                         {
                                          <li>
-                                            <a style="cursor:pointer" data-id="@colors.Id">
+                                            <a style="cursor:pointer" class="color" data-id="@colors.Id">
                                                 @colors.Name <span> (@colors.ProductColors?.Count())</span></a>
                                         </li>
                                         }
@@ -161,14 +161,15 @@
                         <div class="product-shops">
                             <div class="page-width collection-filters">
                                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                    <option selected>Alphabetically, A-Z</option>
-                                    <option value="1">Alphabetically, Z-A</option>
-                                    <option value="2">Best selling</option>
+                                <option selected>Sort by Default</option>
+                                <option value="1">Sort by High Price</option>
+                                <option value="2">Sort by Low Price</option>
+                                    <option value="3">Sort by Rated</option>
                                 </select>
                             </div>
 
                             <div class="product-carts">
-                                <div class="row">
+                            <div class="row pro-list">
                                    <partial name="_ProductListPartial" model="Model.PaginateDatas" />
                                 </div>
 
