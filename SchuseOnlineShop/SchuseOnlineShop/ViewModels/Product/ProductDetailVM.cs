@@ -5,6 +5,8 @@ namespace SchuseOnlineShop.ViewModels.Product
     public class ProductDetailVM
     {
         public int Id { get; set; }
+        public Models.Product Product { get; set; }
+
         public List<Models.Product> Products { get; set; }
 
         public string ProductName { get; set; }

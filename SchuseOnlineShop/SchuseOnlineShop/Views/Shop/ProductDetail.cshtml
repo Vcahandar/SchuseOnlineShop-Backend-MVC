@@ -38,11 +38,11 @@
                                 <div class="product-img">
 
 
-                                @*    <img src="~/assets/img/shoes/product-img/@Model.ProductImages.Where(m=>m.IsMain).First().ImgName
+                                  @*  <img src="~/assets/img/shoes/product-img/@Model.Product.ProductImages.Where(m=>m.IsMain).FirstOrDefault().ImgName
                                          alt="Product Image" />*@
                                     
                                     
-                                    <video playsinline="" loop="" muted="" autoplay="" class="product-grid__video" poster="https://cdn.media.amplience.net/v/office/4142867799_vd1" src="https://cdn.media.amplience.net/v/office/4142867799_vd1/mp4_720p" type="video/mp4">
+                                   <video playsinline="" loop="" muted="" autoplay="" class="product-grid__video" poster="https://cdn.media.amplience.net/v/office/4142867799_vd1" src="https://cdn.media.amplience.net/v/office/4142867799_vd1/mp4_720p" type="video/mp4">
                                     </video>
 
                                 </div>
@@ -120,11 +120,12 @@
                                     <div class="pro-type-color">
                                         <span class="type-title">Color</span>
                                         <div class="shoes-color">
-                                            <span style="background-color: red;" class="product-color active"></span>
-                                            <span style="background-color: white; color: black;" class="product-color"></span>
-                                            <span style="background-color: black;" class="product-color"></span>
-                                            <span style="background-color: green;" class="product-color"></span>
-                                            <span style="background-color: blue;" class="product-color"></span>
+                                            @foreach (var item in Model.ProductColors)
+                                            {
+                                                <span style="background-color: @item.Color.Name;" class="product-color active"></span>
+
+                                            }
+                                          
 
                                         </div>
                                     </div>

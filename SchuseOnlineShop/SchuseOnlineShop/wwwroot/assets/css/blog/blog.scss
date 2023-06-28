@@ -502,7 +502,7 @@ header {
 }
 
 
-main{
+main {
 
     #top-column-content {
         height: 160px;
@@ -525,11 +525,9 @@ main{
                     line-height: 35px;
                     font-weight: 700;
                 }
-
             }
 
             .choose {
-
                 font-size: 17px;
 
                 a {
@@ -544,8 +542,6 @@ main{
                 span {
                     cursor: pointer;
                 }
-
-
             }
         }
     }
@@ -554,104 +550,103 @@ main{
 
 
         .blog {
-    
+
             .container {
                 max-width: 1220px !important;
             }
-    
+
             .product-text {
                 text-align: center;
                 font-family: 'Poppins', sans-serif;
-    
+
                 .title {
-    
+
                     h2 {
                         letter-spacing: .3px;
                         font-weight: 600;
                     }
-    
-    
                 }
-    
             }
-    
+
             .blog-card {
                 font-family: 'Poppins', sans-serif;
-    
-    
-    
+
+
+
                 .blog-img {
-    
                     display: inline-block;
                     overflow: hidden;
-    
+
                     img {
                         width: 100%;
                         transition: all 1.5s cubic-bezier(0, 0, 0.05, 1);
-    
+
                         &:hover {
                             transform: scale3d(1.05, 1.05, 1.05) translateZ(0);
                         }
                     }
                 }
-    
+
                 .create-time {
                     margin-top: 20px;
                     font-weight: 600;
                     color: #ff871d;
                     font-size: 14px;
                 }
-    
+
                 .blog-title {
                     font-weight: 600;
                     margin-top: 15px;
-    
-    
+
+
                     a {
                         color: #000;
                         text-decoration: none;
                     }
                 }
-    
-    
+
+
                 .blog-description {
-    
                     margin-top: 15px;
                     font-family: revert;
-    
-    
+
+
                     p {
                         line-height: 20px;
                         text-overflow: ellipsis;
                         color: #666666;
                     }
                 }
-    
+
                 .blog-button {
                     margin-top: 10px;
                     font-size: 14px;
-    
+
                     a {
                         color: #ff871d;
                         font-weight: 600;
                         letter-spacing: .5px;
                         text-decoration: none;
                         text-decoration: underline;
-
-    
                     }
-    
                 }
-    
             }
-    
-    
-    
+        }
+
+        .paginate-area {
+
+            display: flex;
+            justify-content: center;
+
+            span {
+                font-size: 20px !important;
+            }
+
+            .next-blog {
+                font-size: 25px;
+            }
         }
     }
-
-
-
 }
 
 

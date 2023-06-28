@@ -437,6 +437,17 @@ main #product-blog .blog .blog-card .blog-button a {
   text-decoration: underline;
 }
 
+main #product-blog .blog .paginate-area {
+    display: flex;
+    justify-content: center;
+}
+main #product-blog .blog .paginate-area span{
+  font-size:20px;
+}
+main #product-blog .blog .paginate-area .next-blog {
+        font-size: 27px;
+}
+
 footer .container {
   max-width: 100% !important;
 }

@@ -22,5 +22,20 @@ namespace SchuseOnlineShop.Services
         {
             return await _context.Blogs.FirstOrDefaultAsync(m=>m.Id == id);
         }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await _context.Blogs.CountAsync(); 
+        }
+
+        public async Task<List<Blog>> GetPaginatedDatasAsync(int page = 1, int take = 3)
+        {
+            return await _context.Blogs
+                .Skip((page * take) - take)
+                .Take(take)
+                .ToListAsync();
+        }
+
+
     }
 }
