@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Advert>
+@{
+    ViewData["Title"] = "Index";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                  @*  @if (User.IsInRole("SuperAdmin"))
+                    {*@
+                        <div class="card-header">
+                            <a asp-action="Create" data-toggle="tooltip" data-original-title="Create" class="create"><i class="fa-solid fa-square-plus fa-lg" style="color: #105ada;"></i></a>
+                        </div>
+                    @*}*@
+
+                    <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                            @if (Model.Count() > 0)
+                            {
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Title</th>
+                                            <th>Short Description</th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var advert in Model)
+                                        {
+                                            <tr data-id="@advert.Id">
+                                                <td>
+                                                    <div class="image">
+                                                        <img class="img-fluid" src="~/assets/img/about/@advert.Image" />
+                                                    </div>
+                                                </td>
+                                                <td>@advert.Title</td>
+                                                <td>@advert.ShortDesc</td>
+                                                <td style="display:flex;gap:7px;">
+                                                    <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@advert.Id">Info</a>
+                                                    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@advert.Id">Edit</a>
+                                                    <form asp-action="Delete" method="post" asp-route-id="@advert.Id">
+                                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -924,6 +924,7 @@ main #shoes-main .product-shops .pagination-shoes .pagination a {
   text-decoration: none;
   font-size: 1.5rem;
   padding: 8px 16px 10px;
+  border:none;
 }
 main #shoes-main .product-shops .pagination-shoes .pagination a:before {
   z-index: -1;
@@ -938,6 +939,9 @@ main #shoes-main .product-shops .pagination-shoes .pagination a:before {
   transform: scale(0);
   transition: all 0.2s;
 }
+    main #shoes-main .product-shops .pagination-shoes .pagination .pagination-inner disabled {
+        background-color: red !important;
+    }
 main #shoes-main .product-shops .pagination-shoes .pagination .pagination-active {
   color: #fff;
 }

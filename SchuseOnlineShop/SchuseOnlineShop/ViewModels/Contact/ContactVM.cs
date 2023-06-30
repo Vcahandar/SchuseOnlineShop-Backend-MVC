@@ -7,7 +7,7 @@ namespace SchuseOnlineShop.ViewModels.Contact
         [Required(ErrorMessage = "Don`t be empty")]
         public string FirstName { get; set; }
         [Required(ErrorMessage = "Don`t be empty")]
-        public string LastName { get; set; }
+        public string Subject { get; set; }
         [Required(ErrorMessage = "Don`t be empty")]
         public string Phone { get; set; }
         [Required(ErrorMessage = "Don`t be empty")]

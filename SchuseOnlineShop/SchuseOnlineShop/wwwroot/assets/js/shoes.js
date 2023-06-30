@@ -241,7 +241,7 @@ $(function () {
 
     GetProductsById(".sub-category", "/Shop/GetProductsBySubCategory")
     GetProductsById(".color", "/Shop/GetProductsByColor")
-    GetProductsById(".size", "/Shop/GetProductsByColor")
+    GetProductsById(".sizee", "/Shop/GetProductsBySizeIdAsync")
 
 })
 

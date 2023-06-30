@@ -71,8 +71,8 @@ togglePassword.addEventListener("click", function () {
   this.classList.toggle("fa-eye");
 });
 
-// prevent form submit
-const form = document.querySelector("form");
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-});
+//// prevent form submit
+//const form = document.querySelector("form");
+//form.addEventListener('submit', function (e) {
+//  e.preventDefault();
+//});

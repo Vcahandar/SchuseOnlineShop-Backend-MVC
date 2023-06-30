@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Advert/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWR2ZXJ0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Advert/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWR2ZXJ0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Blog/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -188,6 +196,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Team/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Team/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Team/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/Team/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -198,6 +222,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Account/VerifyEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/OneDrive/Masaüstü/End-lahiye/SchuseOnlineShop-Backend/SchuseOnlineShop/SchuseOnlineShop/Views/Blog/BlogDetails.cshtml]

@@ -1,5 +1,6 @@
 ﻿@model ContactVM
 @inject ILayoutService layout;
+@inject UserManager<AppUser> userManager;
 
 
 @section Links{
@@ -41,34 +42,106 @@
                         <div class="col-lg-6">
                             <div class="contact-message">
                                 <h2 class="contact-title">Tell us your project</h2>
-                                <form action="">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <input name="first_name" placeholder="Name *" type="text" required="">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+
+                                    <form method="post" asp-action="PostComment">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="first_name"
+                                                   placeholder="Name *"
+                                                   type="text"
+                                                   required=""
+                                                   value="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).FirstName">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="phone" 
+                                                       placeholder="Phone *" 
+                                                       type="text" 
+                                                       required=""
+                                                      asp-for="Phone">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="email_address" 
+                                                       placeholder="Email *" 
+                                                       type="text" 
+                                                       required=""
+                                                        value="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).Email">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="first_name" 
+                                                       placeholder="Subject *" 
+                                                       type="text"
+                                                   asp-for="Subject"
+                                                       required=""
+                                                       value="">
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="contact2-textarea text-center">
+                                                    <textarea placeholder="Message *" 
+                                                              name="message"
+                                                              class="form-control2"
+                                                              asp-for="Message">
+                                                     </textarea>
+                                                </div>
+                                                <div class="contact-btn">
+                                                    <button class="btn" type="submit">Send Message</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <p class="form-messege"></p>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <input name="phone" placeholder="Phone *" type="text" required="">
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <input name="email_address" placeholder="Email *" type="text" required="">
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
-                                            <input name="first_name" placeholder="Subject *" type="text" required="">
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="contact2-textarea text-center">
-                                                <textarea placeholder="Message *" name="message"
+                                    </form>
+
+                                }else
+                                {
+                                    <form  method="post" asp-action="PostComment" >
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="first_name"
+                                                   placeholder="Name *"
+                                                   type="text"
+                                                   required=""
+                                                   asp-for="FirstName">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="phone" 
+                                                    placeholder="Phone *" 
+                                                    type="text" 
+                                                    required=""
+                                                   asp-for="Phone">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="email_address"
+                                                    placeholder="Email *" 
+                                                    type="text"
+                                                   asp-for="Email"
+                                                    required="">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <input name="first_name" 
+                                                    placeholder="Subject *"
+                                                   asp-for="Subject"
+                                                    type="text" 
+                                                    required="">
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="contact2-textarea text-center">
+                                                    <textarea placeholder="Message *" asp-for="Message" name="message"
                                                           class="form-control2"></textarea>
+                                                </div>
+                                                <div class="contact-btn">
+                                                    <button class="btn" type="submit">Send Message</button>
+                                                </div>
                                             </div>
-                                            <div class="contact-btn">
-                                                <button class="btn" type="submit">Send Message</button>
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <p class="form-messege"></p>
                                             </div>
                                         </div>
-                                        <div class="col-12 d-flex justify-content-center">
-                                            <p class="form-messege"></p>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                }
+                               
 
                             </div>
                         </div>

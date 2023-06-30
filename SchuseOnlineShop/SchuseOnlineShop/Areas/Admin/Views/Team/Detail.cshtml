@@ -1,0 +1,40 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Edit";
+}
+@section Css{
+    <link rel="stylesheet" href="~/admin/assets/css/index.css">
+}
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="image "><img class="img-fluid" src="~/assets/img/team/@Model.Image" /></div>
+
+                <form method="post" enctype="multipart/form-data" asp-action="Edit">
+                    <span class="text-danger">@ViewBag.error</span>
+
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input disabled type="text" class="form-control" asp-for="FullName">
+                        <span class="text-danger" asp-validation-for="FullName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea disabled class="form-control " rows="3" asp-for="Position"></textarea>
+                        <span class="text-danger" asp-validation-for="Position"></span>
+                    </div>
+                    <a asp-action="Index" style="background-color:red" class="btn btn-danger"><i class="fa-solid fa-backward"></i>  Cancel</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+

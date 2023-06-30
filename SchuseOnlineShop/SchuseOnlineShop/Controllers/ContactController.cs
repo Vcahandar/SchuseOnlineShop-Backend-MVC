@@ -25,7 +25,7 @@ namespace SchuseOnlineShop.Controllers
             Contact contact = new()
             {
                 FirstName = model.FirstName,
-                LastName = model.LastName,
+                LastName = model.Subject,
                 Email = model.Email,
                 Phone = model.Phone,
                 Message = model.Message,

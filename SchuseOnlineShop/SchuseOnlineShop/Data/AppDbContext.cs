@@ -35,12 +35,34 @@ namespace SchuseOnlineShop.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<HomeCategory> HomeCategories { get; set; }
+        public DbSet<Advert> Adverts { get; set; }
 
 
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Product>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<ProductImage>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Blog>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Category>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<SubCategory>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<SubCategory>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<ProductSize>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<CategorySubCategory>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Slider>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Brand>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Size>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Color>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<ProductVideo>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Team>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Setting>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<SectionHeader>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Advert>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<ProductComment>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Contact>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<Cart>().HasQueryFilter(p => !p.SoftDelete);
+            modelBuilder.Entity<CartProduct>().HasQueryFilter(p => !p.SoftDelete);
 
         }
     }
