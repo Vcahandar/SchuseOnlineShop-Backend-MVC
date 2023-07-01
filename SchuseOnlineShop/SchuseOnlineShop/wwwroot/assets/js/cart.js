@@ -80,5 +80,33 @@ $(document).ready(function () {
 
 // -----------
 
+$(function () {
 
+    //delete basket
+    $(document).on("click", ".delete-product", function () {
+
+        let id = $(this).parent().parent().attr("data-id");
+        let prod = $(this).parent().parent();
+        let tbody = $(".tbody").children();
+        let data = { id: id };
+
+        $.ajax({
+            type: "Post",
+            url: `Cart/DeleteDataFromBasket`,
+            data: data,
+            success: function () {
+                if ($(tbody).length == 1) {
+                    $(".product-table").addClass("d-none");
+                    
+                }
+                $(prod).remove();
+                grandTotal();
+            }
+        })
+        return false;
+    })
+
+
+
+})
 

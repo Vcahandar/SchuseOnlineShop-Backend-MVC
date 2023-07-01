@@ -146,7 +146,7 @@ namespace SchuseOnlineShop.Controllers
             if (id is null) return BadRequest();
             ViewBag.subCatId = id;
 
-            var products = await _productService.GetProductsByCategoryIdAsync(id, page, take);
+            var products = await _productService.GetProductsBySubCategoryIdAsync(id, page, take);
 
             int pageCount = await GetPageCountAsync(take, (int)id, null, null,null);
 
@@ -335,6 +335,23 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 5)
+        {
+            if (id is null) return BadRequest();
+            ViewBag.catId = id;
+
+            var products = await _productService.GetProductsByCategoryIdAsync(id, page, take);
+
+            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null);
+
+            Paginate<ProductVM> model = new(products, page, pageCount);
+
+            return PartialView("_ProductListPartial", model);
+        }
 
     }
 }

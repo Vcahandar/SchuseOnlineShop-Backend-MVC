@@ -147,9 +147,22 @@
                                 <button type="submit" class="d-lg-block d-none">
                                     <i class="fa-regular fa-eye"></i>
                                 </button>
-                                <button type="submit">
-                                    <i class="bi bi-bag"></i>
-                                </button>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <button  type="submit">
+                                        <a class="add-to-cart-btn" data-id="@product.Id">
+                                            <i class="bi bi-bag"></i>
+                                        </a>
+                                    </button>
+                                }else
+                                {
+                                    <button type="submit">
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="bi bi-bag"></i>
+                                        </a>
+                                    </button>
+                                }
+                            
                             </div>
                             <div class="star-product">
                                 @for (int i = 0; i < product.Rating; i++)
@@ -328,9 +341,22 @@
                                         <button type="submit" class="d-lg-block d-none">
                                             <i class="fa-regular fa-eye"></i>
                                         </button>
-                                        <button type="submit">
-                                            <i class="bi bi-bag"></i>
-                                        </button>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <button type="submit">
+                                                <a class="add-to-cart-btn" data-id="@pro.Id">
+                                                    <i class="bi bi-bag"></i>
+                                                </a>
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button type="submit">
+                                                <a asp-controller="Account" asp-action="Login">
+                                                    <i class="bi bi-bag"></i>
+                                                </a>
+                                            </button>
+                                        }
                                     </div>
                                     <div class="star-product">
                                         @for (int i = 0; i < pro.Rating; i++)

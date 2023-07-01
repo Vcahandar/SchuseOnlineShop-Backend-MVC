@@ -1,0 +1,213 @@
+﻿@model List<CartDetailVM>
+@inject ILayoutService layout
+
+@{
+    ViewData["Title"] = "Index";
+    decimal grandTotal = 0;
+}
+@section Links{
+
+    <link rel="stylesheet" href="~/assets/css/cart/cart.css">
+    <title>Cart</title>
+}
+
+
+
+<main>
+    <section id="top-column-content">
+        <div class="column-content">
+            <div class="title">
+                <h2>Your Shopping Cart</h2>
+            </div>
+            <div class="choose mt-4">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart-main">
+        <div class="container">
+            <div class="cart-table mt-5">
+                <div class="empty-continue d-none">
+                    <div class="empty">
+                        <h2>Your cart is empty</h2>
+                    </div>
+                @*    <div class="continue">
+                        <a asp-controller="Shop" asp-action="Index">
+                            <button type="submit" class="btn btn-warning">Continue shopping</button>
+                        </a>
+                    </div>*@
+
+                </div>
+                <form>
+                    <div class="page-table d-lg-block d-none">
+                        @if (Model.Count > 0)
+                        {
+                            <table class="table product-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+
+
+
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr data-id="@item.Id">
+                                            <td class="td-img">
+                                                <div class="prdct-img">
+                                                    <img src="~/assets/img/shoes/product-img/@item.Image" alt="">
+                                                </div>
+                                            </td>
+                                            <td class="td-name">
+                                                <a href="">@item.Name</a>
+                                                <div class="product-option">
+                                                    <span>Size:</span>
+                                                    <span>M</span>
+                                                </div>
+                                                <div class="product-option">
+                                                    <span>Color:</span>
+                                                    <span>White</span>
+                                                </div>
+                                            </td>
+                                            <td class="td-price">@item.Price.ToString("0.00") $</td>
+                                            <td class="td-count">
+                                                <div class="number">
+                                                    <span class="minus">-</span>
+                                                    <input type="text" value="@item.Count" disabled="">
+                                                    <span class="plus">+</span>
+                                                </div>
+                                            </td>
+                                            <td class="td-total">@item.Total.ToString("0.00") $</td>
+                                            <td>
+                                                <a class="delete-product">
+                                                    <i class="fa-solid fa-trash delete"></i>
+                                                </a>
+                                                
+                                            </td>
+                                        </tr>
+                                    }
+                                   
+                                </tbody>
+                            </table>
+                        }
+          
+
+                        <div class="total-continue">
+                            <div class="backShop">
+                                <a asp-controller="Shop" asp-action="Index"><button class="btn btn-warning">Continue shopping</button></a>
+                            </div>
+                            <div class="total d-flex">
+                                <div class="total-price">
+                                    <span class="title">Subtotal: $</span>
+                                    @foreach (var item in Model)
+                                    {
+                                        grandTotal += item.Total;
+                                    }
+                                    <span class="num">@grandTotal.ToString("0.00")</span>
+                                </div>
+                                <a href="./checkout.html">
+                                    <button class="btn btn-warning">
+                                        Proceed To
+                                        Checkout
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+           
+
+                <div></div>
+
+                <div class="mobil-table d-lg-none d-block">
+                    <table class="table">
+                        <thead>
+                            <tr class="mobil-tr-up">
+                                <th class="caption-with-letter-spacing" scope="col">Product</th>
+                                <th class="right caption-with-letter-spacing" scope="col">Price</th>
+                                <th class="cart-items__heading--wide medium-up caption-with-letter-spacing"
+                                    scope="col">Quantity</th>
+                                <th class="medium-up right caption-with-letter-spacing" scope="col">Total</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                            <tr class="cart-item" data-id="2">
+                                <td class="cart-item__media">
+                                    <div class="prdct-img">
+                                        <img src="./assets/img/home/product9-1.webp" alt="">
+                                    </div>
+                                </td>
+                                <td class="cart-item__details">
+                                    <a class="cart-item__name break" href="">Style Black Sneakers</a>
+                                    <div class="product-option">
+                                        <span>Size:</span>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="product-option">
+                                        <span>Color:</span>
+                                        <span>White</span>
+                                    </div>
+                                </td>
+                                <td class="cart-item__prices right">
+                                    <div class="cart-item__price-wrapper">
+                                        <span class="price price--end">235.00 $</span>
+                                    </div>
+                                </td>
+                                <td class="cart-item__quantity">
+                                    <label class="medium-down" for="Quantity-1">
+                                        Quantity
+                                    </label>
+                                    <div class="number">
+                                        <span class="minus">-</span>
+                                        <input type="text" value="1" disabled="">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </td>
+                                <td class="delete-icon"><a href=""><i class="fa-solid fa-trash delete"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="total-continue">
+                        <div class="backShop">
+                            <a href="./home.html"><button class="btn btn-warning">Continue shopping</button></a>
+                        </div>
+                        <div class="total d-flex">
+                            <div class="total-price">
+                                <span class="title">Subtotal: $</span>
+                                <span class="num">0</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</main>
+
+
+@section Script{
+
+    <script src="https://kit.fontawesome.com/b01bc4ce26.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="~/assets/js/cart.js"></script>
+ }

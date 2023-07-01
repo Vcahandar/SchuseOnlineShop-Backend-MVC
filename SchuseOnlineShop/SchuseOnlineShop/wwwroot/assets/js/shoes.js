@@ -204,6 +204,7 @@ $(function () {
 
     function GetProducts(clickedElem, url) {
         $(document).on("click", clickedElem, function (e) {
+
             e.preventDefault();
             let parent = $(".pro-list")
             console.log(parent)
@@ -242,6 +243,29 @@ $(function () {
     GetProductsById(".sub-category", "/Shop/GetProductsBySubCategory")
     GetProductsById(".color", "/Shop/GetProductsByColor")
     GetProductsById(".sizee", "/Shop/GetProductsBySizeIdAsync")
+
+
+
+
+    //add cart
+    AddToCart(".add-to-cart-btn", "/Shop/AddToCart");
+
+    function AddToCart(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            let id = $(this).attr("data-id");
+            let data = { id: id };
+            let count = (".count-bask");
+            $.ajax({
+                type: "Post",
+                url: url,
+                data: data,
+                success: function (res) {
+                    $(count).text(res);
+                }
+            })
+            return false;
+        })
+    }
 
 })
 

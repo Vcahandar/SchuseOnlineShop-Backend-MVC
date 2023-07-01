@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="sidebar-body">
                                     <ul class="categorie-list">
-                                    <li><a class="all" href="">All</a></li>
+                                    <li><a class="all" style="cursor:pointer;">All</a></li>
                                         @foreach (var item in Model.SubCategories)
                                     {
                                         <li>
@@ -88,7 +88,7 @@
                                         @foreach (var brand in Model.Brands)
                                     {
                                             <li>
-                                                <input type="checkbox" class="cbox" name="@brand.Name" id="@brand.Id" value="@brand.Name">
+                                            <input type="checkbox" class="cbox" name="@brand.Name" id="@brand.Id" value="@brand.Name">
                                             <label class="cbox-label" for="@brand.Id">@brand.Name (@brand.Products?.Count())</label>
                                             </li>
                                     }

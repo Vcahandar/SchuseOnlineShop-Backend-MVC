@@ -20,7 +20,7 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<int> GetCountAsync();
         Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? colorId, int? brandId, int? sizeId);
 
-        Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page, int take);
+        Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page, int take);
         Task<List<ProductVM>> GetProductsByColorIdAsync(int? id);
         Task<List<ProductVM>> GetProductsBySizeIdAsync(int? id);
         Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id);
@@ -37,6 +37,8 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<ProductComment> GetCommentById(int? id);
 
         Task<IQueryable<Product>> FilterByName(string? name);
+
+        Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page, int take);
 
 
 

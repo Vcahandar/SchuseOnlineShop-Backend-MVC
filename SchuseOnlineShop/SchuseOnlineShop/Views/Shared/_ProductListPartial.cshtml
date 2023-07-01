@@ -3,7 +3,7 @@
  @foreach (var product in Model.Datas)
 {
     <div class="col-lg-4 col-md-6">
-        <div class="card" data-id="1" style="width: 18rem;">
+        <div class="card" data-id="@product.Id" style="width: 18rem;">
             <div class="produc-imgs">
                 <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
                    <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
@@ -22,9 +22,22 @@
                 <button type="submit" class="d-lg-block d-none">
                     <i class="fa-regular fa-eye"></i>
                 </button>
-                <button type="submit">
-                    <i class="bi bi-bag"></i>
-                </button>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <button type="submit">
+                        <a class="add-to-cart-btn" data-id="@product.Id">
+                            <i class="bi bi-bag"></i>
+                        </a>
+                    </button>
+                }
+                else
+                {
+                    <button type="submit">
+                        <a asp-controller="Account" asp-action="Login">
+                            <i class="bi bi-bag"></i>
+                        </a>
+                    </button>
+                }
             </div>
             <div class="star-product">
                 @for (int i = 0; i < product.Rating; i++)

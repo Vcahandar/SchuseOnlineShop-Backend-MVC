@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using SchuseOnlineShop.Helpers.Enums;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
 using SchuseOnlineShop.ViewModels.Account;
 using SchuseOnlineShop.ViewModels.Cart;
+using System.Data;
 
 namespace SchuseOnlineShop.Controllers
 {
@@ -97,6 +99,84 @@ namespace SchuseOnlineShop.Controllers
 
 
 
+
+
+
+
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterVM model)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(model);
+                }
+
+                Random random = new();
+
+                AppUser newUser = new()
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Email = model.Email,
+                    UserName = model.FirstName + random.Next(100)
+                };
+
+                IdentityResult result = await _userManager.CreateAsync(newUser, model.Password);
+
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+
+                    return View(model);
+                }
+
+                string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+                string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token },
+                                            Request.Scheme, Request.Host.ToString());
+
+
+                string subject = "Register Confirmation";
+                string html = string.Empty;
+
+                using (StreamReader reader = new("wwwroot/templates/verify.html"))
+                {
+                    html = reader.ReadToEnd();
+                }
+
+                html = html.Replace("{{link}}", link);
+                html = html.Replace("{{headerText}}", "Welcome");
+
+                _emailService.Send(newUser.Email, subject, html);
+
+                await _userManager.AddToRoleAsync(newUser, "SuperAdmin");
+
+                return RedirectToAction(nameof(VerifyEmail));
+
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return RedirectToAction("Index", model);
+            }
+
+        }
+
+
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
             if (userId is null || token is null) return BadRequest();
@@ -137,77 +217,15 @@ namespace SchuseOnlineShop.Controllers
             return View();
         }
 
-
-        [HttpGet]
-        public IActionResult Register()
+        public async Task CreateRole()
         {
-            return View();
-        }
-
-
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterVM model)
-        {
-            try
+            foreach (var role in Enum.GetValues(typeof(Roles)))
             {
-                if (!ModelState.IsValid)
+                if (!await _roleManager.RoleExistsAsync(role.ToString()))
                 {
-                    return RedirectToAction(nameof(Index));
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
                 }
-
-                Random random = new();
-
-                AppUser newUser = new()
-                {
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
-                    Email = model.Email,
-                    UserName = model.FirstName
-                };
-
-                IdentityResult result = await _userManager.CreateAsync(newUser, model.Password);
-
-                if (!result.Succeeded)
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
-
-                    //TempData["errors"] = model.ErrorMessages;
-                    return RedirectToAction("Index", model);
-                }
-
-                string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-                string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token },
-                                            Request.Scheme, Request.Host.ToString());
-
-
-                string subject = "Register Confirmation";
-                string html = string.Empty;
-
-                using (StreamReader reader = new("wwwroot/templates/verify.html"))
-                {
-                    html = reader.ReadToEnd();
-                }
-
-                html = html.Replace("{{link}}", link);
-
-                _emailService.Send(newUser.Email, subject, html);
-
-                await _userManager.AddToRoleAsync(newUser, "Member");
-
-                return RedirectToAction(nameof(VerifyEmail));
-
             }
-            catch (Exception ex)
-            {
-                ViewBag.error = ex.Message;
-                return RedirectToAction("Index", model);
-            }
-
         }
 
 

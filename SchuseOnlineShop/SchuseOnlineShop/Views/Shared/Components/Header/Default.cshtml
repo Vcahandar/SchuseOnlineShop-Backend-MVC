@@ -65,7 +65,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <form method="post" asp-controller="Account" asp-action="Logout">
+                                        <form method="post" asp-controller="Account" asp-action="Logout" asp-route-userId="@userManager.Users.Where(u=>u.UserName==User.Identity.Name).FirstOrDefault().Id">
                                             <button type="submit" class="dropdown-item">Logout</button>
                                         </form>
                                     </li>
@@ -81,15 +81,14 @@
                                     </li>
                                 </ul>
                             }
-                           @* <ul class="dropdown-menu language">
-                                <li><a class="dropdown-item eng" asp-controller="Account" asp-action="login"><span>Log In</span></a></li>  </li>
-                            </ul>*@
+                         
 
                             <div class="line"></div>
                             <div class="icon">
-                                <a href="~/cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                                <a asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-bag-shopping"></i></a>
                                 <div class="basket-count">
-                                    <span>0</span>
+                                    <span class="count-bask">@Model.BasketCount</span>
+                                    
                                 </div>
                                 <a class="wishlist-nav" href="~/wishlist.html">
                                     <i class="fa-regular fa-bookmark"></i>

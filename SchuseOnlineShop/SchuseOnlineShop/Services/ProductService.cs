@@ -33,6 +33,7 @@ namespace SchuseOnlineShop.Services
                   .Include(m => m.ProductImages)
                   .Include(m => m.ProductVideos)
                   .Include(m => m.ProductColors)
+                  .ThenInclude(m => m.Color)
                   .Include(m => m.ProductSizes)
                   .FirstOrDefaultAsync(m => m.Id == id);
         }
@@ -217,7 +218,7 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 5)
+        public async Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page = 1, int take = 5)
         {
             List<ProductVM> model = new();
             var products = await _context.Products
@@ -416,6 +417,34 @@ namespace SchuseOnlineShop.Services
                 .Include(pr => pr.ProductSizes)
                 .Include(pr => pr.Brand)
                 .Where(pr => !string.IsNullOrEmpty(name) ? pr.Name.ToLower().Contains(name.ToLower()) : true);
+        }
+
+
+
+        public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 5)
+        {
+            List<ProductVM> model = new();
+            var products = await _context.Products
+                .Include(m => m.ProductImages)
+                .Include(m => m.Category)
+                .Where(m => m.Category.Id == id)
+                .Skip((page * take) - take)
+                .Take(take)
+                .ToListAsync();
+
+            foreach (var item in products)
+            {
+                model.Add(new ProductVM
+                {
+                    Id = item.Id,
+                    Price = item.Price,
+                    DiscountPrice = item.DiscountPrice,
+                    Name = item.Name,
+                    ProductImages = item.ProductImages,
+                    Rating = item.Rating
+                });
+            }
+            return model;
         }
     }
 }

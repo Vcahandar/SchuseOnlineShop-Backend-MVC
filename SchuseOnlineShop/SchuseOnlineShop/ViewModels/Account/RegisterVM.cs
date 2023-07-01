@@ -21,6 +21,5 @@ namespace SchuseOnlineShop.ViewModels.Account
         [Required(ErrorMessage = "Don`t be empty")]
         [DataType(DataType.Password), Compare("Password")]
         public string ConfirmPassword { get; set; }
-        public List<string> ErrorMessages { get; set; } = new List<string>();
     }
 }

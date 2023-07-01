@@ -1,4 +1,5 @@
 ﻿using SchuseOnlineShop.ViewModels.Cart;
+using SchuseOnlineShop.ViewModels.Shop;
 
 namespace SchuseOnlineShop.ViewModels.Layout
 {
@@ -6,6 +7,8 @@ namespace SchuseOnlineShop.ViewModels.Layout
     {
         public Dictionary<string, string> GetSettingDatas { get; set; }
         public IEnumerable<CartVM> CartVMs { get; set; }
+        public IEnumerable<ShopVM> ShopVMs { get; set; }
+
         public int BasketCount { get; set; }
 
         public string Name { get; set; }
