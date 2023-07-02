@@ -1,5 +1,6 @@
 ﻿
 @model  ProductDetailVM
+@inject UserManager<AppUser> userManager
 
 @section Links{
 
@@ -269,54 +270,62 @@
                         <h3>Contenido Dos</h3>
                         <div class="product-review-body">
                             <div class="blog-comment mt-0">
-                                <h4 class="heading">Comments (03)</h4>
-                                <div class="blog-comment-item">
+                                <h4 class="heading">Comments (@Model.ProductComments.Count())</h4>
+                                @foreach (var item in Model.ProductComments)
+                                {
+                                    <div class="blog-comment-item">
 
-                                    <div class="blog-comment-content">
-                                        <div class="user-meta">
-                                            <h2 class="user-name">Donald Chavez</h2>
-                                            <span class="date">21 July 2021</span>
+                                        <div class="blog-comment-content">
+                                            <div class="user-meta">
+                                                <h2 class="user-name">@item.Name</h2>
+                                                <span class="date">@item.CreatedDate.ToString("dd MMMM yyyy")</span>
+                                            </div>
+                                            <p class="user-comment">
+                                              @item.Message
+                                            </p>
                                         </div>
-                                        <p class="user-comment">
-                                            Lorem ipsum dolor sit amet, consectetur adipisi
-                                            elit, sed do eiusmod tempor incidid ut labore etl
-                                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitati ullamco laboris nisi ut
-                                            aliquiex ea commodo consequat.
-                                        </p>
                                     </div>
-                                </div>
-
+                                }
                             </div>
-                            <div class="feedback-area">
-                                <h2 class="heading">Leave a comment</h2>
-                                <form class="feedback-form" action="#">
-                                    <div class="group-input">
-                                        <div class="form-field me-md-30 mb-30 mb-md-0">
-                                            <input type="text" name="name" placeholder="Your Name*"
-                                                   class="input-field" />
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                AppUser user = userManager.Users.FirstOrDefault(m => m.UserName == User.Identity.Name);
+
+                                <div class="feedback-area">
+                                    <h2 class="heading">Leave a comment</h2>
+                                    <form class="feedback-form" method="post" asp-action="PostComment" asp-route-id="@Model.Id" asp-route-userId="@user.Id">
+                                        <div class="group-input">
+                                            <div class="form-field me-md-30 mb-30 mb-md-0">
+                                                <input 
+                                                    placeholder="Your Name*"
+                                                   class="input-field"
+                                                   value="@(user.FirstName + " " + user.LastName)" asp-for="ProductCommentVM.Name" readonly
+                                                   />
+                                            </div>
+                                            <div class="form-field">
+                                                <input   placeholder="Your Email*"
+                                                   class="input-field" value="@(user.Email)"
+                                                   asp-for="ProductCommentVM.Email" readonly />
+                                            </div>
                                         </div>
-                                        <div class="form-field">
-                                            <input type="text" name="email" placeholder="Your Email*"
-                                                   class="input-field" />
+                                        <div class="form-field mt-30">
+                                            <input type="text"  placeholder="Subject (Optinal)"
+                                               class="input-field"   asp-for="ProductCommentVM.Subject"  />
                                         </div>
-                                    </div>
-                                    <div class="form-field mt-30">
-                                        <input type="text" name="subject" placeholder="Subject (Optinal)"
-                                               class="input-field" />
-                                    </div>
-                                    <div class="form-field mt-30">
-                                        <textarea name="message" placeholder="Message"
-                                                  class="textarea-field"></textarea>
-                                    </div>
-                                    <div class="button-wrap pt-5">
-                                        <button type="submit" value="submit"
+                                        <div class="form-field mt-30">
+                                            <textarea  placeholder="Message"
+                                                  class="textarea-field" asp-for="ProductCommentVM.Message"></textarea>
+                                        </div>
+                                        <div class="button-wrap pt-5">
+                                            <button type="submit" value="submit"
                                                 class="btn btn-custom-size xl-size btn-my-primary" name="submit">
-                                            Post Comment
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+                                                Post Comment
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            }
+                        
                         </div>
                     </article>
 

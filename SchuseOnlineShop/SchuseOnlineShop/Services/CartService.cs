@@ -20,7 +20,7 @@ namespace SchuseOnlineShop.Services
         public void DeleteData(int? id)
         {
             var baskets = JsonConvert.DeserializeObject<List<CartVM>>(_httpContextAccessor.HttpContext.Request.Cookies["basket"]);
-            var deletedProduct = baskets.FirstOrDefault(b => b.ProductId == id);
+            var deletedProduct = baskets.FirstOrDefault(m => m.ProductId == id);
             baskets.Remove(deletedProduct);
             _httpContextAccessor.HttpContext.Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
         }

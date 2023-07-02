@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
 using SchuseOnlineShop.ViewModels.Cart;
+using System.Data;
 
 namespace SchuseOnlineShop.Controllers
 {
@@ -45,8 +46,9 @@ namespace SchuseOnlineShop.Controllers
 
             _cartService.DeleteData((int)id);
             List<CartVM> baskets = _cartService.GetDatasFromCookie();
+          
 
-            return Ok();
+            return Ok(baskets.Count);
 
         }
 

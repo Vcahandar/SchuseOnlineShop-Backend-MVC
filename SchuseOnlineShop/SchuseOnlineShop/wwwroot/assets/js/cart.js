@@ -82,12 +82,12 @@ $(document).ready(function () {
 
 $(function () {
 
-    //delete basket
     $(document).on("click", ".delete-product", function () {
 
         let id = $(this).parent().parent().attr("data-id");
         let prod = $(this).parent().parent();
         let tbody = $(".tbody").children();
+        console.log(tbody)
         let data = { id: id };
 
         $.ajax({
@@ -97,7 +97,7 @@ $(function () {
             success: function () {
                 if ($(tbody).length == 1) {
                     $(".product-table").addClass("d-none");
-                    
+                    //$(".footer-alert").removeClass("d-none")
                 }
                 $(prod).remove();
                 grandTotal();
@@ -105,6 +105,20 @@ $(function () {
         })
         return false;
     })
+
+
+
+
+    function grandTotal() {
+        let tbody = $(".tbody").children()
+        let sum = 0;
+        for (var prod of tbody) {
+            let price = parseFloat($(prod).children().eq(4).text())
+            sum += price
+        }
+        $(".grand-total").text(sum);
+
+    }
 
 
 

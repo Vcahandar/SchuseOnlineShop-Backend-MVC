@@ -57,7 +57,7 @@
 
 
 
-                                <tbody>
+                                <tbody class="tbody">
                                     @foreach (var item in Model)
                                     {
                                         <tr data-id="@item.Id">
@@ -111,7 +111,7 @@
                                     {
                                         grandTotal += item.Total;
                                     }
-                                    <span class="num">@grandTotal.ToString("0.00")</span>
+                                    <span class="grand-total">@grandTotal.ToString("0.00")</span>
                                 </div>
                                 <a href="./checkout.html">
                                     <button class="btn btn-warning">

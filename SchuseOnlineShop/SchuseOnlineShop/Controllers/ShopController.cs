@@ -263,7 +263,7 @@ namespace SchuseOnlineShop.Controllers
                 Email = model.ProductCommentVM.Email,
                 Subject = model.ProductCommentVM.Subject,
                 Message = model.ProductCommentVM.Message,
-                //AppUserId = userId,
+                AppUserId = userId,
                 ProductId = (int)id
             };
             await _crudService.CreateAsync(productComment);

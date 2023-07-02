@@ -64,7 +64,7 @@ namespace SchuseOnlineShop.Controllers
                 if (!res.Succeeded)
                 {
                     ModelState.AddModelError(string.Empty, "Email or password is wrong");
-                    RedirectToAction("Index", model);
+                    return View(model);
                 }
 
                 List<CartVM> cartVMs = new();
@@ -95,13 +95,6 @@ namespace SchuseOnlineShop.Controllers
                 return View();
             }
         }
-
-
-
-
-
-
-
 
 
         [HttpGet]
