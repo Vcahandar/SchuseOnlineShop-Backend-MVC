@@ -90,11 +90,11 @@
                                     <span class="count-bask">@Model.BasketCount</span>
                                     
                                 </div>
-                                <a class="wishlist-nav" href="~/wishlist.html">
+                                <a class="wishlist-nav" asp-controller="Wishlist" asp-action="Index">
                                     <i class="fa-regular fa-bookmark"></i>
                                 </a>
                                 <div class="basket-count">
-                                    <span>0</span>
+                                    <span class="count-whislist">@Model.WishlistCount</span>
                                 </div>
                             </div>
 
@@ -158,19 +158,19 @@
                 <div class="col-12">
                     <div class="mobil-down-navbar">
                         <div class="account-mob-icon">
-                            <a href="~/login.html"><i class="fa-regular fa-user"></i></a>
+                            <a asp-controller="Account" asp-action="Login"><i class="fa-regular fa-user"></i></a>
                         </div>
                         <div class="line"></div>
                         <div class="basket-mob-icon">
-                            <a href="~/cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-basket-shopping"></i></a>
                             <div class="basket-count">
-                                <span>0</span>
+                                <span class="count-bask">@Model.BasketCount</span>
                             </div>
-                            <a class="wishlist-nav" href="~/wishlist.html">
+                            <a class="wishlist-nav" asp-controller="Wishlist" asp-action="Index">
                                 <i class="fa-regular fa-bookmark"></i>
                             </a>
                             <div class="basket-count">
-                                <span>0</span>
+                                <span class="count-whislist">@Model.WishlistCount</span>
                             </div>
                         </div>
 
@@ -215,7 +215,7 @@
                 <div class="content-area-center">
                     <ul>
                         <li>
-                            <a href="~/home.html">Home</a>
+                            <a asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li>
                             <a asp-controller="Shop" asp-action="Index">Shoes</a>
@@ -227,12 +227,12 @@
                             <a href="">Women Shoes</a>
                         </li>
                         <li>
-                            <a href="~/contact.html">Contact</a>
+                            <a asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
                         <li>
-                            <a href="~/blog.html">Blog</a>
+                            <a asp-controller="Blog" asp-action="Index">Blog</a>
                         </li>
-                        <li><a href="~/about.html">About</a></li>
+                        <li><a asp-controller="About" asp-action="Index">About</a></li>
                     </ul>
 
                 </div>

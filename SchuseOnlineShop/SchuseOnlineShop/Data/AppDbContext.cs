@@ -36,6 +36,8 @@ namespace SchuseOnlineShop.Data
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<HomeCategory> HomeCategories { get; set; }
         public DbSet<Advert> Adverts { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<WishlistProduct> WishlistProducts { get; set; }
 
 
 

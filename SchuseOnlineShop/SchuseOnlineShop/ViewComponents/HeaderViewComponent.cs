@@ -8,11 +8,15 @@ namespace SchuseOnlineShop.ViewComponents
     {
         private readonly ILayoutService _layoutService;
         private readonly ICartService _cartService;
+        private readonly IWishlistService _wishlistService;
 
-        public HeaderViewComponent(ILayoutService layoutService, ICartService cartService)
+        public HeaderViewComponent(ILayoutService layoutService, 
+                                    ICartService cartService, 
+                                    IWishlistService wishlistService)
         {
             _layoutService = layoutService;
             _cartService = cartService;
+            _wishlistService = wishlistService;
         }
 
 
@@ -21,7 +25,8 @@ namespace SchuseOnlineShop.ViewComponents
             LayoutVM model = new()
             {
                 GetSettingDatas = _layoutService.GetSettings(),
-                BasketCount = _cartService.GetDatasFromCookie().Count
+                BasketCount = _cartService.GetDatasFromCookie().Count,
+                WishlistCount = _wishlistService.GetDatasFromCookie().Count
 
             };
             return await Task.FromResult(View(model));

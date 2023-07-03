@@ -197,6 +197,29 @@ $(document).ready(function () {
 //})
 
 
+
+//----------icon-whislist-start------------
+
+let bookIcons = document.querySelectorAll(" .card .product-hover .fa-bookmark")
+
+
+bookIcons.forEach(icons => {
+    icons.addEventListener("click", function () {
+        if (icons.classList.contains("fa-regular")) {
+            icons.classList.remove("fa-regular");
+            icons.classList.add("fa-solid");
+        } else {
+            icons.classList.remove("fa-solid");
+            icons.classList.add("fa-regular");
+        }
+
+
+    })
+
+
+});
+
+
 $(function () {
 
 
@@ -255,6 +278,28 @@ $(function () {
             let id = $(this).attr("data-id");
             let data = { id: id };
             let count = (".count-bask");
+            $.ajax({
+                type: "Post",
+                url: url,
+                data: data,
+                success: function (res) {
+                    $(count).text(res);
+                }
+            })
+            return false;
+        })
+    }
+
+
+
+    //add wishlist
+    AddToCart(".add-to-wishlist-btn", "/Shop/AddToWishlist");
+
+    function AddToCart(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            let id = $(this).attr("data-id");
+            let data = { id: id };
+            let count = (".count-whislist");
             $.ajax({
                 type: "Post",
                 url: url,

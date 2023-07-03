@@ -424,11 +424,16 @@ namespace SchuseOnlineShop.Migrations
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("WishlistId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CartId");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("WishlistId");
 
                     b.ToTable("CartProducts");
                 });
@@ -472,6 +477,9 @@ namespace SchuseOnlineShop.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
@@ -484,6 +492,8 @@ namespace SchuseOnlineShop.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("SubCategoryId");
 
@@ -1023,6 +1033,68 @@ namespace SchuseOnlineShop.Migrations
                     b.ToTable("Teams");
                 });
 
+            modelBuilder.Entity("SchuseOnlineShop.Models.Wishlist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Wishlists");
+                });
+
+            modelBuilder.Entity("SchuseOnlineShop.Models.WishlistProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("WishlistId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("WishlistId");
+
+                    b.ToTable("WishlistProducts");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -1104,6 +1176,10 @@ namespace SchuseOnlineShop.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("SchuseOnlineShop.Models.Wishlist", null)
+                        .WithMany("CartProducts")
+                        .HasForeignKey("WishlistId");
+
                     b.Navigation("Cart");
 
                     b.Navigation("Product");
@@ -1116,6 +1192,10 @@ namespace SchuseOnlineShop.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("SchuseOnlineShop.Models.Product", null)
+                        .WithMany("CategorySubCategories")
+                        .HasForeignKey("ProductId");
 
                     b.HasOne("SchuseOnlineShop.Models.SubCategory", "SubCategory")
                         .WithMany("CategorySubCategories")
@@ -1232,6 +1312,34 @@ namespace SchuseOnlineShop.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("SchuseOnlineShop.Models.Wishlist", b =>
+                {
+                    b.HasOne("SchuseOnlineShop.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("SchuseOnlineShop.Models.WishlistProduct", b =>
+                {
+                    b.HasOne("SchuseOnlineShop.Models.Product", "Product")
+                        .WithMany("WishlistProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SchuseOnlineShop.Models.Wishlist", "Wishlist")
+                        .WithMany()
+                        .HasForeignKey("WishlistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Wishlist");
+                });
+
             modelBuilder.Entity("SchuseOnlineShop.Models.Author", b =>
                 {
                     b.Navigation("Blogs");
@@ -1261,6 +1369,8 @@ namespace SchuseOnlineShop.Migrations
                 {
                     b.Navigation("CartProducts");
 
+                    b.Navigation("CategorySubCategories");
+
                     b.Navigation("ProductColors");
 
                     b.Navigation("ProductComments");
@@ -1270,6 +1380,8 @@ namespace SchuseOnlineShop.Migrations
                     b.Navigation("ProductSizes");
 
                     b.Navigation("ProductVideos");
+
+                    b.Navigation("WishlistProducts");
                 });
 
             modelBuilder.Entity("SchuseOnlineShop.Models.Size", b =>
@@ -1280,6 +1392,11 @@ namespace SchuseOnlineShop.Migrations
             modelBuilder.Entity("SchuseOnlineShop.Models.SubCategory", b =>
                 {
                     b.Navigation("CategorySubCategories");
+                });
+
+            modelBuilder.Entity("SchuseOnlineShop.Models.Wishlist", b =>
+                {
+                    b.Navigation("CartProducts");
                 });
 #pragma warning restore 612, 618
         }

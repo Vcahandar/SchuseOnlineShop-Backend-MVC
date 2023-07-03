@@ -6,6 +6,7 @@ using SchuseOnlineShop.Services.Interfaces;
 using SchuseOnlineShop.ViewModels.Cart;
 using SchuseOnlineShop.ViewModels.Product;
 using SchuseOnlineShop.ViewModels.Shop;
+using SchuseOnlineShop.ViewModels.Wishlist;
 
 namespace SchuseOnlineShop.Controllers
 {
@@ -21,6 +22,7 @@ namespace SchuseOnlineShop.Controllers
         private readonly ILayoutService _layoutService;
         private readonly ISubCategoryService _subCategoryService;
         private readonly ISizeService _sizeService;
+        private readonly IWishlistService _wishlistService;
 
         public ShopController(IProductService productService,
             ICartService cartService, 
@@ -30,7 +32,8 @@ namespace SchuseOnlineShop.Controllers
             IBrandService branService, 
             ICrudService<ProductComment> crudService,
             ILayoutService layoutService,
-            ISizeService sizeService)
+            ISizeService sizeService,
+            IWishlistService wishlistService)
         {
             _productService = productService;
             _cartService = cartService;
@@ -41,6 +44,7 @@ namespace SchuseOnlineShop.Controllers
             _layoutService = layoutService;
             _subCategoryService = subCategoryService;
             _sizeService = sizeService;
+            _wishlistService = wishlistService;
         }
 
         public async Task<IActionResult> Index(int page = 1, int take = 6, int? subcategoryId = null, int? colorId = null, int? brandId = null,int? sizeId = null)
@@ -319,6 +323,26 @@ namespace SchuseOnlineShop.Controllers
             _cartService.SetDatasToCookie(carts, dbProduct, existProduct);
 
             int cartCount = carts.Count;
+
+            return Ok(cartCount);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddToWishlist(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Product dbProduct = await _productService.GetByIdAsync((int)id);
+
+            if (dbProduct == null) return NotFound();
+
+            List<WishlistVM> wishlists = _wishlistService.GetDatasFromCookie();
+
+            WishlistVM existProduct = wishlists.FirstOrDefault(p => p.ProductId == id);
+
+            _wishlistService.SetDatasToCookie(wishlists, dbProduct, existProduct);
+
+            int cartCount = wishlists.Count;
 
             return Ok(cartCount);
         }

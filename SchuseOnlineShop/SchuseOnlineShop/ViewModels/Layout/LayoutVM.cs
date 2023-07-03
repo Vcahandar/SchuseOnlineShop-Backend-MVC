@@ -10,6 +10,7 @@ namespace SchuseOnlineShop.ViewModels.Layout
         public IEnumerable<ShopVM> ShopVMs { get; set; }
 
         public int BasketCount { get; set; }
+        public int WishlistCount { get; set; }
 
         public string Name { get; set; }
         public string Image { get; set; }

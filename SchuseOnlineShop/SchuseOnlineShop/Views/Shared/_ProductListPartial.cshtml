@@ -16,9 +16,22 @@
             </div>
 
             <div class="product-hover d-flex">
-                <button type="submit">
-                    <i class="fa-regular fa-bookmark"></i>
-                </button>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <button type="submit">
+                        <a class="add-to-wishlist-btn" data-id="@product.Id">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </a>
+                    </button>
+                }
+                else
+                {
+                    <button type="submit" data-id="@product.Id">
+                        <a asp-controller="Account" asp-action="Login">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </a>
+                    </button>
+                }
                 <button type="submit" class="d-lg-block d-none">
                     <i class="fa-regular fa-eye"></i>
                 </button>

@@ -52,6 +52,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<IAdvertService, AdvertService>();
+builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 builder.Services.Configure<EmailSetting>(builder.Configuration.GetSection("EmailSettings"));
 

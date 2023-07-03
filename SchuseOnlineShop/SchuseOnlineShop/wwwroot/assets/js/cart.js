@@ -107,6 +107,30 @@ $(function () {
     })
 
 
+    //change product count
+    $(document).on("click", ".plus", function () {
+        let id = $(this).parent().parent().parent().attr("data-id");
+        console.log(id)
+
+
+
+
+        //let nativePrice = parseFloat($(this).parent().parent().prev().children().eq(1).text());
+        //let total = $(this).parent().parent().next().children().eq(1);
+        //let count = $(this).prev().prev();
+
+        //$.ajax({
+        //    type: "Post",
+        //    url: `Cart/IncrementProductCount?id=${id}`,
+        //    success: function (res) {
+        //        res++;
+        //        subTotal(res, nativePrice, total, count)
+        //        grandTotal();
+        //    }
+        //})
+    })
+
+
 
 
     function grandTotal() {

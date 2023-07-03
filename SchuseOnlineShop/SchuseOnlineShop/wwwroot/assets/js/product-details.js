@@ -207,10 +207,35 @@ $(document).ready(function(){
 
   $(document).on("click", ".slider .slider__item", function () {
     let photo = $(this).children().eq(0).attr("src")
-    $("#product-details-wrapper .product-img video").attr("poster", photo)
-    $("#product-details-wrapper .product-img video").attr("src", photo)
+    $("#product-details-wrapper .product-img img").attr("src", photo)
+    $("#product-details-wrapper .product-img img").attr("src", photo)
   
   })
+})
+
+
+$(function () {
+
+    //add cart
+    AddToCart(".add-to-cart-btn", "/Shop/AddToCart");
+
+    function AddToCart(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            let id = $(this).attr("data-id");
+            let data = { id: id };
+            let count = (".count-bask");
+            $.ajax({
+                type: "Post",
+                url: url,
+                data: data,
+                success: function (res) {
+                    $(count).text(res);
+                }
+            })
+            return false;
+        })
+    }
+
 })
 
 

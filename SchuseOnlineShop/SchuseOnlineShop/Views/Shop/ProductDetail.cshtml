@@ -76,11 +76,14 @@
                                         <h3>@Model.ProductName</h3>
                                     </div>
                                     <div class="star-product">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star"></i>
-                                        <i class="bi bi-star"></i>
+                                        @for (int m = 0; m < Model.Rating; m++)
+                                        {
+                                            <i class="bi bi-star-fill"></i>
+                                        }
+                                        @for (int c = 0; c < 5 - Model.Rating; c++)
+                                        {
+                                            <i class="bi bi-star"></i>
+                                        }
                                     </div>
                                     <div class="pro-price">
                                         <span class="regular-price">$ @Model.DiscountPrice</span>
@@ -110,7 +113,6 @@
                                             @foreach (var item in Model.ProductSizes)
                                             {
                                                 <span class="size-number">@item.Size.Number</span>
-
                                             }
                                            
                                         </div>
@@ -121,10 +123,8 @@
                                             @foreach (var item in Model.ProductColors)
                                             {
                                                 <span style="background-color: @item.Color.Name;" class="product-color active"></span>
-
                                             }
                                           
-
                                         </div>
                                     </div>
 
@@ -137,11 +137,26 @@
                                             <span class="plus">+</span>
                                         </div>
                                     </div>
-                                    <div class="add-buttons">
-                                        <div class="click-btn right">
-                                            <button class="btn btn-warning">ADD TO CARD</button>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="add-buttons">
+                                            <div class="click-btn right">
+                                                <a class="add-to-cart-btn" data-id="@Model.Id">
+                                                    <button type="button" class="btn btn-warning">ADD TO CARD</button>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    }else
+                                    {
+                                        <div class="add-buttons">
+                                            <div class="click-btn right">
+                                                <a asp-controller="Account" asp-action="Login">
+                                                    <button type="button" class="btn btn-warning">ADD TO CARD</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                 
 
                                 </div>
                                 <div class="product-accordion">
