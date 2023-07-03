@@ -681,10 +681,7 @@ namespace SchuseOnlineShop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AppUserId1")
+                    b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedDate")
@@ -713,7 +710,7 @@ namespace SchuseOnlineShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId1");
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("ProductId");
 
@@ -1181,7 +1178,7 @@ namespace SchuseOnlineShop.Migrations
                 {
                     b.HasOne("SchuseOnlineShop.Models.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId1");
+                        .HasForeignKey("AppUserId");
 
                     b.HasOne("SchuseOnlineShop.Models.Product", "Product")
                         .WithMany("ProductComments")

@@ -1,10 +1,12 @@
 ﻿@model Paginate<ProductListVM>
 @{
     ViewData["Title"] = "Index";
+    int count = (Model.CurrentPage - 1) * 5;
 }
 @section Css{
     <link rel="stylesheet" href="~/admin/assets/css/index.css">
 }
+
 <section class="pcoded-main-container">
     <div class="pcoded-content">
         <div class="row">
@@ -22,8 +24,9 @@
                             {
                                 <table class="table table-hover">
                                     <thead>
+
                                         <tr>
-                                            <th>#</th>
+                                            <th>№</th>
                                             <th>Main Image</th>
                                             <th>Name</th>
                                             <th>Price</th>
@@ -33,8 +36,9 @@
                                     <tbody>
                                         @foreach (var product in Model.Datas)
                                         {
+                                            count++;
                                             <tr data-id="@product.Id">
-                                                <td>@product.SKU</td>
+                                                <td>@count</td>
                                                 <td>
                                                     <div class="image"><img class="img-fluid" src="~/assets/img/shoes/product-img/@product.Images.Where(i=>i.IsMain).FirstOrDefault()?.ImgName" /></div>
                                                 </td>

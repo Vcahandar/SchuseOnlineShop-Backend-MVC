@@ -40,7 +40,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
             _crudService = crudService;
         }
 
-        public async Task<IActionResult> Index(int page = 1,int take = 5)
+        public async Task<IActionResult> Index(  int page = 1, int take = 5)
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null);
             List<ProductListVM> mappedDatas = GetDatas(datas);
@@ -412,6 +412,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
 
 
+
         [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -473,7 +474,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 return View();
             }
         }
-
 
 
 

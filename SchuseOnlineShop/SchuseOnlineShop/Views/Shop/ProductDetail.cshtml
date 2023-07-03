@@ -20,11 +20,11 @@
     <section id="top-column-content">
         <div class="column-content">
             <div class="title">
-                <h2>Products</h2>
+                <h2>Product</h2>
             </div>
             <div class="choose">
                 <a asp-controller="Home" asp-action="Index">Home |</a>
-                <span>Product Name</span>
+                <span>@Model.ProductName</span>
             </div>
         </div>
     </section>
@@ -37,14 +37,11 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="product-img">
-
-
-                                  @* <img src="~/assets/img/shoes/product-img/@Model.Product.ProductImages.FirstOrDefault().IsMain
-                                         alt="Product Image" />*@
+                                   <img src="~/assets/img/shoes/product-img/@Model.ProductImages.FirstOrDefault(m => m.IsMain)?.ImgName"
+                                         alt="Product Image" />
                                     
-                                    
-                                 <video playsinline="" loop="" muted="" autoplay="" class="product-grid__video" poster="https://cdn.media.amplience.net/v/office/4142867799_vd1" src="https://cdn.media.amplience.net/v/office/4142867799_vd1/mp4_720p" type="video/mp4">
-                                    </video>
+                               @*  <video playsinline="" loop="" muted="" autoplay="" class="product-grid__video" poster="https://cdn.media.amplience.net/v/office/4142867799_vd1" src="https://cdn.media.amplience.net/v/office/4142867799_vd1/mp4_720p" type="video/mp4">
+                                    </video>*@
 
                                 </div>
                                 <div class="small-carousel">

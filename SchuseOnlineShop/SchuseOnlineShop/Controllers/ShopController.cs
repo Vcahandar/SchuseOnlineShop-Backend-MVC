@@ -336,8 +336,6 @@ namespace SchuseOnlineShop.Controllers
 
 
 
-
-
         [HttpGet]
         public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 5)
         {
@@ -352,6 +350,10 @@ namespace SchuseOnlineShop.Controllers
 
             return PartialView("_ProductListPartial", model);
         }
+
+
+
+
 
     }
 }

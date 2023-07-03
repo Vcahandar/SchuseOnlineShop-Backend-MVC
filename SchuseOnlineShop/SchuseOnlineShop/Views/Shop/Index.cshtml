@@ -88,7 +88,7 @@
                                         @foreach (var brand in Model.Brands)
                                     {
                                             <li>
-                                            <input type="checkbox" class="cbox" name="@brand.Name" id="@brand.Id" value="@brand.Name">
+                                            <input type="checkbox" class="cbox" name="@brand.Name" id="@brand.Id"  value="@brand.Id">
                                             <label class="cbox-label" for="@brand.Id">@brand.Name (@brand.Products?.Count())</label>
                                             </li>
                                     }

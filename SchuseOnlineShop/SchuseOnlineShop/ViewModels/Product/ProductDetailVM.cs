@@ -26,7 +26,7 @@ namespace SchuseOnlineShop.ViewModels.Product
 
 
         public ICollection<ProductColor> ProductColors { get; set; }
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public ICollection<ProductImage>? ProductImages { get; set; }
         public ICollection<ProductVideo> ProductVideos { get; set; }
         public ICollection<ProductSize> ProductSizes { get; set; }
         public Dictionary<string, string> SectionBgs { get; set; }

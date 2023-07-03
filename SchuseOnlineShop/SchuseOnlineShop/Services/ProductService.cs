@@ -199,7 +199,6 @@ namespace SchuseOnlineShop.Services
             else
             {
                 products = await _context.Products
-                    
                     .Include(m => m.SubCategory)
                     .Include(m => m.Category)
                     .Include(m => m.ProductImages)

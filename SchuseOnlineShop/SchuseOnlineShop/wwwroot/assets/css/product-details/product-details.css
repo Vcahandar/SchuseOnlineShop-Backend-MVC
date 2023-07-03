@@ -397,7 +397,6 @@ main #product-details-wrapper .product-details-inner .small-carousel .slider {
 }
 main #product-details-wrapper .product-details-inner .small-carousel .slider__container {
   gap: 10px;
-  height: 168px;
   cursor: grab;
   display: flex;
   overflow: hidden;
@@ -413,12 +412,11 @@ main #product-details-wrapper .product-details-inner .small-carousel .slider__co
 main #product-details-wrapper .product-details-inner .small-carousel .slider__item {
   padding: 4px;
   border: 1px solid rgba(128, 128, 128, 0.3490196078);
-  height: 157px;
   margin-top: 7px;
   margin-left: 3px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   flex: 0 0 auto;
-  width: 39%;
+  width: 36%;
 }
 main #product-details-wrapper .product-details-inner .small-carousel .slider__item img {
   cursor: pointer;

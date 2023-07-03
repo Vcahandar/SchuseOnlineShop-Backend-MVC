@@ -18,7 +18,7 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<Product> GetProductByVideoId(int? id);
         void RemoveVideo(ProductVideo video);
         Task<int> GetCountAsync();
-        Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? colorId, int? brandId, int? sizeId);
+        Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? subCategoryId, int? colorId, int? brandId, int? sizeId);
 
         Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page, int take);
         Task<List<ProductVM>> GetProductsByColorIdAsync(int? id);

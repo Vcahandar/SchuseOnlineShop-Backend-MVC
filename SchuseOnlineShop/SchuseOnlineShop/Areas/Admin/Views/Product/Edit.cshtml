@@ -1,10 +1,13 @@
 ﻿@model ProductUpdateVM
+
+
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 @section Css{
     <link rel="stylesheet" href="~/admin/assets/css/index.css">
 }
+
 <section class="pcoded-main-container">
     <div class="pcoded-content">
         <div class="row">
@@ -17,21 +20,11 @@
                             <img class="img-fluid" src="~/assets/img/shoes/product-img/@item.ImgName" />
                             <div class=" d-flex align-items-center justify-content-center" data-id="@item.Id">
                                 <a class="delete-image"><i class="fa-solid fa-trash" style="color: #c60101; cursor:pointer;"></i></a>
-                                <div class="statuses" style=" margin-left:10px;">
-                                    @if (item.IsMain)
-                                    {
-                                        <div class="active-status image-status"></div>
-                                    }
-                                    else
-                                    {
-                                        <div class="de-active image-status"></div>
-                                    }
-                                </div>
                             </div>
                         </div>
                     }
                 </div>
-                <form method="post" enctype="multipart/form-data" asp-action="Edit" >
+                <form method="post" enctype="multipart/form-data" asp-action="Edit">
                     <span class="text-danger">@ViewBag.error</span>
                     <div class="form-group">
                         <label>Images</label>
