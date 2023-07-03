@@ -1,7 +1,7 @@
 ﻿@model Paginate<ProductListVM>
 @{
     ViewData["Title"] = "Index";
-    int count = (Model.CurrentPage - 1) * 5;
+    int count = (Model.CurrentPage - 1) * ViewBag.page;
 }
 @section Css{
     <link rel="stylesheet" href="~/admin/assets/css/index.css">

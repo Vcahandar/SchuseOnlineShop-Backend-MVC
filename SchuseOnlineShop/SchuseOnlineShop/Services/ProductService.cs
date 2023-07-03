@@ -62,8 +62,8 @@ namespace SchuseOnlineShop.Services
         public async Task<Product> GetFullDataByIdAsync(int? id)
         {
             return await _context.Products
-              .Include(m => m.ProductVideos)
               .Include(m => m.ProductImages)
+              .Include(m => m.ProductVideos)
               .Include(m => m.ProductComments)
               .Include(m => m.Category)
               .Include(m => m.SubCategory)

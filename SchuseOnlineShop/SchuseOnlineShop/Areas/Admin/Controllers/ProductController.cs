@@ -44,7 +44,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null);
             List<ProductListVM> mappedDatas = GetDatas(datas);
-
+            ViewBag.page = take;
             int pageCount = await GetPageCountAsync(take);
 
             Paginate<ProductListVM> paginatedDatas = new(mappedDatas, page, pageCount);
@@ -290,7 +290,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, int page, ProductUpdateVM model)
+        public async Task<IActionResult> Edit(int? id, ProductUpdateVM model)
         {
             try
             {
@@ -311,17 +311,10 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 }
 
 
-                int canUploadImg = 6 - dbProduct.ProductImages.Count;
                 if (model.Photos is not null)
                 {
                     List<ProductImage> productImages = new();
 
-                    if (model.Photos.Count > canUploadImg)
-                    {
-                        ModelState.AddModelError("Photos", $"The maximum number of images you can upload is {canUploadImg}");
-                        model.ProductImages = dbProduct.ProductImages;
-                        return View(model);
-                    }
 
                     foreach (var photo in model.Photos)
                     {
@@ -401,7 +394,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
                 await _crudService.SaveAsync();
 
-                return RedirectToAction(nameof(Index), new { page });
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
