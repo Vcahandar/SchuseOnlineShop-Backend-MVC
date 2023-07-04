@@ -33,8 +33,7 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
         [Required(ErrorMessage = "Don`t be empty")]
         public List<int> ColorIds { get; set; } = new();
 
-        [Required(ErrorMessage = "Don`t be empty")]
-        public int CategoryId { get; set; }
+     
         [Required(ErrorMessage = "Don`t be empty")]
         public int SubCategoryId { get; set; }
 

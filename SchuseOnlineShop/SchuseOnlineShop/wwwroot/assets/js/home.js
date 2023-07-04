@@ -291,6 +291,10 @@ $(function () {
     }
 
 
+})
+
+$(function () {
+
     //add wishlist
     AddToCart(".add-to-wishlist-btn", "/Shop/AddToWishlist");
 
@@ -310,9 +314,6 @@ $(function () {
             return false;
         })
     }
-
-
-
 
 })
 

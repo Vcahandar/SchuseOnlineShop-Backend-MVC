@@ -11,6 +11,7 @@ namespace SchuseOnlineShop.Services.Interfaces
         Setting GetById(int? id);
         Task<IEnumerable<SectionHeader>> GetSectionsDatasAsync();
         Task<SectionHeader> GetSectionAsync(int? id);
+        Task<IEnumerable<Category>> GetCategorysByName();
 
     }
 }

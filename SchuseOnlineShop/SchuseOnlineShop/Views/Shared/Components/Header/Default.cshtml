@@ -1,6 +1,6 @@
 ﻿
-@model LayoutVM
 @inject UserManager<AppUser> userManager;
+@inject ILayoutService layout;
 
 
 
@@ -143,7 +143,11 @@
             <ul>
                 <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                 <li><a asp-controller="Shop" asp-action="Index">Shoes</a></li>
-                <li><a asp-controller="Shop" asp-action="Index">Man Shoes</a></li>
+                @foreach (var item in layout.GetCategorysByName().Result)
+                {
+                    <li><a asp-controller="Shop" asp-action="Index" asp-route-categoryId="@item.Id">@item.Name</a></li>
+                }   
+                
                 <li><a href="">Women Shoes</a></li>
                 <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
                 <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>

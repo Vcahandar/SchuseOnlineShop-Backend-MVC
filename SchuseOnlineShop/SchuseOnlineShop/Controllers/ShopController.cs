@@ -47,37 +47,43 @@ namespace SchuseOnlineShop.Controllers
             _wishlistService = wishlistService;
         }
 
-        public async Task<IActionResult> Index(int page = 1, int take = 6, int? subcategoryId = null, int? colorId = null, int? brandId = null,int? sizeId = null)
+        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? subcategoryId = null, int? colorId = null, int? brandId = null,int? sizeId = null)
         {
-            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, subcategoryId, colorId, brandId,sizeId);
+            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId, subcategoryId, colorId, brandId,sizeId);
             List<ProductVM> mappedDatas = GetDatas(datas);
             int pageCount = 0;
             ViewBag.subCatId = subcategoryId;
             ViewBag.branId = brandId;
             ViewBag.sizeId = sizeId;
 
+
+
+            if (categoryId != null)
+            {
+                pageCount = await GetPageCountAsync(take, categoryId, null, null, null, null);
+            }
             if (subcategoryId != null)
             {
-                pageCount = await GetPageCountAsync(take, subcategoryId, null, null,null);
+                pageCount = await GetPageCountAsync(take, null, subcategoryId, null, null,null);
             }
             if (colorId != null)
             {
-                pageCount = await GetPageCountAsync(take, null, colorId, null,null);
+                pageCount = await GetPageCountAsync(take, null, null, colorId, null,null);
             }
 
             if (brandId != null)
             {
-                pageCount = await GetPageCountAsync(take, null, null, brandId,null);
+                pageCount = await GetPageCountAsync(take, null, null, null, brandId,null);
             }
 
             if (sizeId != null)
             {
-                pageCount = await GetPageCountAsync(take, null, null, null, sizeId);
+                pageCount = await GetPageCountAsync(take, null,null, null, null, sizeId);
             }
 
-            if (subcategoryId == null && brandId == null && colorId == null)
+            if (categoryId == null && subcategoryId == null && brandId == null && colorId == null)
             {
-                pageCount = await GetPageCountAsync(take, null, null, null, null);
+                pageCount = await GetPageCountAsync(take, null,null, null, null, null);
             }
 
             Paginate<ProductVM> paginatedDatas = new(mappedDatas, page, pageCount);
@@ -86,6 +92,7 @@ namespace SchuseOnlineShop.Controllers
             {
                 Products = await _productService.GetFullDataAsync(),
                 SubCategories = await _subCategoryService.GetAllAsync(),
+                Categories = await _categoryService.GetAllAsync(),
                 Brands = await _branService.GetAllAsync(),
                 Colors = await _colorService.GetAllAsync(),
                 Sizes = await _sizeService.GetAllAsync(),
@@ -94,9 +101,13 @@ namespace SchuseOnlineShop.Controllers
             return View(model);
         }
 
-        private async Task<int> GetPageCountAsync(int take, int? subCatId, int? colorId, int? branId,int? sizeId)
+        private async Task<int> GetPageCountAsync(int take, int? catId, int? subCatId, int? colorId, int? branId, int? sizeId)
         {
             int prodCount = 0;
+            if (catId is not null)
+            {
+                prodCount = await _productService.GetProductsCountByCategoryAsync(catId);
+            }
             if (subCatId is not null)
             {
                 prodCount = await _productService.GetProductsCountBySubCategoryAsync(subCatId);
@@ -116,7 +127,7 @@ namespace SchuseOnlineShop.Controllers
                 prodCount = await _productService.GetProductsCountBySizeAsync(sizeId);
 
             }
-            if (subCatId == null && branId == null && colorId == null && sizeId == null)
+            if (catId == null && subCatId == null && branId == null && colorId == null && sizeId == null)
             {
                 prodCount = await _productService.GetCountAsync();
             }
@@ -152,7 +163,7 @@ namespace SchuseOnlineShop.Controllers
 
             var products = await _productService.GetProductsBySubCategoryIdAsync(id, page, take);
 
-            int pageCount = await GetPageCountAsync(take, (int)id, null, null,null);
+            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -166,7 +177,7 @@ namespace SchuseOnlineShop.Controllers
             if (id is null) return BadRequest();
             ViewBag.brandId = id;
             var products = await _productService.GetProductsByColorIdAsync(id);
-            int pageCount = await GetPageCountAsync(take, null, null, (int)id, null);
+            int pageCount = await GetPageCountAsync(take, null, null, null, (int)id, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -181,7 +192,7 @@ namespace SchuseOnlineShop.Controllers
 
             var products = await _productService.GetProductsByColorIdAsync(id);
 
-            int pageCount = await GetPageCountAsync(take, null, (int)id, null, null);
+            int pageCount = await GetPageCountAsync(take, null, null, (int)id, null, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -196,7 +207,7 @@ namespace SchuseOnlineShop.Controllers
 
             var products = await _productService.GetProductsBySizeIdAsync(id);
 
-            int pageCount = await GetPageCountAsync(take, null, null, null, (int)id);
+            int pageCount = await GetPageCountAsync(take, null,null, null, null, (int)id);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -212,6 +223,8 @@ namespace SchuseOnlineShop.Controllers
             return PartialView("_ProductListPartial", products);
         }
 
+
+ 
 
 
 
@@ -361,14 +374,14 @@ namespace SchuseOnlineShop.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 5)
+        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 6)
         {
             if (id is null) return BadRequest();
             ViewBag.catId = id;
 
             var products = await _productService.GetProductsByCategoryIdAsync(id, page, take);
 
-            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null);
+            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 

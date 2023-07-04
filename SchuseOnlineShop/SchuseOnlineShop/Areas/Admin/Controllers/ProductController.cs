@@ -42,7 +42,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(  int page = 1, int take = 5)
         {
-            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null);
+            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null, null);
             List<ProductListVM> mappedDatas = GetDatas(datas);
             ViewBag.page = take;
             int pageCount = await GetPageCountAsync(take);
@@ -84,7 +84,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
             ViewBag.colors = await GetColorsAsync();
             ViewBag.brands = await GetBrandsAsync();
             ViewBag.sizes = await GetSizesAsync();
-            ViewBag.categories = await GetCategoriesAsync();
             ViewBag.subcategories = await GetSubCategoriesAsync();
             return View();
         }
@@ -98,7 +97,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 ViewBag.colors = await GetColorsAsync();
                 ViewBag.brands = await GetBrandsAsync();
                 ViewBag.sizes = await GetSizesAsync();
-                ViewBag.categories = await GetCategoriesAsync();
                 ViewBag.subcategories = await GetSubCategoriesAsync();
 
                 if (!ModelState.IsValid) return View(model);
@@ -107,7 +105,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 List<ProductImage> productImages = new();
                 List<ProductColor> productColors = new();
                 List<ProductSize> productSizes = new();
-                Category newCategory = new();
                 SubCategory newSubCategory = new();
 
                 //List<Category> categories = new();
@@ -225,7 +222,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 newProduct.StockCount = model.StockCount;
                 newProduct.SKU = model.Name.Substring(0, 3) + "-" + random.Next();
                 newProduct.BrandId = model.BrandId;
-                newProduct.CategoryId = model.CategoryId;
                 newProduct.SubCategoryId = model.SubCategoryId;
                 newProduct.Rating = model.Rating;
 

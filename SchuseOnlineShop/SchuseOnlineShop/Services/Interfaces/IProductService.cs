@@ -14,11 +14,12 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<ProductImage> GetImageById(int? id);
         Task<Product> GetProductByImageId(int? id);
         void RemoveImage(ProductImage image);
+
         Task<ProductVideo> GetVideoById(int? id);
         Task<Product> GetProductByVideoId(int? id);
         void RemoveVideo(ProductVideo video);
         Task<int> GetCountAsync();
-        Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? subCategoryId, int? colorId, int? brandId, int? sizeId);
+        Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? subCategoryId, int? colorId, int? brandId, int? sizeId);
 
         Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page, int take);
         Task<List<ProductVM>> GetProductsByColorIdAsync(int? id);
@@ -28,8 +29,10 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<int> GetProductsCountByColorAsync(int? colorId);
         Task<int> GetProductsCountBySizeAsync(int? sizeId);
 
-        Task<int> GetProductsCountBySubCategoryAsync(int? catId);
+        Task<int> GetProductsCountBySubCategoryAsync(int? subCatId);
+        Task<int> GetProductsCountByCategoryAsync(int? catId);
         Task<int> GetProductsCountByBrandAsync(int? brandId);
+
 
         Task<List<Product>> GetAllBySearchText(string searchText);
         Task<List<ProductComment>> GetComments();
@@ -39,6 +42,8 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<IQueryable<Product>> FilterByName(string? name);
 
         Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page, int take);
+
+
 
 
 

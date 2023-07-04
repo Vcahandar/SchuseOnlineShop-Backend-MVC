@@ -220,28 +220,54 @@ bookIcons.forEach(icons => {
 });
 
 
+
+
+
 $(function () {
 
+    //GetProducts(".all", "/Shop/GetProducts")
 
-    GetProducts(".all", "/Shop/GetProducts")
+    //function GetProducts(clickedElem, url) {
+    //    $(document).on("click", clickedElem, function (e) {
+    //        console.log("test")
+    //        e.preventDefault();
+    //        let parent = $(".pro-list")
+    //        console.log(parent)
+    //        $.ajax({
+    //            url: url,
+    //            type: "Get",
+    //            success: function (res) {
+    //                $(parent).html(res);
+    //            }
+    //        })
+    //    })
 
-    function GetProducts(clickedElem, url) {
-        $(document).on("click", clickedElem, function (e) {
+    //}
 
-            e.preventDefault();
-            let parent = $(".pro-list")
-            console.log(parent)
-            $.ajax({
-                url: url,
-                type: "Get",
-                success: function (res) {
-                    $(parent).html(res);
-                }
-            })
-        })
+    //$(document).on("click", ".all", function (e) {
+    //    e.preventDefault();
+    //    let parent = $(".pro-list")
 
-    }
+    //    $.ajax({
 
+    //        url: "shop/GetAllProduct",
+    //        type: "Get",
+
+    //        success: function (res) {
+
+    //            $(parent).html(res)
+    //        }
+    //    })
+
+
+
+    //})
+
+
+})
+
+
+$(function () {
 
 
     function GetProductsById(clickedElem, url) {
@@ -292,7 +318,14 @@ $(function () {
 
 
 
-    //add wishlist
+
+
+})
+
+$(function () {
+
+
+        //add wishlist
     AddToCart(".add-to-wishlist-btn", "/Shop/AddToWishlist");
 
     function AddToCart(clickedElem, url) {
@@ -311,6 +344,8 @@ $(function () {
             return false;
         })
     }
+
+
 
 })
 

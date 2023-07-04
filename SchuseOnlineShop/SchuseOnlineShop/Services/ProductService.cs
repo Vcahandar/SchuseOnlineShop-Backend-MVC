@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿    using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Data;
 using SchuseOnlineShop.Models;
@@ -77,8 +77,6 @@ namespace SchuseOnlineShop.Services
 
 
 
-
-
         public async Task<ProductImage> GetImageById(int? id)
         {
             return await _context.ProductImages.FindAsync((int)id);
@@ -129,9 +127,37 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? subCategoryId, int? colorId, int? brandId, int? sizeId)
+        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? subCategoryId, int? colorId, int? brandId, int? sizeId)
         {
-            var products = new List<Product>(); 
+            List<Product> products = new List<Product>();
+
+            if(categoryId == null || subCategoryId == null || colorId == null || brandId == null || sizeId == null )
+            {
+                products = await _context.Products
+                    .Include(m => m.SubCategory)
+                    .Include(m => m.Category)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.ProductColors)
+                    .ThenInclude(m => m.Color)
+                    .Include(m => m.ProductSizes)
+                    .ThenInclude(m => m.Size)
+                    .Include(m => m.Brand)
+                    .Skip((page * take) - take)
+                    .Take(take)
+                    .ToListAsync();
+            }
+
+            if (categoryId != null)
+            {
+                products = await _context.Products
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.Category)
+                    .Where(m => m.Category.Id == categoryId)
+                    .Skip((page * take) - take)
+                    .Take(take)
+                    .ToListAsync();
+            }
+
 
             if (subCategoryId != null)
             {
@@ -144,7 +170,7 @@ namespace SchuseOnlineShop.Services
                 products = await _context.Products
                     .Include(m => m.ProductImages)
                     .Include(m => m.SubCategory)
-                    .Where(m => m.SubCategory.Id == subCategoryId && m.Category.Id == subCategoryId)
+                    .Where(m => m.SubCategory.Id == subCategoryId)
                     .Skip((page * take) - take)
                     .Take(take)
                     .ToListAsync();
@@ -196,28 +222,14 @@ namespace SchuseOnlineShop.Services
                     .Take(take)
                     .ToListAsync();
             }
-            else
-            {
-                products = await _context.Products
-                    .Include(m => m.SubCategory)
-                    .Include(m => m.Category)
-                    .Include(m => m.ProductImages)
-                    .Include(m => m.ProductColors)
-                    .ThenInclude(m => m.Color)
-                    .Include(m => m.ProductSizes)
-                    .ThenInclude(m => m.Size)
-                    .Include(m => m.Brand)
-                    .Skip((page * take) - take)
-                    .Take(take)
-                    .ToListAsync();
-            }
+
 
             return products;
 
         }
 
 
-        public async Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page = 1, int take = 5)
+        public async Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page = 1, int take = 6)
         {
             List<ProductVM> model = new();
             var products = await _context.Products
@@ -420,10 +432,10 @@ namespace SchuseOnlineShop.Services
 
 
 
-        public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 5)
+        public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 6)
         {
             List<ProductVM> model = new();
-            var products = await _context.Products
+            List<Product> products = await _context.Products
                 .Include(m => m.ProductImages)
                 .Include(m => m.Category)
                 .Where(m => m.Category.Id == id)
@@ -444,6 +456,15 @@ namespace SchuseOnlineShop.Services
                 });
             }
             return model;
+        }
+
+        public async Task<int> GetProductsCountByCategoryAsync(int? id)
+        {
+                    return await _context.Products
+                          .Include(p => p.Category)
+                          .Include(p => p.ProductImages)
+                          .Where(pc => pc.Category.Id == id)
+                          .CountAsync();
         }
     }
 }

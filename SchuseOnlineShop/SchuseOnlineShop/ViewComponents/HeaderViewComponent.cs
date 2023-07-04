@@ -26,8 +26,8 @@ namespace SchuseOnlineShop.ViewComponents
             {
                 GetSettingDatas = _layoutService.GetSettings(),
                 BasketCount = _cartService.GetDatasFromCookie().Count,
-                WishlistCount = _wishlistService.GetDatasFromCookie().Count
-
+                WishlistCount = _wishlistService.GetDatasFromCookie().Count,
+                Categories = await _layoutService.GetCategorysByName()
             };
             return await Task.FromResult(View(model));
         }

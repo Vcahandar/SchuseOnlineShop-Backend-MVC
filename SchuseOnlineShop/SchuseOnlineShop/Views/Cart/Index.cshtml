@@ -6,7 +6,6 @@
     decimal grandTotal = 0;
 }
 @section Links{
-
     <link rel="stylesheet" href="~/assets/css/cart/cart.css">
     <title>Cart</title>
 }
@@ -32,11 +31,11 @@
                     <div class="empty">
                         <h2>Your cart is empty</h2>
                     </div>
-                @*    <div class="continue">
+                    <div class="continue">
                         <a asp-controller="Shop" asp-action="Index">
                             <button type="submit" class="btn btn-warning">Continue shopping</button>
                         </a>
-                    </div>*@
+                    </div>
 
                 </div>
                 <form>
@@ -102,7 +101,7 @@
 
                         <div class="total-continue">
                             <div class="backShop">
-                                <a asp-controller="Shop" asp-action="Index"><button class="btn btn-warning">Continue shopping</button></a>
+                                <a asp-controller="Shop" asp-action="Index"><button type="button" class="btn btn-warning">Continue shopping</button></a>
                             </div>
                             <div class="total d-flex">
                                 <div class="total-price">
@@ -141,52 +140,64 @@
                         </thead>
 
 
-                        <tbody>
-                            <tr class="cart-item" data-id="2">
-                                <td class="cart-item__media">
-                                    <div class="prdct-img">
-                                        <img src="./assets/img/home/product9-1.webp" alt="">
-                                    </div>
-                                </td>
-                                <td class="cart-item__details">
-                                    <a class="cart-item__name break" href="">Style Black Sneakers</a>
-                                    <div class="product-option">
-                                        <span>Size:</span>
-                                        <span>42</span>
-                                    </div>
-                                    <div class="product-option">
-                                        <span>Color:</span>
-                                        <span>White</span>
-                                    </div>
-                                </td>
-                                <td class="cart-item__prices right">
-                                    <div class="cart-item__price-wrapper">
-                                        <span class="price price--end">235.00 $</span>
-                                    </div>
-                                </td>
-                                <td class="cart-item__quantity">
-                                    <label class="medium-down" for="Quantity-1">
-                                        Quantity
-                                    </label>
-                                    <div class="number">
-                                        <span class="minus">-</span>
-                                        <input type="text" value="1" disabled="">
-                                        <span class="plus">+</span>
-                                    </div>
-                                </td>
-                                <td class="delete-icon"><a href=""><i class="fa-solid fa-trash delete"></i></a></td>
-                            </tr>
+                        <tbody class="tbody">
+                            @foreach (var item in Model)
+                            {
+                                <tr class="cart-item" data-id="2">
+                                    <td class="cart-item__media">
+                                        <div class="prdct-img">
+                                            <img src="~/assets/img/shoes/product-img/@item.Image" alt="">
+                                        </div>
+                                    </td>
+                                    <td class="cart-item__details">
+                                        <a class="cart-item__name break" href="">@item.Name</a>
+                                        <div class="product-option">
+                                            <span>Size:</span>
+                                            <span>42</span>
+                                        </div>
+                                        <div class="product-option">
+                                            <span>Color:</span>
+                                            <span></span>
+                                        </div>
+                                    </td>
+                                    <td class="cart-item__prices right">
+                                        <div class="cart-item__price-wrapper">
+                                            <span class="price price--end">@item.Price.ToString("0.00") $</span>
+                                        </div>
+                                    </td>
+                                    <td class="cart-item__quantity">
+                                        <label class="medium-down" for="Quantity-1">
+                                            Quantity
+                                        </label>
+                                        <div class="number">
+                                            <span class="minus">-</span>
+                                            <input type="text" value="1" disabled="">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </td>
+                                    <td class="delete-icon">
+                                        <a class="delete-product">
+                                            <i class="fa-solid fa-trash delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                      
                         </tbody>
                     </table>
 
                     <div class="total-continue">
                         <div class="backShop">
-                            <a href="./home.html"><button class="btn btn-warning">Continue shopping</button></a>
+                            <a asp-controller="Shop" asp-action="Index"><button type="button" class="btn btn-warning">Continue shopping</button></a>
                         </div>
                         <div class="total d-flex">
                             <div class="total-price">
                                 <span class="title">Subtotal: $</span>
-                                <span class="num">0</span>
+                                      @foreach (var item in Model)
+                                    {
+                                        grandTotal += item.Total;
+                                    }
+                                <span>0</span>
                             </div>
 
                         </div>

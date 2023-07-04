@@ -43,10 +43,10 @@ namespace SchuseOnlineShop.Controllers
             if (id is null) return BadRequest();
 
             _wishlistService.DeleteData((int)id);
-            List<WishlistVM> baskets = _wishlistService.GetDatasFromCookie();
+            List<WishlistVM> wishlists = _wishlistService.GetDatasFromCookie();
 
 
-            return Ok(baskets.Count);
+            return Ok(wishlists.Count);
 
         }
     }

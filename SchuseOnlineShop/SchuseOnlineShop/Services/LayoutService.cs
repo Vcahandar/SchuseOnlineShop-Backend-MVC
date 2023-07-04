@@ -19,6 +19,11 @@ namespace SchuseOnlineShop.Services
             return _context.Settings.Where(m => m.Id == id).FirstOrDefault();
         }
 
+        public async Task<IEnumerable<Category>> GetCategorysByName()
+        {
+            return await _context.Categories.ToListAsync();
+        }
+
         public async Task<SectionHeader> GetSectionAsync(int? id)
         {
             return await _context.SectionHeaders.FirstOrDefaultAsync(m => m.Id == id);

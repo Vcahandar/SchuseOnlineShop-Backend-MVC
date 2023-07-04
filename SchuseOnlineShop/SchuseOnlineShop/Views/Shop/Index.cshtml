@@ -39,8 +39,8 @@
                                 </div>
                                 <div class="sidebar-body">
                                     <ul class="categorie-list">
-                                    <li><a class="all" style="cursor:pointer;">All</a></li>
-                                        @foreach (var item in Model.SubCategories)
+                                    <li><a asp-controller="Shop" asp-action="Index" class="all" style="cursor:pointer;">All</a></li>
+                                    @foreach (var item in Model.SubCategories)
                                     {
                                         <li>
                                             <a style="cursor:pointer" class="sub-category" data-id="@item.Id">@item.Name</a>
@@ -105,7 +105,7 @@
                                 <div class="sidebar-body">
                                     <ul>
                                         <li>
-                                            <a href="">All
+                                            <a href="#">All
                                             @foreach (var color in Model.Colors)
                                             {
                                                 sumOfProductsCountByColor += color.ProductColors?.Count();

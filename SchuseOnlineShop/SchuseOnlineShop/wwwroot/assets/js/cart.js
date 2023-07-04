@@ -96,7 +96,7 @@ $(function () {
             data: data,
             success: function () {
                 if ($(tbody).length == 1) {
-                    $(".product-table").addClass("d-none");
+                    $(".empty-continue").removeClass("d-none");
                     //$(".footer-alert").removeClass("d-none")
                 }
                 $(prod).remove();
@@ -107,32 +107,6 @@ $(function () {
     })
 
 
-    //change product count
-    $(document).on("click", ".plus", function () {
-        let id = $(this).parent().parent().parent().attr("data-id");
-        console.log(id)
-
-
-
-
-        //let nativePrice = parseFloat($(this).parent().parent().prev().children().eq(1).text());
-        //let total = $(this).parent().parent().next().children().eq(1);
-        //let count = $(this).prev().prev();
-
-        //$.ajax({
-        //    type: "Post",
-        //    url: `Cart/IncrementProductCount?id=${id}`,
-        //    success: function (res) {
-        //        res++;
-        //        subTotal(res, nativePrice, total, count)
-        //        grandTotal();
-        //    }
-        //})
-    })
-
-
-
-
     function grandTotal() {
         let tbody = $(".tbody").children()
         let sum = 0;
@@ -140,11 +114,18 @@ $(function () {
             let price = parseFloat($(prod).children().eq(4).text())
             sum += price
         }
+
         $(".grand-total").text(sum);
 
     }
 
 
 
+
 })
 
+
+$(function () {
+
+
+})
