@@ -34,7 +34,6 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
         public int BrandId { get; set; }
 
         public int CategoryId { get; set; }
-
         public int SubCategoryId { get; set; }
 
 

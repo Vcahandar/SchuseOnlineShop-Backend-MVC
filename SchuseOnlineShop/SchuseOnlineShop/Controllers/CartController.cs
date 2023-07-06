@@ -32,6 +32,7 @@ namespace SchuseOnlineShop.Controllers
                     Price = dbProduct.DiscountPrice,
                     Image = dbProduct.ProductImages.FirstOrDefault(i => i.IsMain).ImgName,
                     Count = item.Count,
+                    Brand = dbProduct.Brand,
                     Total = dbProduct.DiscountPrice * item.Count
                 });
             }

@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="~/assets/css/home/home.css">
+
+    @*<link rel="stylesheet" href="~/assets/css/home/home.css">*@
     @RenderSection("Links", required: false)
 
  
@@ -35,8 +36,9 @@
     </div>
 
 
- 
     @await RenderSectionAsync("Script",required:false)
+
+    <script src="~/assets/js/script.js"></script>
 </body>
 
 </html>

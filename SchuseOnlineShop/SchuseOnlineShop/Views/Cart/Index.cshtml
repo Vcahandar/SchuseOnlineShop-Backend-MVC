@@ -59,7 +59,7 @@
                                 <tbody class="tbody">
                                     @foreach (var item in Model)
                                     {
-                                        <tr data-id="@item.Id">
+                                        <tr class="basket-product" data-id="@item.Id">
                                             <td class="td-img">
                                                 <div class="prdct-img">
                                                     <img src="~/assets/img/shoes/product-img/@item.Image" alt="">
@@ -73,7 +73,7 @@
                                                 </div>
                                                 <div class="product-option">
                                                     <span>Color:</span>
-                                                    <span>White</span>
+                                                    <span>@item.Brand.Name.ToLower()</span>
                                                 </div>
                                             </td>
                                             <td class="td-price">@item.Price.ToString("0.00") $</td>
@@ -81,10 +81,10 @@
                                                 <div class="number">
                                                     <span class="minus">-</span>
                                                     <input type="text" value="@item.Count" disabled="">
-                                                    <span class="plus">+</span>
+                                                    <span class="plus inc">+</span>
                                                 </div>
                                             </td>
-                                            <td class="td-total">@item.Total.ToString("0.00") $</td>
+                                            <td class="td-total">@item.Total.ToString("0.00") </td>
                                             <td>
                                                 <a class="delete-product">
                                                     <i class="fa-solid fa-trash delete"></i>
@@ -193,10 +193,7 @@
                         <div class="total d-flex">
                             <div class="total-price">
                                 <span class="title">Subtotal: $</span>
-                                      @foreach (var item in Model)
-                                    {
-                                        grandTotal += item.Total;
-                                    }
+                                   
                                 <span>0</span>
                             </div>
 

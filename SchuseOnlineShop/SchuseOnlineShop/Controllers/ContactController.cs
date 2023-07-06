@@ -21,7 +21,7 @@ namespace SchuseOnlineShop.Controllers
         [HttpPost]
         public async Task<IActionResult> PostComment(ContactVM model)
         {
-            if (!ModelState.IsValid) return RedirectToAction("Index", model);
+            //if (!ModelState.IsValid) return RedirectToAction("Index", model);
             Contact contact = new()
             {
                 FirstName = model.FirstName,
@@ -32,7 +32,7 @@ namespace SchuseOnlineShop.Controllers
             };
 
             await _crudService.CreateAsync(contact);
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

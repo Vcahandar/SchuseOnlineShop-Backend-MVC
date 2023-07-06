@@ -84,6 +84,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
             ViewBag.colors = await GetColorsAsync();
             ViewBag.brands = await GetBrandsAsync();
             ViewBag.sizes = await GetSizesAsync();
+            ViewBag.categories = await GetCategoriesAsync();
             ViewBag.subcategories = await GetSubCategoriesAsync();
             return View();
         }
@@ -97,6 +98,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 ViewBag.colors = await GetColorsAsync();
                 ViewBag.brands = await GetBrandsAsync();
                 ViewBag.sizes = await GetSizesAsync();
+                ViewBag.categories = await GetCategoriesAsync();
                 ViewBag.subcategories = await GetSubCategoriesAsync();
 
                 if (!ModelState.IsValid) return View(model);
@@ -105,6 +107,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 List<ProductImage> productImages = new();
                 List<ProductColor> productColors = new();
                 List<ProductSize> productSizes = new();
+                Category newCategory = new();
                 SubCategory newSubCategory = new();
 
                 //List<Category> categories = new();
@@ -215,6 +218,8 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
                 Random random = new();
 
+                newSubCategory.Id = model.SubCategoryId;
+
                 newProduct.Name = model.Name;
                 newProduct.Description = model.Description;
                 newProduct.Price = convertedPrice;
@@ -222,8 +227,10 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 newProduct.StockCount = model.StockCount;
                 newProduct.SKU = model.Name.Substring(0, 3) + "-" + random.Next();
                 newProduct.BrandId = model.BrandId;
+                newProduct.CategoryId = model.CategoryId;
                 newProduct.SubCategoryId = model.SubCategoryId;
                 newProduct.Rating = model.Rating;
+
 
                 await _crudService.CreateAsync(newProduct);
                 await _crudService.SaveAsync();
@@ -384,8 +391,9 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 dbProduct.StockCount = model.StockCount;
                 dbProduct.BrandId = model.BrandId;
                 dbProduct.Rating = model.Rating;
-                dbProduct.CategoryId = model.CategoryId;
                 dbProduct.SubCategoryId = model.SubCategoryId;
+                dbProduct.CategoryId = model.CategoryId;
+
 
 
                 await _crudService.SaveAsync();
@@ -549,9 +557,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 return View();
             }
         }
-
-
-
 
 
         private async Task<SelectList> GetColorsAsync()

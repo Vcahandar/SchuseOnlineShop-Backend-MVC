@@ -45,12 +45,14 @@
                                 @if (User.Identity.IsAuthenticated)
                                 {
 
-                                    <form method="post" asp-action="PostComment">
+                                    <form id="contact-form"
+                                      class="contact-form" method="post" asp-action="PostComment">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input name="first_name"
+                                                <input name="firstName"
                                                    placeholder="Name *"
                                                    type="text"
+                                                   asp-for="FirstName"
                                                    required=""
                                                    value="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).FirstName">
                                             </div>
@@ -62,9 +64,10 @@
                                                       asp-for="Phone">
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input name="email_address" 
+                                                <input name="email" 
                                                        placeholder="Email *" 
-                                                       type="text" 
+                                                       type="text"
+                                                       asp-for="Email"
                                                        required=""
                                                         value="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).Email">
                                             </div>
@@ -99,7 +102,7 @@
                                     <form  method="post" asp-action="PostComment" >
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input name="first_name"
+                                                <input name="firstName"
                                                    placeholder="Name *"
                                                    type="text"
                                                    required=""
@@ -113,7 +116,7 @@
                                                    asp-for="Phone">
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input name="email_address"
+                                                <input name="email"
                                                     placeholder="Email *" 
                                                     type="text"
                                                    asp-for="Email"

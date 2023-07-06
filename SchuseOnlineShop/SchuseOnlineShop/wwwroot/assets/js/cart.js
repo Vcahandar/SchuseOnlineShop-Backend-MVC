@@ -87,7 +87,6 @@ $(function () {
         let id = $(this).parent().parent().attr("data-id");
         let prod = $(this).parent().parent();
         let tbody = $(".tbody").children();
-        console.log(tbody)
         let data = { id: id };
 
         $.ajax({
@@ -107,11 +106,16 @@ $(function () {
     })
 
 
+
+
+
     function grandTotal() {
         let tbody = $(".tbody").children()
         let sum = 0;
         for (var prod of tbody) {
             let price = parseFloat($(prod).children().eq(4).text())
+            //let price = parseFloat($(prod).children().eq(2).text())
+            console.log(price)
             sum += price
         }
 
@@ -122,10 +126,38 @@ $(function () {
 
 
 
+
+
+    //function subTotal(res, nativePrice, total, count) {
+    //    $(count).val(res);
+    //    let subtotal = parseFloat(nativePrice * $(count).val());
+    //    $(total).text(subtotal);
+    //}
+
+
 })
 
+//$(function () {
 
-$(function () {
+//    //change product count
+//    $(document).on("click", ".inc", function () {
+//        let id = $(this).parent().parent().parent().attr("data-id");
+//        console.log("dsd")
+//        let nativePrice = parseFloat($(this).parent().parent().prev().children().eq(1).text());
+//        let total = $(this).parent().parent().next().children().eq(1);
+//        let count = $(this).prev().prev();
+
+//        $.ajax({
+//            type: "Post",
+//            url: `Cart/IncrementProductCount?id=${id}`,
+//            success: function (res) {
+//                res++;
+//                subTotal(res, nativePrice, total, count)
+//                grandTotal();
+//            }
+//        })
+//    })
+//})
 
 
-})
+

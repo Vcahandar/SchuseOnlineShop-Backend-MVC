@@ -17558,7 +17558,7 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     transition: box-shadow 0.2s ease-in-out;
-    border-top: 3px solid #8CDDCD;
+    border-top: 3px solid #ff871d;
 }
 
 .card.borderless {
@@ -17641,7 +17641,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .card .card-header .card-header-right .btn.dropdown-toggle.mobile-menu span {
-    background-color: #888;
+    background-color: black;
     height: 2px;
     border-radius: 5px;
 }
@@ -17649,7 +17649,7 @@ a.text-dark:hover, a.text-dark:focus {
 .card .card-header .card-header-right .btn.dropdown-toggle.mobile-menu span:after, .card .card-header .card-header-right .btn.dropdown-toggle.mobile-menu span:before {
     border-radius: 5px;
     height: 2px;
-    background-color: #888;
+    background-color: black;
 }
 
 .card .card-header .card-header-right .nav-pills {
@@ -20091,8 +20091,15 @@ pre[class*=language-]:before {
 /*====== border-width css ends ======*/
 /* new logo start */
 .b-brand {
+    width:180px;
+    height:55px;
     display: flex;
     align-items: center;
+}
+
+.b-brand img {
+ 
+    width:100%
 }
 
 .b-brand .b-bg {
@@ -20283,15 +20290,14 @@ pre[class*=language-]:before {
     transition: all 0.3s ease-in-out;
 }
 
-.pcoded-header .m-header {
-    width: 235px;
-    position: relative;
-    height: 56px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 25px;
-}
+    .pcoded-header .m-header {
+        width: 250px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 25px;
+    }
 
 .pcoded-header .m-header .logo-dark,
     .pcoded-header .m-header .logo-thumb {
@@ -20369,13 +20375,14 @@ pre[class*=language-]:before {
     font-size: 16px;
 }
 
-.pcoded-header .dropdown .dropdown-toggle {
-    line-height: 56px;
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    min-width: 20px;
-}
+ .pcoded-header .dropdown .dropdown-toggle {
+        line-height: 56px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        min-width: 20px;
+       color: black;
+ }
 
 .pcoded-header .dropdown .dropdown-toggle > i {
     font-size: 16px;
@@ -20413,7 +20420,7 @@ pre[class*=language-]:before {
 }
 
 .pcoded-header .dropdown .dropdown-menu li.active a, .pcoded-header .dropdown .dropdown-menu li:active a, .pcoded-header .dropdown .dropdown-menu li:focus a, .pcoded-header .dropdown .dropdown-menu li:hover a {
-    color: #fff;
+    color: black;
 }
 
 .pcoded-header .dropdown.mega-menu {
@@ -20616,7 +20623,7 @@ pre[class*=language-]:before {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: rgba(44, 62, 80, 0.8);
+    background-color: black;
     transition: 0.3s cubic-bezier(0.97, 0.75, 0.61, 1.84);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -20679,11 +20686,11 @@ pre[class*=language-]:before {
     box-shadow: 0 2px 10px -1px rgba(69, 90, 100, 0.3);
     transition: all 0.3s ease-in-out;
     width: 235px;
-    height: calc(100% - 56px);
+    /* height: calc(100% - 56px);*/
     margin-top: 56px;
     top: 0;
-    background: #2c3e50;
-    color: #d0dcda;
+    background: black;
+    color: white;
 }
 
 .pcoded-navbar ul {
@@ -20750,15 +20757,15 @@ pre[class*=language-]:before {
     margin-left: 10px;
 }
 
-.pcoded-navbar .main-menu-header {
-    background: #3e5871;
-    position: relative;
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    height: 82px;
-    align-items: center;
-}
+    .pcoded-navbar .main-menu-header {
+        background: #ff871d;
+        position: relative;
+        padding: 20px;
+        text-align: left;
+        display: flex;
+        height: 82px;
+        align-items: center;
+    }
 
 .pcoded-navbar .main-menu-header .user-details {
     cursor: pointer;
@@ -20899,7 +20906,7 @@ pre[class*=language-]:before {
 .pcoded-navbar .pcoded-inner-navbar li.pcoded-menu-caption {
     font-size: 13px;
     font-weight: 600;
-    color: #1abc9c;
+    color: black;
     padding: 18px 15px 5px;
     text-transform: capitalize;
     position: relative;
@@ -21159,12 +21166,12 @@ pre[class*=language-]:before {
 }
 
 .pcoded-navbar .pcoded-inner-navbar li.active > a, .pcoded-navbar .pcoded-inner-navbar li:focus > a, .pcoded-navbar .pcoded-inner-navbar li:hover > a {
-    color: #1abc9c;
+    color: white;
 }
 
 .pcoded-navbar .pcoded-inner-navbar > li.active > a, .pcoded-navbar .pcoded-inner-navbar > li.pcoded-trigger > a {
-    background: #1abc9c;
-    color: #fff;
+    background: white;
+    color: black;
 }
 
 .pcoded-navbar .pcoded-inner-navbar > .pcoded-menu-caption.active:after, .pcoded-navbar .pcoded-inner-navbar > .pcoded-menu-caption.pcoded-trigger:after {
@@ -23048,20 +23055,20 @@ pre[class*=language-]:before {
 /* ====== [ light menu style end ] ======== */
 /* ====== [ Header color start ] ======== */
 .pcoded-header[class*="header-"] .mobile-menu span {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: black;
 }
 
 .pcoded-header[class*="header-"] .mobile-menu span:after, .pcoded-header[class*="header-"] .mobile-menu span:before {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: black
 }
 
 .pcoded-header[class*="header-"] .mobile-menu:hover span {
-    background-color: #fff;
+    background-color: black;
 }
 
-.pcoded-header[class*="header-"] .mobile-menu:hover span:after, .pcoded-header[class*="header-"] .mobile-menu:hover span:before {
-    background-color: #fff;
-}
+    .pcoded-header[class*="header-"] .mobile-menu:hover span:after, .pcoded-header[class*="header-"] .mobile-menu:hover span:before {
+        background-color: black
+    }
 
 @media only screen and (min-width: 992px) {
     .pcoded-header[class*="header-"] .page-header .breadcrumb-item + .breadcrumb-item::before,
@@ -23752,8 +23759,7 @@ pre[class*=language-]:before {
 }
 
 .pcoded-header.header-dark {
-    background: #2c3e50;
-    color: rgba(255, 255, 255, 0.8);
+    color: red;
 }
 
 .pcoded-header.header-dark .profile-notification li > a {
@@ -24248,6 +24254,7 @@ body.box-layout .pcoded-navbar.theme-horizontal ~ .pcoded-header {
 }
 
 .nav-tabs .nav-link {
+    color:black;
     border: none;
     background: no-repeat center bottom, center 100%;
     background-size: 0 100%, 100% 100%;
@@ -24277,8 +24284,8 @@ body.box-layout .pcoded-navbar.theme-horizontal ~ .pcoded-header {
 
 .page-item.active .page-link {
     z-index: 1;
-    color: #fff;
-    background-color: #1abc9c;
+    color: white;
+    background-color: black;
     border-color: #1abc9c;
 }
 

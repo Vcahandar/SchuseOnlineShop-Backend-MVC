@@ -33,7 +33,6 @@ header {
 
     #page-navbar {
         font-family: 'Poppins', sans-serif;
-
         width: 100%;
         height: 213px;
 
@@ -74,7 +73,6 @@ header {
                     :hover {
                         color: #ff871d;
                     }
-
                 }
 
                 .line {
@@ -88,10 +86,7 @@ header {
 
                 .show {
                     font-size: 14px;
-
                 }
-
-
             }
 
 
@@ -132,7 +127,6 @@ header {
                     width: 1px;
                     background: #80808075;
                     margin-top: 1px;
-
                 }
 
                 .icon {
@@ -150,7 +144,6 @@ header {
                     }
 
                     .wishlist-nav {
-
                         margin-left: 15px;
                     }
 
@@ -168,8 +161,6 @@ header {
                         }
                     }
                 }
-
-
             }
         }
 
@@ -182,7 +173,6 @@ header {
             align-items: center;
 
             .header-service {
-
                 display: flex;
                 align-items: center;
                 gap: 5px;
@@ -196,7 +186,6 @@ header {
                 }
 
                 .service {
-
                     margin-top: 19px;
                     font-size: 15px;
                     line-height: 0.5;
@@ -213,7 +202,6 @@ header {
                     p {
                         color: #666666;
                     }
-
                 }
             }
 
@@ -243,26 +231,27 @@ header {
                     text-transform: capitalize;
                     color: #666;
                     font-weight: 600;
-
                 }
 
 
                 .search-icon {
-                    right: 30px;
-                    position: relative;
-                    top: 7px;
+
 
 
                     i {
                         cursor: pointer;
                         font-size: 20px;
                     }
+
+                    .search-btn {
+                        background-color: white;
+                        right: 112px;
+                        position: absolute;
+                        top: 91px;
+                        border: none;
+                    }
                 }
-
             }
-
-
-
         }
 
         .down-navbar {
@@ -285,8 +274,6 @@ header {
                         font-weight: 600;
                         text-decoration: none;
                         padding: 15px 0;
-
-
                     }
 
                     a:hover {
@@ -316,7 +303,6 @@ header {
             border-bottom: 1px solid lightgray;
 
             .mobil-down-navbar {
-
                 display: flex;
                 align-items: center;
                 margin-top: 13px;
@@ -329,11 +315,9 @@ header {
                     a {
                         color: #000;
                     }
-
                 }
 
                 .line {
-
                     height: 22px;
                     color: black;
                     width: 1px;
@@ -364,7 +348,6 @@ header {
                             color: white;
                         }
                     }
-
                 }
             }
         }
@@ -374,7 +357,6 @@ header {
 
 
         .down {
-
             height: 66px;
             padding: 20px 11px;
 
@@ -387,7 +369,6 @@ header {
                 }
 
                 .nav-logo {
-
                     margin-left: 25px;
                     width: 101px;
 
@@ -397,19 +378,16 @@ header {
                 }
 
                 .search-mob-icon {
-
                     display: flex;
 
                     .search-box {
                         display: flex;
                         align-items: center;
-
                         height: 30px;
                         border: 1px solid #ccc;
                         border-radius: 15px;
                         overflow: hidden;
                         margin-left: 3px;
-
                     }
 
 
@@ -421,9 +399,7 @@ header {
                         outline: none;
                         overflow: hidden;
                         padding: 10px;
-
                     }
-
                     // .search-box:hover input[type="text"] {
                     //     width: 117px;
                     //     padding-inline: 1.5rem;
@@ -437,18 +413,14 @@ header {
                         outline: none;
                         cursor: pointer;
                     }
-
                     // .search-box button[type="submit"]:hover {
                     //     background-color: #aaa;
                     // }
-
                     // .search-box i {
                     //     color: #fff;
                     //     font-size: 1.5rem;
                     // }
                 }
-
-
             }
 
 
@@ -474,12 +446,10 @@ header {
 
 
                 .content-area-center {
-
                     margin-top: 65px;
 
 
                     li {
-
                         list-style: none;
                         margin-bottom: 20px;
 
@@ -491,14 +461,8 @@ header {
                     }
                 }
             }
-
         }
-
-
     }
-
-
-
 }
 
 

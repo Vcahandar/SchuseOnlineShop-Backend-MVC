@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SchuseOnlineShop.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
 {
@@ -36,6 +37,9 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
      
         [Required(ErrorMessage = "Don`t be empty")]
         public int SubCategoryId { get; set; }
+
+        [Required(ErrorMessage = "Don`t be empty")]
+        public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
         public List<int> SizeIds { get; set; } = new();

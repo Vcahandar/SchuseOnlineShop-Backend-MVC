@@ -1,0 +1,104 @@
+﻿@model List<Product>
+
+
+@section Links{
+
+    <link rel="stylesheet" href="~/assets/css/search/search.css">
+    <title>Search</title>
+}
+
+
+    <main>
+
+    @if (Model.Count() == 0)
+    {
+        <h1 style="text-align:center; margin-top:35px;">OOPS – NO RESULTS FOR PRODUCT</h1>
+    }
+        <section id="recent-arrivals" class="mt-5">
+            <div class="container">
+                <div class="row">
+
+                @foreach (var product in Model)
+                {
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card" data-id="@product.Id" style="width: 18rem;">
+                            <div class="produc-imgs">
+                                <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
+                                <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+                            </div>
+                            <div class="discount">
+                                <span class="badge">sale</span>
+                            </div>
+
+                            <div class="product-hover d-flex">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <button type="submit">
+                                        <a class="add-to-wishlist-btn" data-id="@product.Id">
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </a>
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="submit" data-id="@product.Id">
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </a>
+                                    </button>
+                                }
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <button type="submit">
+                                        <a class="add-to-cart-btn" data-id="@product.Id">
+                                            <i class="bi bi-bag"></i>
+                                        </a>
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="submit">
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="bi bi-bag"></i>
+                                        </a>
+                                    </button>
+                                }
+
+                            </div>
+                            <div class="star-product">
+                                @for (int i = 0; i < product.Rating; i++)
+                                {
+                                    <i class="bi bi-star-fill"></i>
+                                }
+                                @for (int c = 0; c < 5 - product.Rating; c++)
+                                {
+                                    <i class="bi bi-star"></i>
+                                }
+
+
+                            </div>
+                            <div class="card-body">
+                                <a href="">
+                                    <p>@product.Name</p>
+                                </a>
+
+                                <p class="card-text price"> $@product.DiscountPrice</p>
+                                <del>$@product.Price</del>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+

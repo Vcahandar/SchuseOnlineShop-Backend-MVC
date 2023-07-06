@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SchuseOnlineShop.Data;
 using SchuseOnlineShop.Helpers;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
@@ -12,7 +14,7 @@ namespace SchuseOnlineShop.Controllers
 {
     public class ShopController : Controller
     {
-       
+        private readonly AppDbContext _context;
         private readonly IProductService _productService;
         private readonly ICartService _cartService;
         private readonly ICategoryService _categoryService;
@@ -33,7 +35,8 @@ namespace SchuseOnlineShop.Controllers
             ICrudService<ProductComment> crudService,
             ILayoutService layoutService,
             ISizeService sizeService,
-            IWishlistService wishlistService)
+            IWishlistService wishlistService,
+            AppDbContext context)
         {
             _productService = productService;
             _cartService = cartService;
@@ -45,6 +48,7 @@ namespace SchuseOnlineShop.Controllers
             _subCategoryService = subCategoryService;
             _sizeService = sizeService;
             _wishlistService = wishlistService;
+            _context = context;
         }
 
         public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? subcategoryId = null, int? colorId = null, int? brandId = null,int? sizeId = null)
@@ -224,10 +228,6 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
- 
-
-
-
         [HttpGet]
         public async Task<IActionResult> ProductDetail(int? id)
         {
@@ -362,13 +362,16 @@ namespace SchuseOnlineShop.Controllers
 
         public async Task<IActionResult> Search(string searchText)
         {
-            if (string.IsNullOrEmpty(searchText))
-            {
-                return Ok();
-            }
-            var products = await _productService.GetAllBySearchText(searchText);
 
-            return View(products);
+            var productsAll = await _context.Products
+                             .Include(m => m.ProductImages)
+                             .Include(m => m.Category)?
+                             .OrderByDescending(m => m.Id)
+                             .Where(m => !m.SoftDelete && m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                             .Take(6)
+                             .ToListAsync();
+
+            return View(productsAll);
         }
 
 
