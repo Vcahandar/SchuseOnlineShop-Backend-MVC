@@ -230,6 +230,8 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 newProduct.CategoryId = model.CategoryId;
                 newProduct.SubCategoryId = model.SubCategoryId;
                 newProduct.Rating = model.Rating;
+                newProduct.Video = model.Video;
+
 
 
                 await _crudService.CreateAsync(newProduct);
@@ -462,6 +464,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                     SizeNames = dbProduct.ProductSizes,
                     BrandName = dbProduct.Brand.Name,
                     Rating = dbProduct.Rating,
+                    Video = dbProduct.Video
                 };
                 return View(model);
             }

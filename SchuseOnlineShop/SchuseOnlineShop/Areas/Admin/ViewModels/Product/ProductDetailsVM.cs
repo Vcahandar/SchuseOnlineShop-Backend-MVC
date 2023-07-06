@@ -14,6 +14,7 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
         public int Rating { get; set; }
         public int StockCount { get; set; }
         public string BrandName { get; set; }
+        public string Video { get; set; }
 
         public ICollection<ProductColor> ColorNames { get; set; }
         public string CategoryNames { get; set; }

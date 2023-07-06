@@ -37,11 +37,17 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="product-img">
-                                   <img src="~/assets/img/shoes/product-img/@Model.ProductImages.FirstOrDefault(m => m.IsMain)?.ImgName"
+                                    @if (@Model.Video == null)
+                                    {
+                                        <img src="~/assets/img/shoes/product-img/@Model.ProductImages.FirstOrDefault(m => m.IsMain)?.ImgName"
                                          alt="Product Image" />
+                                    }else{
+                                        <video playsinline="" loop="" muted="" autoplay="" poster="" class="product-grid__video" src="@Model.Video" type="video/mp4">
+                                        </video>
+                                    }
+                                 
                                     
-                               @*  <video playsinline="" loop="" muted="" autoplay="" class="product-grid__video" poster="https://cdn.media.amplience.net/v/office/4142867799_vd1" src="https://cdn.media.amplience.net/v/office/4142867799_vd1/mp4_720p" type="video/mp4">
-                                    </video>*@
+                               
 
                                 </div>
                                 <div class="small-carousel">

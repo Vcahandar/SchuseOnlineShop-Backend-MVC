@@ -197,11 +197,11 @@ $(function() {
 });
 
 
-//-----TabMenu----------end---
 
 
 
-//product-photo-video------------
+
+//product-photo-photo------------
 
 $(document).ready(function(){
 
@@ -211,6 +211,18 @@ $(document).ready(function(){
     $("#product-details-wrapper .product-img img").attr("src", photo)
   
   })
+})
+
+//product-photo-video------------
+
+$(document).ready(function () {
+
+    $(document).on("click", ".slider .slider__item", function () {
+        let photo = $(this).children().eq(0).attr("src")
+        $("#product-details-wrapper .product-img video").attr("poster", photo)
+        $("#product-details-wrapper .product-img video").attr("src", photo)
+
+    })
 })
 
 

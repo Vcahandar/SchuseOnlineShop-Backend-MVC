@@ -13,6 +13,7 @@ namespace SchuseOnlineShop.Models
         public int Rating { get; set; } = 5;
         public int SaleCount { get; set; }
         public int StockCount { get; set; }
+        public string Video { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
         public int SubCategoryId { get; set; }
@@ -22,7 +23,6 @@ namespace SchuseOnlineShop.Models
 
         public ICollection<CategorySubCategory> CategorySubCategories { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
-        public ICollection<ProductVideo> ProductVideos { get; set; }
         public ICollection<ProductSize> ProductSizes { get; set; }
         public ICollection<ProductColor> ProductColors { get; set; }
         public ICollection<ProductComment> ProductComments { get; set; }

@@ -12,6 +12,7 @@ namespace SchuseOnlineShop.ViewModels.Product
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public decimal DiscountPrice { get; set; }
+        public string Video { get; set; }
 
         public string SKU { get; set; }
         public int Rating { get; set; }
@@ -27,7 +28,6 @@ namespace SchuseOnlineShop.ViewModels.Product
 
         public ICollection<ProductColor> ProductColors { get; set; }
         public ICollection<ProductImage>? ProductImages { get; set; }
-        public ICollection<ProductVideo> ProductVideos { get; set; }
         public ICollection<ProductSize> ProductSizes { get; set; }
         public Dictionary<string, string> SectionBgs { get; set; }
         public ProductCommentVM ProductCommentVM { get; set; }

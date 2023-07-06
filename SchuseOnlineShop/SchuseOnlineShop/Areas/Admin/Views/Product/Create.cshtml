@@ -14,7 +14,11 @@
                         <input class="form-control" asp-for="Photos">
                         <span class="text-danger" asp-validation-for="Photos"></span>
                     </div>
-
+                    <div class="form-group">
+                        <label style="padding-left:6px;" for="formFile" class="form-label my-2">Add Video</label>
+                        <input class="form-control" id="customFile" asp-for="Video" />
+                        <span class="text-danger" asp-validation-for="Video"></span>
+                    </div>
                     <div class="form-group">
                         <label style="font-weight:800">Title</label>
                         <input type="text" class="form-control" asp-for="Name">

@@ -31,7 +31,6 @@ namespace SchuseOnlineShop.Services
                   .Include(m => m.Category)
                   .Include(m => m.SubCategory)
                   .Include(m => m.ProductImages)
-                  .Include(m => m.ProductVideos)
                   .Include(m => m.ProductColors)
                   .ThenInclude(m => m.Color)
                   .Include(m => m.ProductSizes)
@@ -43,7 +42,6 @@ namespace SchuseOnlineShop.Services
         public async Task<List<Product>> GetFullDataAsync()
         {
             return await _context.Products
-                 .Include(m => m.ProductVideos)
                  .Include(m => m.ProductImages)
                  .Include(m => m.ProductComments)
                    .Include(m => m.Category)
@@ -61,9 +59,7 @@ namespace SchuseOnlineShop.Services
 
         public async Task<Product> GetFullDataByIdAsync(int? id)
         {
-            return await _context.Products
-              .Include(m => m.ProductImages)
-              .Include(m => m.ProductVideos)
+            return await _context.Products.Include(m => m.ProductImages)
               .Include(m => m.ProductComments)
               .Include(m => m.Category)
               .Include(m => m.SubCategory)
@@ -93,32 +89,12 @@ namespace SchuseOnlineShop.Services
 
 
 
-        public async Task<ProductVideo> GetVideoById(int? id)
-        {
-            return await _context.ProductVideos.FindAsync((int)id);
-        }
-
-
-
-        public async Task<Product> GetProductByVideoId(int? id)
-        {
-            return await _context.Products
-           .Include(m => m.ProductVideos)
-           .FirstOrDefaultAsync(m => m.ProductVideos.Any(m => m.Id == id));
-        }
-
-
         public void RemoveImage(ProductImage image)
         {
             _context.Remove(image);
         }
 
 
-
-        public void RemoveVideo(ProductVideo video)
-        {
-            _context.Remove(video);
-        }
 
 
         public async Task<int> GetCountAsync()

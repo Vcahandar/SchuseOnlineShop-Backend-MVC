@@ -29,7 +29,6 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
 
         public List<IFormFile> Photos { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
-        public ICollection<ProductVideo> ProductVideos { get; set; }
 
         public int BrandId { get; set; }
 

@@ -25,7 +25,6 @@ namespace SchuseOnlineShop.Data
         public DbSet<ProductComment> ProductComments { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductSize> ProductSizes { get; set; }
-        public DbSet<ProductVideo> ProductVideos { get; set; }
         public DbSet<SectionHeader> SectionHeaders { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Size> Sizes { get; set; }
@@ -34,8 +33,8 @@ namespace SchuseOnlineShop.Data
         public DbSet<Team> Teams { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
-        public DbSet<HomeCategory> HomeCategories { get; set; }
         public DbSet<Advert> Adverts { get; set; }
+        public DbSet<HomeCategory> HomeCategories { get; set; }
         public DbSet<Wishlist> Wishlists { get; set; }
         public DbSet<WishlistProduct> WishlistProducts { get; set; }
 
@@ -56,11 +55,9 @@ namespace SchuseOnlineShop.Data
             modelBuilder.Entity<Brand>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<Size>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<Color>().HasQueryFilter(p => !p.SoftDelete);
-            modelBuilder.Entity<ProductVideo>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<Team>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<Setting>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<SectionHeader>().HasQueryFilter(p => !p.SoftDelete);
-            modelBuilder.Entity<Advert>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<ProductComment>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<Contact>().HasQueryFilter(p => !p.SoftDelete);
             modelBuilder.Entity<Cart>().HasQueryFilter(p => !p.SoftDelete);

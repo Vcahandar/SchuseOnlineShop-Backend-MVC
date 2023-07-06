@@ -28,7 +28,7 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
 
         [Required(ErrorMessage = "Don`t be empty")]
         public List<IFormFile> Photos { get; set; }
-
+        public string Video { get; set; }
         public int BrandId { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
