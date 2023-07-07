@@ -274,6 +274,7 @@ $(function () {
         $(document).on("click", clickedElem, function (e) {
             e.preventDefault();
             let id = $(this).attr("data-id");
+            console.log(id)
             let data = { id: id };
             let parent = $(".pro-list")
             $.ajax({
@@ -291,7 +292,7 @@ $(function () {
 
     GetProductsById(".sub-category", "/Shop/GetProductsBySubCategory")
     GetProductsById(".color", "/Shop/GetProductsByColor")
-    GetProductsById(".sizee", "/Shop/GetProductsBySizeIdAsync")
+    GetProductsById(".brand", "/Shop/GetProductsByBrand")
 
 
 

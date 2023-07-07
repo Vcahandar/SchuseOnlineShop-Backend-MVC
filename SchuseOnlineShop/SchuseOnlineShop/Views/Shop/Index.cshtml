@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="~/assets/css/shoes/shoes.css">
     <title>Shop</title>
-} 
+}
 
 
 @{
@@ -14,31 +14,31 @@
     int? sumOfProductsCountByBrand = 0;
     int? sumOfProductsCountBySize = 0;
 }
-    <main>
+<main>
 
-        <section id="top-column-content">
-            <div class="column-content">
-                <div class="title">
-                    <h2>Products</h2>
-                </div>
-                <div class="choose">
-                    <a href="./home.html">Home |</a>
-                    <span>Shoes</span>
-                </div>
+    <section id="top-column-content">
+        <div class="column-content">
+            <div class="title">
+                <h2>Products</h2>
             </div>
-        </section>
+            <div class="choose">
+                <a href="./home.html">Home |</a>
+                <span>Shoes</span>
+            </div>
+        </div>
+    </section>
 
-        <section id="shoes-main" class="mt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="side-bar">
-                            <div class="product-categorie">
-                                <div class="title-categorie">
-                                    <h4>Shop By Categories</h4>
-                                </div>
-                                <div class="sidebar-body">
-                                    <ul class="categorie-list">
+    <section id="shoes-main" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="side-bar">
+                        <div class="product-categorie">
+                            <div class="title-categorie">
+                                <h4>Shop By Categories</h4>
+                            </div>
+                            <div class="sidebar-body">
+                                <ul class="categorie-list">
                                     <li><a asp-controller="Shop" asp-action="Index" class="all" style="cursor:pointer;">All</a></li>
                                     @foreach (var item in Model.SubCategories)
                                     {
@@ -46,11 +46,11 @@
                                             <a style="cursor:pointer" class="sub-category" data-id="@item.Id">@item.Name</a>
                                         </li>
                                     }
-                                    </ul>
+                                </ul>
 
-                                </div>
                             </div>
-                            <div class="line"></div>
+                        </div>
+                        <div class="line"></div>
                             <div class="product-price">
                                 <div class="price-title">
                                     <h3>Filter By Price</h3>
@@ -71,234 +71,236 @@
 
                                         <div class="range-slider">
                                             <input type="range" class="min-price" value="100" min="10" max="500"
-                                                step="10">
+                                                   step="10">
                                             <input type="range" class="max-price" value="250" min="10" max="500"
-                                                step="10">
+                                                   step="10">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="product-brand">
-                                <div class="tags-title">
-                                    <h3>Brand</h3>
-                                </div>
-                                <div class="sidebar-body">
-                                    <ul>
-                                        @foreach (var brand in Model.Brands)
+                        <div class="product-brand">
+                            <div class="tags-title">
+                                <h3>Brand</h3>
+                            </div>
+                            <div class="sidebar-body">
+                                <ul>
+                                    @foreach (var brand in Model.Brands)
                                     {
-                                            <li>
-                                            <input type="checkbox" class="cbox" name="@brand.Name" id="@brand.Id"  value="@brand.Id">
-                                            <label class="cbox-label" for="@brand.Id">@brand.Name (@brand.Products?.Count())</label>
-                                            </li>
+                                        <li>
+                                            <a style="cursor:pointer" class="brand" data-id="@brand.Id">@brand.Name (@brand.Products?.Count())</a>
+                                        </li>
                                     }
-                                    </ul>
-                                </div>
-
-
+                                </ul>
                             </div>
 
-                            <div class="product-color">
-                                <div class="tags-title">
-                                    <h3>Color</h3>
-                                </div>
-                                <div class="sidebar-body">
-                                    <ul>
-                                        <li>
-                                            <a href="#">All
+
+                        </div>
+
+                        <div class="product-color">
+                            <div class="tags-title">
+                                <h3>Color</h3>
+                            </div>
+                            <div class="sidebar-body">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            All
                                             @foreach (var color in Model.Colors)
                                             {
                                                 sumOfProductsCountByColor += color.ProductColors?.Count();
                                             }
                                             <span> (@sumOfProductsCountByColor)</span>
-                                           
+
                                         </a>
-                                        </li>
-                                        @foreach (var colors in Model.Colors)
-                                        {
-                                         <li>
+                                    </li>
+                                    @foreach (var colors in Model.Colors)
+                                    {
+                                        <li>
                                             <a style="cursor:pointer" class="color" data-id="@colors.Id">
-                                                @colors.Name <span> (@colors.ProductColors?.Count())</span></a>
+                                                @colors.Name <span> (@colors.ProductColors?.Count())</span>
+                                            </a>
                                         </li>
-                                        }
-                                       
-            
-
-                                    </ul>
-                                </div>
+                                    }
 
 
+
+                                </ul>
                             </div>
 
-                            <div class="product-size">
-                                <div class="tags-title">
-                                    <h3>Size</h3>
-                                </div>
-                                <div class="sidebar-body">
-                                    <ul>
-                                        @foreach (var size in Model.Sizes)
+
+                        </div>
+
+                        <div class="product-size">
+                            <div class="tags-title">
+                                <h3>Size</h3>
+                            </div>
+                            <div class="sidebar-body">
+                                <ul>
+                                    @foreach (var size in Model.Sizes)
                                     {
                                         <li>
                                             <input type="checkbox" class="cbox sizee" name="@size.Number" id="@size.Id" value="@size.Number">
                                             <label class="cbox-label" for="@size.Id">@size.Number <span>(@size.ProductSizes?.Count())</span></label>
                                         </li>
-                                        
+
                                     }
 
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
-
-                            <div class="product-sale-banner d-lg-block d-none">
-                                <a href="">
-                                    <img src="~/assets/img/shoes/pro-sale.jpg" alt="">
-                                </a>
-                            </div>
-
                         </div>
+
+                        <div class="product-sale-banner d-lg-block d-none">
+                            <a href="">
+                                <img src="~/assets/img/shoes/pro-sale.jpg" alt="">
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="col-lg-9">
-                        <div class="product-shops">
-                            <div class="page-width collection-filters">
-                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                </div>
+                <div class="col-lg-9">
+                    <div class="product-shops">
+                        <div class="page-width collection-filters">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>Sort by Default</option>
                                 <option value="1">Sort by High Price</option>
                                 <option value="2">Sort by Low Price</option>
-                                    <option value="3">Sort by Rated</option>
-                                </select>
-                            </div>
+                                <option value="3">Sort by Rated</option>
+                            </select>
+                        </div>
 
-                            <div class="product-carts">
+                        <div class="product-carts">
                             <div class="row pro-list">
-                                   <partial name="_ProductListPartial" model="Model.PaginateDatas" />
-                                </div>
-
-
+                                <partial name="_ProductListPartial" model="Model.PaginateDatas" />
                             </div>
-                            <div class="mini-modal">
-                                <div class="product-modal d-none">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="img">
-                                                    <img src="" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="delete-icon">
-                                                    <a href=""><i class="fa-solid fa-xmark"></i></a>
-                                                </div>
-                                                <div class="prod-tittle">
-                                                    <h2>Wild Taps Sneakers</h2>
 
-                                                </div>
-                                                <div class="price-discount">
-                                                    <div class="discount">
-                                                        <del></del>
-                                                    </div>
-                                                    <div class="pro-price">
-                                                        <p></p>
-                                                    </div>
-                                                </div>
 
-                                                <div class="border">
-
-                                                </div>
-                                                <div class="text3">
-                                                    <p></p>
-                                                </div>
-                                                <div class="pro-description">
-                                                    <p>Stylish and comfortable this printed chemise is designed with
-                                                        short sleeves
-                                                        and a round neckline. Elegant and comfy, this embroidered
-                                                        A-line dress which has a round neck, and three-</p>
-                                                </div>
-
-                                                <div class="pro-category">
-                                                    <div class="category-name">
-                                                        <span class="type">Type</span>
-                                                        <span class="type-name">
-                                                            : sandal
-                                                        </span>
-                                                    </div>
-
-                                                    <div class="category-name">
-                                                        <span class="type">Vendor</span>
-                                                        <span class="type-name">
-                                                            : Nike
-                                                        </span>
-                                                    </div>
-                                                    <div class="category-name">
-                                                        <span class="type">SKU</span>
-                                                        <span class="type-name">
-                                                            : AP-888
-                                                        </span>
-                                                    </div>
-
-                                                    <div class="category-name">
-                                                        <span class="type">Size</span>
-                                                        <select id="size">
-                                                            <option value="39">36</option>
-                                                            <option value="37">37</option>
-                                                            <option value="38">38</option>
-                                                            <option value="39">39</option>
-                                                            <option value="40">40</option>
-                                                            <option value="41">41</option>
-                                                            <option value="42">42</option>
-                                                            <option value="43">43</option>
-                                                            <option value="44">44</option>
-                                                        </select>
-
-                                                    </div>
-
-                                                    <div class="input-icon">
-                                                        <div class="inputs">
-                                                            <div class="number">
-                                                                <span class="minus">-</span>
-                                                                <input type="text" value="1" />
-                                                                <span class="plus">+</span>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="box">
-                                                        <button class="button">
-                                                            <span>Add To Cart</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <div class="prod-detail">
-                                                        <a href="">View Full Product Details</a>
-                                                    </div>
-
-                                                </div>
+                        </div>
+                        <div class="mini-modal">
+                            <div class="product-modal d-none">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="img">
+                                                <img src="" alt="">
                                             </div>
                                         </div>
+                                        <div class="col-6">
+                                            <div class="delete-icon">
+                                                <a href=""><i class="fa-solid fa-xmark"></i></a>
+                                            </div>
+                                            <div class="prod-tittle">
+                                                <h2>Wild Taps Sneakers</h2>
 
+                                            </div>
+                                            <div class="price-discount">
+                                                <div class="discount">
+                                                    <del></del>
+                                                </div>
+                                                <div class="pro-price">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="border">
+                                            </div>
+                                            <div class="text3">
+                                                <p></p>
+                                            </div>
+                                            <div class="pro-description">
+                                                <p>
+                                                    Stylish and comfortable this printed chemise is designed with
+                                                    short sleeves
+                                                    and a round neckline. Elegant and comfy, this embroidered
+                                                    A-line dress which has a round neck, and three-
+                                                </p>
+                                            </div>
+
+                                            <div class="pro-category">
+                                                <div class="category-name">
+                                                    <span class="type">Type</span>
+                                                    <span class="type-name">
+                                                        : sandal
+                                                    </span>
+                                                </div>
+
+                                                <div class="category-name">
+                                                    <span class="type">Vendor</span>
+                                                    <span class="type-name">
+                                                        : Nike
+                                                    </span>
+                                                </div>
+                                                <div class="category-name">
+                                                    <span class="type">SKU</span>
+                                                    <span class="type-name">
+                                                        : AP-888
+                                                    </span>
+                                                </div>
+
+                                                <div class="category-name">
+                                                    <span class="type">Size</span>
+                                                    <select id="size">
+                                                        <option value="39">36</option>
+                                                        <option value="37">37</option>
+                                                        <option value="38">38</option>
+                                                        <option value="39">39</option>
+                                                        <option value="40">40</option>
+                                                        <option value="41">41</option>
+                                                        <option value="42">42</option>
+                                                        <option value="43">43</option>
+                                                        <option value="44">44</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="input-icon">
+                                                    <div class="inputs">
+                                                        <div class="number">
+                                                            <span class="minus">-</span>
+                                                            <input type="text" value="1" />
+                                                            <span class="plus">+</span>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="box">
+                                                    <button class="button">
+                                                        <span>Add To Cart</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="prod-detail">
+                                                    <a href="">View Full Product Details</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
-
-                
                         </div>
+
+
                     </div>
                 </div>
-        </section>
+            </div>
+    </section>
 
 
-    </main>
+</main>
 
 
 @section Script{
 
-     <script src="https://kit.fontawesome.com/b01bc4ce26.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b01bc4ce26.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js
     "></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-      <script src="~/assets/js/shoes.js"></script>
+    <script src="~/assets/js/shoes.js"></script>
     }
 

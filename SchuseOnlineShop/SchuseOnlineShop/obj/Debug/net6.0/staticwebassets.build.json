@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LOPmTqAvAdcqHsJ3PIkesBpU9KojbVrYdxn3UuzDxIc=",
+  "Hash": "cY2BtwN+lUgiZTexNPOBgUPkpSFoU8eOrizyzWA9AFM=",
   "Source": "SchuseOnlineShop",
   "BasePath": "_content/SchuseOnlineShop",
   "Mode": "Default",
@@ -13090,6 +13090,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\00e17155-311e-48d5-9eee-82cdb3238cfd1-4.webp"
     },
     {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\03c8f2ab-9431-49c7-b796-8f3396c3c2cf5-2.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/03c8f2ab-9431-49c7-b796-8f3396c3c2cf5-2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\03c8f2ab-9431-49c7-b796-8f3396c3c2cf5-2.webp"
+    },
+    {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\049953a0-84b4-4ceb-adf3-60f846425ad42-4.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
@@ -13105,6 +13122,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\049953a0-84b4-4ceb-adf3-60f846425ad42-4.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\04b47703-aac8-4cd5-974b-80ceaedee1185-1.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/04b47703-aac8-4cd5-974b-80ceaedee1185-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\04b47703-aac8-4cd5-974b-80ceaedee1185-1.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\05880c6b-2d5f-4f32-8bef-57c2969217772-2.webp",
@@ -13362,6 +13396,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\1decc47b-1d15-49df-97ca-d9d295b8962b11-1.webp"
     },
     {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\1f9cb2f3-c86b-4d0b-b6e4-1f46664059655-1.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/1f9cb2f3-c86b-4d0b-b6e4-1f46664059655-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\1f9cb2f3-c86b-4d0b-b6e4-1f46664059655-1.webp"
+    },
+    {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\23f313d8-9df8-4b8c-937b-938ded3fb4d64-6.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
@@ -13617,6 +13668,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\35a33c8e-5a84-4022-98a7-ded97e7a73b84-4.webp"
     },
     {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\36db6c1b-0400-4500-be05-6fd7a6ec795b6-2.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/36db6c1b-0400-4500-be05-6fd7a6ec795b6-2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\36db6c1b-0400-4500-be05-6fd7a6ec795b6-2.webp"
+    },
+    {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\3c1c1cc9-d3a9-44c4-9ebf-5f1170683b9b3-6.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
@@ -13666,6 +13734,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\3f26a533-85a8-49f2-b168-aeb9b2b18a01product10-5.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4169999e-49a8-47ed-b1b0-324430395c806-1.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/4169999e-49a8-47ed-b1b0-324430395c806-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\4169999e-49a8-47ed-b1b0-324430395c806-1.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\44d304d5-e781-49af-a022-71c1606e3520w1-6.webp",
@@ -14416,6 +14501,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\9fe038ec-56e2-4ba3-a0fe-57756e0625f82-3.webp"
     },
     {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\a0c8e8fa-d83c-4c27-b7a0-d4e602e290927-1.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/a0c8e8fa-d83c-4c27-b7a0-d4e602e290927-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\a0c8e8fa-d83c-4c27-b7a0-d4e602e290927-1.webp"
+    },
+    {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\a21e874c-5195-4358-9522-0fea6fe66e064-1.webp",
       "SourceId": "SchuseOnlineShop",
       "SourceType": "Discovered",
@@ -14686,6 +14788,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\c437bb54-efb8-47c5-93e9-46e094b2fdc12-3.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c49eeafe-143b-4e3a-b3ec-b40c97c9724f7-1.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/c49eeafe-143b-4e3a-b3ec-b40c97c9724f7-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\c49eeafe-143b-4e3a-b3ec-b40c97c9724f7-1.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c9ef0014-fb4e-4537-a14a-008c3d65efecproduct9-4.webp",
@@ -15060,6 +15179,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\f735953d-8389-4439-8a68-6746e860165f3-5.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\f7417ca9-3221-4440-854e-895becc50abd5-2.webp",
+      "SourceId": "SchuseOnlineShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\",
+      "BasePath": "_content/SchuseOnlineShop",
+      "RelativePath": "assets/img/shoes/product-img/f7417ca9-3221-4440-854e-895becc50abd5-2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shoes\\product-img\\f7417ca9-3221-4440-854e-895becc50abd5-2.webp"
     },
     {
       "Identity": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\f74c8664-2959-464d-aa42-16020c53013a1-3.webp",

@@ -180,7 +180,7 @@ namespace SchuseOnlineShop.Controllers
         {
             if (id is null) return BadRequest();
             ViewBag.brandId = id;
-            var products = await _productService.GetProductsByColorIdAsync(id);
+            var products = await _productService.GetProductsByBrandIdAsync(id);
             int pageCount = await GetPageCountAsync(take, null, null, null, (int)id, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
