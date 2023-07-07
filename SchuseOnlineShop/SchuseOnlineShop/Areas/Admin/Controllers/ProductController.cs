@@ -279,6 +279,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                     CategoryId = dbProduct.CategoryId,
                     SubCategoryId = dbProduct.SubCategoryId,
                     BrandId = dbProduct.BrandId,
+                    Video = dbProduct.Video,
                     ColorIds = dbProduct.ProductColors.Select(t => t.Color.Id).ToList(),
                     SizeIds = dbProduct.ProductSizes.Select(s => s.Size.Id).ToList(),
                 };
@@ -393,6 +394,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 dbProduct.StockCount = model.StockCount;
                 dbProduct.BrandId = model.BrandId;
                 dbProduct.Rating = model.Rating;
+                dbProduct.Video = model.Video;
                 dbProduct.SubCategoryId = model.SubCategoryId;
                 dbProduct.CategoryId = model.CategoryId;
 

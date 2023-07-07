@@ -271,7 +271,7 @@ bookIcons.forEach(icons => {
 $(function () {
 
     //add cart
-    AddToCart(".add-to-cart-btn", "/Shop/AddToCart");
+    AddToCart(".add-to-cart-btn", "/cart/AddCart");
 
     function AddToCart(clickedElem, url) {
         $(document).on("click", clickedElem, function (e) {

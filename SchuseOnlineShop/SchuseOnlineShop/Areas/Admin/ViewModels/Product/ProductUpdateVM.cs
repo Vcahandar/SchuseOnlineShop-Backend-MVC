@@ -29,7 +29,7 @@ namespace SchuseOnlineShop.Areas.Admin.ViewModels.Product
 
         public List<IFormFile> Photos { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
-
+        public string Video { get; set; }
         public int BrandId { get; set; }
 
         public int CategoryId { get; set; }

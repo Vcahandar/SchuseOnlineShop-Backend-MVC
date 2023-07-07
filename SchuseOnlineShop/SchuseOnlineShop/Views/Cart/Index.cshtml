@@ -1,4 +1,4 @@
-﻿@model List<CartDetailVM>
+﻿@model CartIndexVM
 @inject ILayoutService layout
 
 @{
@@ -40,7 +40,7 @@
                 </div>
                 <form>
                     <div class="page-table d-lg-block d-none">
-                        @if (Model.Count > 0)
+                        @if (Model.CartDetails.Count > 0)
                         {
                             <table class="table product-table">
                                 <thead>
@@ -57,7 +57,7 @@
 
 
                                 <tbody class="tbody">
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.CartDetails)
                                     {
                                         <tr class="basket-product" data-id="@item.Id">
                                             <td class="td-img">
@@ -68,8 +68,8 @@
                                             <td class="td-name">
                                                 <a href="">@item.Name</a>
                                                 <div class="product-option">
-                                                    <span>Size:</span>
-                                                    <span>M</span>
+                                                    <span>Brand:</span>
+                                                    <span>@item.Brand.Name</span>
                                                 </div>
                                               @*  <div class="product-option">
                                                     <span>Color:</span>
@@ -106,7 +106,7 @@
                             <div class="total d-flex">
                                 <div class="total-price">
                                     <span class="title">Subtotal: $</span>
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.CartDetails)
                                     {
                                         grandTotal += item.Total;
                                     }
@@ -141,7 +141,7 @@
 
 
                         <tbody class="tbody">
-                            @foreach (var item in Model)
+                            @foreach (var item in Model.CartDetails)
                             {
                                 <tr class="cart-item" data-id="2">
                                     <td class="cart-item__media">

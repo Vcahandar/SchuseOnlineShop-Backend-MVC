@@ -228,49 +228,49 @@ namespace SchuseOnlineShop.Controllers
         {
             await _signInManager.SignOutAsync();
 
-            List<CartVM> carts = _cartService.GetDatasFromCookie();
+            //List<CartVM> carts = _cartService.GetDatasFromCookie();
 
-            if (carts.Count != 0)
-            {
-                Cart dbCart = await _cartService.GetByUserIdAsync(userId);
-                if (dbCart == null)
-                {
-                    dbCart = new()
-                    {
-                        AppUserId = userId,
-                        CartProducts = new List<CartProduct>()
-                    };
-                    foreach (var cart in carts)
-                    {
-                        dbCart.CartProducts.Add(new CartProduct()
-                        {
-                            ProductId = cart.ProductId,
-                            CartId = dbCart.Id,
-                            Count = cart.Count
-                        });
-                    }
-                    await _crudService.CreateAsync(dbCart);
+            //if (carts.Count != 0)
+            //{
+            //    Cart dbCart = await _cartService.GetByUserIdAsync(userId);
+            //    if (dbCart == null)
+            //    {
+            //        dbCart = new()
+            //        {
+            //            AppUserId = userId,
+            //            CartProducts = new List<CartProduct>()
+            //        };
+            //        foreach (var cart in carts)
+            //        {
+            //            dbCart.CartProducts.Add(new CartProduct()
+            //            {
+            //                ProductId = cart.ProductId,
+            //                CartId = dbCart.Id,
+            //                Count = cart.Count
+            //            });
+            //        }
+            //        await _crudService.CreateAsync(dbCart);
 
-                }
-                else
-                {
-                    List<CartProduct> cartProducts = new List<CartProduct>();
-                    foreach (var cart in carts)
-                    {
-                        cartProducts.Add(new CartProduct()
-                        {
-                            ProductId = cart.ProductId,
-                            CartId = dbCart.Id,
-                            Count = cart.Count
-                        });
-                    }
-                    dbCart.CartProducts = cartProducts;
-                    await _crudService.SaveAsync();
+            //    }
+            //    else
+            //    {
+            //        List<CartProduct> cartProducts = new List<CartProduct>();
+            //        foreach (var cart in carts)
+            //        {
+            //            cartProducts.Add(new CartProduct()
+            //            {
+            //                ProductId = cart.ProductId,
+            //                CartId = dbCart.Id,
+            //                Count = cart.Count
+            //            });
+            //        }
+            //        dbCart.CartProducts = cartProducts;
+            //        await _crudService.SaveAsync();
 
-                }
-                Response.Cookies.Delete("basket");
+            //    }
+            //    Response.Cookies.Delete("basket");
 
-            }
+            //}
 
             return RedirectToAction("Index", "Home");
         }

@@ -17,13 +17,7 @@ namespace SchuseOnlineShop.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public void DeleteData(int? id)
-        {
-            var baskets = JsonConvert.DeserializeObject<List<CartVM>>(_httpContextAccessor.HttpContext.Request.Cookies["basket"]);
-            var deletedProduct = baskets.FirstOrDefault(m => m.ProductId == id);
-            baskets.Remove(deletedProduct);
-            _httpContextAccessor.HttpContext.Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
-        }
+
 
         public async Task<List<CartProduct>> GetAllByCartIdAsync(int? cartId)
         {
@@ -35,37 +29,6 @@ namespace SchuseOnlineShop.Services
             return await _context.Carts.Include(m => m.CartProducts).FirstOrDefaultAsync(m => m.AppUserId == userId);
         }
 
-        public List<CartVM> GetDatasFromCookie()
-        {
-            List<CartVM> carts;
 
-            if (_httpContextAccessor.HttpContext.Request.Cookies["basket"] != null)
-            {
-                carts = JsonConvert.DeserializeObject<List<CartVM>>(_httpContextAccessor.HttpContext.Request.Cookies["basket"]);
-            }
-            else
-            {
-                carts = new List<CartVM>();
-            }
-            return carts;
-        }
-
-        public void SetDatasToCookie(List<CartVM> carts, Product dbProduct, CartVM existProduct)
-        {
-            if (existProduct == null)
-            {
-                carts.Add(new CartVM
-                {
-                    ProductId = dbProduct.Id,
-                    Count = 1
-                });
-            }
-            else
-            {
-                existProduct.Count++;
-            }
-            _httpContextAccessor.HttpContext.Response.Cookies
-                .Append("basket", JsonConvert.SerializeObject(carts));
-        }
     }
 }

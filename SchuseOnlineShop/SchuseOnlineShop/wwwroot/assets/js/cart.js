@@ -91,7 +91,7 @@ $(function () {
 
         $.ajax({
             type: "Post",
-            url: `Cart/DeleteDataFromBasket`,
+            url: `Cart/Delete`,
             data: data,
             success: function () {
                 if ($(tbody).length == 1) {

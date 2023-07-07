@@ -320,25 +320,25 @@ namespace SchuseOnlineShop.Controllers
 
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddToCart(int? id)
-        {
-            if (id is null) return BadRequest();
+        //[HttpPost]
+        //public async Task<IActionResult> AddToCart(int? id)
+        //{
+        //    if (id is null) return BadRequest();
 
-            Product dbProduct = await _productService.GetByIdAsync((int)id);
+        //    Product dbProduct = await _productService.GetByIdAsync((int)id);
 
-            if (dbProduct == null) return NotFound();
+        //    if (dbProduct == null) return NotFound();
 
-            List<CartVM> carts = _cartService.GetDatasFromCookie();
+        //    List<CartVM> carts = _cartService.GetDatasFromCookie();
 
-            CartVM existProduct = carts.FirstOrDefault(p => p.ProductId == id);
+        //    CartVM existProduct = carts.FirstOrDefault(p => p.ProductId == id);
 
-            _cartService.SetDatasToCookie(carts, dbProduct, existProduct);
+        //    _cartService.SetDatasToCookie(carts, dbProduct, existProduct);
 
-            int cartCount = carts.Count;
+        //    int cartCount = carts.Count;
 
-            return Ok(cartCount);
-        }
+        //    return Ok(cartCount);
+        ////}
 
         [HttpPost]
         public async Task<IActionResult> AddToWishlist(int? id)
