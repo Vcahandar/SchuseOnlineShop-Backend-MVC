@@ -546,13 +546,16 @@ main {
             .produc-imgs {
                 position: relative;
                 overflow: hidden;
+                height:280px;
 
                 .basic {
                     width: 100%;
                     transition: all 1.5s cubic-bezier(0, 0, 0.05, 1);
+                    height: 100%;
                 }
 
                 .top {
+                    height:100%;
                     position: absolute;
                     top: 0;
                     left: 0;

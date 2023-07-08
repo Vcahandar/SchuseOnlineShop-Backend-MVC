@@ -5088,23 +5088,24 @@ input[type="button"].btn-block {
 }
 
 .page-link {
+    font-weight:700;
     position: relative;
     display: block;
     padding: 0.5rem 0.75rem;
     margin-left: 0;
     line-height: 1.25;
-    color: #1abc9c;
+    color: #ff871d;
     background-color: #fff;
     border: 0 solid #dee2e6;
 }
 
-.page-link:hover {
-    z-index: 2;
-    color: #1abc9c;
-    text-decoration: none;
-    background-color: #e9e9e9;
-    border-color: #dee2e6;
-}
+    .page-link:hover {
+        z-index: 2;
+        color: #0770f7;
+        text-decoration: none;
+        background-color: #e9e9e9;
+        border-color: #dee2e6;
+    }
 
 .page-link:focus {
     z-index: 2;

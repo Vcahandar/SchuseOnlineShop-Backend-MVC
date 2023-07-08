@@ -76,15 +76,21 @@
                                                     <span>@item.Brand.Name.ToLower()</span>
                                                 </div>*@
                                             </td>
-                                            <td class="td-price">@item.Price.ToString("0.00") $</td>
+                                            <td class="td-price">
+                                                <span>@item.Price.ToString("0.00") </span>
+                                               <span>$</span> 
+                                            </td>
                                             <td class="td-count">
                                                 <div class="number">
                                                     <span class="minus">-</span>
                                                     <input type="text" value="@item.Count" disabled="">
-                                                    <span class="plus inc">+</span>
+                                                    <span class="plus">+</span>
                                                 </div>
                                             </td>
-                                            <td class="td-total">@item.Total.ToString("0.00") </td>
+                                            <td class="td-total">
+                                                <span> @item.Total.ToString("0.00")</span>
+                                                <span> $</span>
+                                            </td>
                                             <td>
                                                 <a class="delete-product">
                                                     <i class="fa-solid fa-trash delete"></i>

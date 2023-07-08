@@ -135,14 +135,17 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="card" data-id="@product.Id" style="width: 18rem;">
                             <div class="produc-imgs">
-                                <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
-                                <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+                                <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@product.Id">
+                                    <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
+                                    <img src="~/assets/img/shoes/product-img/@product.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+                                </a>
+
                             </div>
                             <div class="discount">
                                 <span class="badge">sale</span>
                             </div>
 
-                            <div class="product-hover d-flex">
+                            <div class="product-hover d-flex mt-3">
                                 @if (User.Identity.IsAuthenticated)
                                 {
                                     <button type="submit">
@@ -160,7 +163,9 @@
                                 }
                                
                                 <button type="submit" class="d-lg-block d-none">
-                                    <i class="fa-regular fa-eye"></i>
+                                    <a class="add-to-eye-btn" data-id="@product.Id">
+                                       <i class="fa-regular fa-eye"></i>
+                                    </a>
                                 </button>
                                 @if (User.Identity.IsAuthenticated)
                                 {
@@ -343,16 +348,33 @@
                             <div class="col-3">
                                 <div class="card">
                                     <div class="produc-imgs">
-                                        <img src="~/assets/img/shoes/product-img/@pro.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
-                                         
-                                        <img src="~/assets/img/shoes/product-img/@pro.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+                                        <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@pro.Id">
+                                            <img src="~/assets/img/shoes/product-img/@pro.ProductImages.Where(p=>p.IsMain).FirstOrDefault().ImgName" class="card-img-top basic" alt="...">
+
+                                            <img src="~/assets/img/shoes/product-img/@pro.ProductImages.Where(p=>p.IsHover).FirstOrDefault().ImgName" class="card-img-top top" alt="...">
+
+                                        </a>
+
                                     </div>
 
 
                                     <div class="product-hover d-flex">
-                                        <button type="submit">
-                                            <i class="fa-regular fa-bookmark"></i>
-                                        </button>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <button type="submit">
+                                                <a class="add-to-wishlist-btn" data-id="@pro.Id">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </a>
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button type="submit" data-id="@pro.Id">
+                                                <a asp-controller="Account" asp-action="Login">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </a>
+                                            </button>
+                                        }
                                         <button type="submit" class="d-lg-block d-none">
                                             <i class="fa-regular fa-eye"></i>
                                         </button>

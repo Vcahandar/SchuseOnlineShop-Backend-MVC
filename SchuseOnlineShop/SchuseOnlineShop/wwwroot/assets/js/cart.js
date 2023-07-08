@@ -109,6 +109,28 @@ $(function () {
 
 
 
+
+
+    $(".plus").click(function () {
+
+        let id = $(this).parent().parent().parent().attr("data-id");
+        let nativePrice = parseFloat($(this).parent().parent().prev().children().eq(0).text());
+        let total = $(this).parent().parent().next().children().eq(0);
+        let count = $(this).prev();
+
+        $.ajax({
+            type: "Post",
+            url: `Cart/IncrementProductCount?id=${id}`,
+            success: function (res) {
+                res++;
+                subTotal(res, nativePrice, total, count)
+                grandTotal();
+            }
+        })
+    });
+
+
+
     function grandTotal() {
         let tbody = $(".tbody").children()
         let sum = 0;
@@ -124,15 +146,13 @@ $(function () {
     }
 
 
+    function subTotal(res, nativePrice, total, count) {
+        $(count).val(res);
+        let subtotal = parseFloat(nativePrice * $(count).val());
+        $(total).text(subtotal + ".00");
+    }
 
 
-
-
-    //function subTotal(res, nativePrice, total, count) {
-    //    $(count).val(res);
-    //    let subtotal = parseFloat(nativePrice * $(count).val());
-    //    $(total).text(subtotal);
-    //}
 
 
 })

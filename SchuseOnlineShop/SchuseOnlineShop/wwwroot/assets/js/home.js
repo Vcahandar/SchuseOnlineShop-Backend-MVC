@@ -217,6 +217,28 @@ $(function () {
   });
 
 
+
+    
+    AddToModal(".add-to-eye-btn", "/Shop/GetDataProductModal");
+
+    function AddToModal(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            let id = $(this).attr("data-id");
+            let data = { id: id };
+          
+            $.ajax({
+                type: "Post",
+                url: url,
+                data: data,
+                success: function (res) {
+                   
+                }
+            })
+            return false;
+        })
+    }
+
+
 })
 
 

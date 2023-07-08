@@ -284,14 +284,16 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id)
+        public async Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id, int page = 1, int take = 6)
         {
             List<ProductVM> model = new();
             var products = await _context.Products
                 .Include(m => m.ProductImages)
                 .Include(m => m.Brand)
                 .Where(p => p.Brand.Id == id)
-                .ToListAsync();
+                 .Skip((page * take) - take)
+                 .Take(take)
+                 .ToListAsync();
 
             foreach (var item in products)
             {
@@ -441,6 +443,14 @@ namespace SchuseOnlineShop.Services
                           .Include(p => p.ProductImages)
                           .Where(pc => pc.Category.Id == id)
                           .CountAsync();
+        }
+
+        public async Task<Product> GetDatasModalProductByIdAsyc(int? id)
+        {
+            return await _context.Products.Include(m => m.ProductImages)
+            .Include(m => m.Category)
+            .Include(m => m.Brand)
+            .FirstOrDefaultAsync(m => m.Id == id);
         }
     }
 }

@@ -116,10 +116,14 @@
                                     <div class="pro-type-size">
                                         <span class="type-title">Size</span>
                                         <div class="shoes-size">
-                                            @foreach (var item in Model.ProductSizes)
-                                            {
-                                                <span class="size-number">@item.Size.Number</span>
-                                            }
+                                            <select style="outline:none;">
+                                                <option value="size">Select Size</option>
+                                                @foreach (var item in Model.ProductSizes)
+                                                {
+                                                    <option value="size">@item.Size.Number</option>
+                                                }
+                                            </select>
+                                           
                                            
                                         </div>
                                     </div>

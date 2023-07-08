@@ -2,26 +2,11 @@
     //delete 
 
     RemoveItem(".delete-slider", "/Admin/Slider/Delete");
-    RemoveItem(".delete-brandlogo", "/Admin/BrandLogo/Delete");
-    RemoveItem(".delete-advert", "/Admin/Advert/Delete");
-    RemoveItem(".delete-category", "/Admin/Category/Delete");
-    RemoveItem(".delete-size", "/Admin/Size/Delete");
-    RemoveItem(".delete-testimonial", "/Admin/Testimonial/Delete");
-    RemoveItem(".delete-color", "/Admin/Color/Delete");
-    RemoveItem(".delete-tag", "/Admin/Tag/Delete");
-    RemoveItem(".delete-banner", "/Admin/Banner/Delete");
-    RemoveItem(".delete-brand","/Admin/Brand/Delete");
-    RemoveItem(".delete-blog", "/Admin/Blog/Delete");
-    RemoveItem(".delete-product", "/Admin/Product/Delete");
-    RemoveItem(".delete-productComment", "/Admin/ProductComment/Delete");
-    RemoveItem(".delete-blogComment", "/Admin/ProductComment/Delete");
+    RemoveItem(".delete-user", "/Admin/User/Delete");
 
 
-
-    SetStatus("/Admin/Blog/SetStatus");
     SetStatus("/Admin/Product/SetStatus");
 
-    RemoveImage("/Admin/Blog/DeleteBlogImage");
     RemoveImage("/Admin/Product/DeleteProductImage");
 
 
@@ -129,4 +114,6 @@
             })
         })
     }
+
+
 })

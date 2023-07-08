@@ -402,6 +402,9 @@ main #shoes-main .side-bar .product-categorie .sidebar-body {
 main #shoes-main .side-bar .product-categorie .sidebar-body .categorie-list li {
   list-style: none;
 }
+
+    main #shoes-main .side-bar .product-categorie .sidebar-body .categorie-list .brand {
+    }
 main #shoes-main .side-bar .product-categorie .sidebar-body .categorie-list li a {
   color: #1d1c1c;
   font-size: 19px;
@@ -617,6 +620,7 @@ main #shoes-main .product-shops .card:hover .product-hover {
   opacity: 1;
   visibility: visible;
 }
+
 main #shoes-main .product-shops .card .product-hover {
   gap: 5px;
   justify-content: center;
@@ -631,6 +635,9 @@ main #shoes-main .product-shops .card .product-hover button {
   border: none;
   background-color: rgba(245, 242, 242, 0.5215686275);
 }
+    main #shoes-main .product-shops .card .product-hover button a{
+       color:black;
+    }
 main #shoes-main .product-shops .card .product-hover button:hover {
   color: white;
   background-color: #ff871d;
@@ -641,6 +648,7 @@ main #shoes-main .product-shops .card .product-hover i {
   text-align: center;
   margin-top: 2px;
 }
+
 main #shoes-main .product-shops .card .star-product {
   display: flex;
   justify-content: center;

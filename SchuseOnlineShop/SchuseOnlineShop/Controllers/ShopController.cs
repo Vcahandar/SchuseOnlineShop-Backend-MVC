@@ -56,6 +56,7 @@ namespace SchuseOnlineShop.Controllers
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId, subcategoryId, colorId, brandId,sizeId);
             List<ProductVM> mappedDatas = GetDatas(datas);
             int pageCount = 0;
+            ViewBag.catId = categoryId;
             ViewBag.subCatId = subcategoryId;
             ViewBag.branId = brandId;
             ViewBag.sizeId = sizeId;
@@ -167,7 +168,7 @@ namespace SchuseOnlineShop.Controllers
 
             var products = await _productService.GetProductsBySubCategoryIdAsync(id, page, take);
 
-            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null, null);
+            int pageCount = await GetPageCountAsync(take, null, (int)id, null, null, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -392,6 +393,36 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
+
+        [HttpPost]
+        public async Task<IActionResult> GetDataProductModal(int? id)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                var dbProduct = await _productService.GetDatasModalProductByIdAsyc((int)id);
+                if (dbProduct is null) return NotFound();
+
+                ModalVM model = new()
+                {
+                    Id = dbProduct.Id,
+                    Name = dbProduct.Name,
+                    Price = dbProduct.Price,
+                    Description = dbProduct.Description,
+                    Brand = dbProduct.Brand.Name,
+                    Sku = dbProduct.SKU,
+                    Category = dbProduct.Category.Name,
+                    ProductImages = dbProduct.ProductImages,
+                };
+
+                return Ok(model);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
 
 
 

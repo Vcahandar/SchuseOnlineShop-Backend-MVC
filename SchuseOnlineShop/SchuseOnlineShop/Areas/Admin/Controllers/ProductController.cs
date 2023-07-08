@@ -113,13 +113,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 //List<Category> categories = new();
                 //List<SubCategory> Subcategories = new();
 
-                int canUploadImg = 6 - model.Photos.Count;
-
-                if (canUploadImg < 0)
-                {
-                    ModelState.AddModelError("Photos", $"The maximum number of images you can upload is 6");
-                    return View();
-                }
 
                 foreach (var photo in model.Photos)
                 {
@@ -218,7 +211,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
                 Random random = new();
 
-                newSubCategory.Id = model.SubCategoryId;
 
                 newProduct.Name = model.Name;
                 newProduct.Description = model.Description;
@@ -397,7 +389,6 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
                 dbProduct.Video = model.Video;
                 dbProduct.SubCategoryId = model.SubCategoryId;
                 dbProduct.CategoryId = model.CategoryId;
-
 
 
                 await _crudService.SaveAsync();

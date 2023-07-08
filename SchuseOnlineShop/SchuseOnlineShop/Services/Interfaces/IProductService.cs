@@ -9,6 +9,7 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<Product> GetByIdAsync(int? id);
         Task<List<Product>> GetFullDataAsync();
         Task<Product> GetFullDataByIdAsync(int? id);
+        Task<Product> GetDatasModalProductByIdAsyc(int? id);
 
         Task<IEnumerable<ProductVM>> GetDatasAsync();
         Task<ProductImage> GetImageById(int? id);
