@@ -236,11 +236,22 @@ header #mobil-navbar .up .mobil-down-navbar {
   align-items: center;
   margin-top: 13px;
   justify-content: space-between;
+  margin-bottom:10px
 }
 header #mobil-navbar .up .mobil-down-navbar .account-mob-icon {
   margin-left: 15px;
   font-size: 24px;
+  display:flex;
 }
+ header #mobil-navbar .up .mobil-down-navbar .account-mob-icon form {
+        border: 1px solid;
+        margin-left: 30px;
+ }
+ header #mobil-navbar .up .mobil-down-navbar .account-mob-icon form span {
+        color: red;
+        padding: 9px;
+        font-size: 18px;
+ }
 header #mobil-navbar .up .mobil-down-navbar .account-mob-icon a {
   color: #000;
 }
@@ -702,7 +713,6 @@ main #recent-arrivals .card .star-product .bi-star-fill {
 main #recent-arrivals .card .produc-imgs {
   position: relative;
   overflow: hidden;
-  height:280px;
 }
 main #recent-arrivals .card .produc-imgs .basic {
   width: 100%;
@@ -884,7 +894,7 @@ main #recent-arrivals .product-modal .pro-category {
 main #recent-arrivals .product-modal .pro-category .category-name {
   margin-bottom: 5px;
 }
-main #recent-arrivals .product-modal .pro-category .category-name .type {
+main #recent-arrivals .product-modal .pro-category  .type {
   text-transform: capitalize;
   display: inline-block;
   min-width: 90px;
@@ -892,8 +902,10 @@ main #recent-arrivals .product-modal .pro-category .category-name .type {
   color: black;
   font-size: 17px;
 }
-main #recent-arrivals .product-modal .pro-category .category-name .type-name {
-  color: #000;
+main #recent-arrivals .product-modal .pro-category .type-name {
+ color: #000;
+ font-size: 18px;
+
 }
 main #recent-arrivals .product-modal .pro-category .category-name #size {
   width: 140px;

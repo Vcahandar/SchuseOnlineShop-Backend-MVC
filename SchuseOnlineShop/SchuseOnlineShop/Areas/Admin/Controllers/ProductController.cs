@@ -42,7 +42,7 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(  int page = 1, int take = 5)
         {
-            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null, null);
+            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null, null,null,null);
             List<ProductListVM> mappedDatas = GetDatas(datas);
             ViewBag.page = take;
             int pageCount = await GetPageCountAsync(take);

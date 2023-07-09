@@ -103,11 +103,11 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? subCategoryId, int? colorId, int? brandId, int? sizeId)
+        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? subCategoryId, int? colorId, int? brandId, int? sizeId,int? value1,int? value2)
         {
             List<Product> products = new List<Product>();
 
-            if(categoryId == null || subCategoryId == null || colorId == null || brandId == null || sizeId == null )
+            if(categoryId == null && subCategoryId == null && colorId == null && brandId == null && sizeId == null )
             {
                 products = await _context.Products
                     .Include(m => m.SubCategory)
@@ -121,6 +121,18 @@ namespace SchuseOnlineShop.Services
                     .Skip((page * take) - take)
                     .Take(take)
                     .ToListAsync();
+            }
+
+
+            if (value1 != null && value2 != null)
+            {
+                products = await _context.Products
+               .Include(p => p.ProductImages)
+               .Where(p => p.Price >= value1 && p.Price <= value2)
+               .Skip((page * take) - take)
+               .Take(take)
+               .ToListAsync();
+
             }
 
             if (categoryId != null)
@@ -447,11 +459,22 @@ namespace SchuseOnlineShop.Services
 
         public async Task<Product> GetDatasModalProductByIdAsyc(int? id)
         {
-            return await _context.Products.Include(m => m.ProductImages)
+            var data = await _context.Products
+            .Include(m => m.ProductImages)
             .Include(m => m.Category)
             .Include(m => m.Brand)
+            .Include(m => m.ProductSizes)
             .FirstOrDefaultAsync(m => m.Id == id);
+            return data;
         }
 
+
+
+        public async Task<int> GetProductsCountByRangeAsync(int? value1, int? value2)
+        {
+            return await _context.Products.Where(p => p.DiscountPrice >= value1 && p.DiscountPrice <= value2)
+                         .Include(p => p.ProductImages)
+                         .CountAsync();
+        }
     }
 }

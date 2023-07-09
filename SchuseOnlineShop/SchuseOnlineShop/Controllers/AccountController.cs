@@ -6,7 +6,6 @@ using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
 using SchuseOnlineShop.ViewModels.Account;
 using SchuseOnlineShop.ViewModels.Cart;
-using System.Data;
 
 namespace SchuseOnlineShop.Controllers
 {
@@ -228,49 +227,7 @@ namespace SchuseOnlineShop.Controllers
         {
             await _signInManager.SignOutAsync();
 
-            //List<CartVM> carts = _cartService.GetDatasFromCookie();
 
-            //if (carts.Count != 0)
-            //{
-            //    Cart dbCart = await _cartService.GetByUserIdAsync(userId);
-            //    if (dbCart == null)
-            //    {
-            //        dbCart = new()
-            //        {
-            //            AppUserId = userId,
-            //            CartProducts = new List<CartProduct>()
-            //        };
-            //        foreach (var cart in carts)
-            //        {
-            //            dbCart.CartProducts.Add(new CartProduct()
-            //            {
-            //                ProductId = cart.ProductId,
-            //                CartId = dbCart.Id,
-            //                Count = cart.Count
-            //            });
-            //        }
-            //        await _crudService.CreateAsync(dbCart);
-
-            //    }
-            //    else
-            //    {
-            //        List<CartProduct> cartProducts = new List<CartProduct>();
-            //        foreach (var cart in carts)
-            //        {
-            //            cartProducts.Add(new CartProduct()
-            //            {
-            //                ProductId = cart.ProductId,
-            //                CartId = dbCart.Id,
-            //                Count = cart.Count
-            //            });
-            //        }
-            //        dbCart.CartProducts = cartProducts;
-            //        await _crudService.SaveAsync();
-
-            //    }
-            //    Response.Cookies.Delete("basket");
-
-            //}
 
             return RedirectToAction("Index", "Home");
         }
@@ -312,10 +269,35 @@ namespace SchuseOnlineShop.Controllers
             }
 
             html = html.Replace("{{link}}", link);
-            html = html.Replace("{{headerText}}", "Hello P135");
+            html = html.Replace("{{headerText}}", "Hi");
 
             _emailService.Send(existUser.Email, subject, html);
             return RedirectToAction(nameof(VerifyEmail));
+        }
+
+
+
+        [HttpGet]
+        public IActionResult ResetPassword(string userId, string token)
+        {
+            return View(new ResetPasswordVM { Token = token, UserId = userId });
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
+        {
+            if (!ModelState.IsValid) return View(resetPassword);
+            AppUser existUser = await _userManager.FindByIdAsync(resetPassword.UserId);
+            if (existUser == null) return NotFound();
+            if (await _userManager.CheckPasswordAsync(existUser, resetPassword.Password))
+            {
+                ModelState.AddModelError("", "New password cant be same with old password");
+                return View(resetPassword);
+            }
+            await _userManager.ResetPasswordAsync(existUser, resetPassword.Token, resetPassword.Password);
+            return RedirectToAction(nameof(Login));
         }
     }
 }

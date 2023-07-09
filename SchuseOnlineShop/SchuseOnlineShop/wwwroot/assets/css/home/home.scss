@@ -481,10 +481,7 @@ main {
                     letter-spacing: .3px;
                     font-weight: 600;
                 }
-
-
             }
-
         }
 
 
@@ -526,7 +523,6 @@ main {
                     text-align: center;
                     margin-top: 2px;
                 }
-
             }
 
 
@@ -546,7 +542,7 @@ main {
             .produc-imgs {
                 position: relative;
                 overflow: hidden;
-                height:280px;
+                height: 280px;
 
                 .basic {
                     width: 100%;
@@ -555,7 +551,7 @@ main {
                 }
 
                 .top {
-                    height:100%;
+                    height: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -567,7 +563,6 @@ main {
             }
 
             &:hover {
-
                 // transition: .5s;
                 .produc-imgs {
 
@@ -580,9 +575,7 @@ main {
                         visibility: visible;
                         transform: scale3d(1.05, 1.05, 1.05) translateZ(0);
                     }
-
                 }
-
             }
 
 
@@ -600,8 +593,6 @@ main {
                         letter-spacing: .5px;
                         text-transform: capitalize;
                         font-weight: 600;
-
-
                     }
 
                     p:hover {
@@ -625,8 +616,6 @@ main {
                     font-size: 16px;
                     font-weight: 600;
                 }
-
-
             }
 
             .discount {
@@ -639,7 +628,6 @@ main {
 
                 .badge {
                     border-radius: 0px;
-
                     display: inline-block;
                     font-size: 11px;
                     line-height: 20px;
@@ -678,9 +666,6 @@ main {
                     text-decoration: none;
                     color: white;
                 }
-
-
-
             }
 
             .button:hover {
@@ -697,7 +682,6 @@ main {
             width: 100%;
             height: 100%;
             z-index: 99;
-
         }
 
 
@@ -707,7 +691,6 @@ main {
             width: 900px;
             height: 550px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
             left: 20%;
             background-color: rgb(255, 251, 251);
             position: fixed;
@@ -779,7 +762,6 @@ main {
                     font-size: 30px;
                     margin-top: -15px;
                 }
-
             }
 
             .border {
@@ -813,7 +795,6 @@ main {
                     margin-bottom: 5px;
 
                     .type {
-
                         text-transform: capitalize;
                         display: inline-block;
                         min-width: 90px;
@@ -837,11 +818,17 @@ main {
                         outline-style: none;
                         height: 31px;
                     }
-
                 }
 
+                .type {
+                    text-transform: capitalize;
+                    display: inline-block;
+                    min-width: 90px;
+                    font-weight: 600;
+                    color: black;
+                    font-size: 17px;
+                }
                 // .text2 {
-
                 //     p {
                 //         font-size: 15px;
                 //         margin-top: 1px;
@@ -865,7 +852,6 @@ main {
                             font-size: 21px;
                             font-weight: 700;
                             cursor: pointer;
-
                         }
 
 
@@ -878,17 +864,12 @@ main {
 
 
                         .plus {
-
                             font-size: 21px;
                             font-weight: 700;
                             cursor: pointer;
-
                         }
                     }
-
-
                 }
-
             }
 
 
@@ -935,19 +916,17 @@ main {
                 transform: translateY(110%);
                 pointer-events: none;
                 z-index: 1;
-                transition: transform 0.5s cubic-bezier(0, 0, 0.1, 1),
-                    border-radius 0.5s cubic-bezier(0, 0.4, 0.1, 1);
+                transition: transform 0.5s cubic-bezier(0, 0, 0.1, 1), border-radius 0.5s cubic-bezier(0, 0.4, 0.1, 1);
             }
 
-            .button:hover>span {
+            .button:hover > span {
                 color: rgb(25, 25, 25);
             }
 
             .button:hover::before {
                 border-radius: 0;
                 transform: translateY(0%);
-                transition: transform 0.5s cubic-bezier(0, 5, 0.1, 1),
-                    border-radius 0.8s cubic-bezier(0, 0.4, 0.1, 1);
+                transition: transform 0.5s cubic-bezier(0, 5, 0.1, 1), border-radius 0.8s cubic-bezier(0, 0.4, 0.1, 1);
             }
 
 
@@ -963,13 +942,9 @@ main {
                         color: #ff871d;
                     }
                 }
-
-
             }
-
         }
     }
-
 }
 
 

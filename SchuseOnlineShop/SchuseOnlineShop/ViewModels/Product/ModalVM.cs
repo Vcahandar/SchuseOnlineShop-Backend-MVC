@@ -8,10 +8,11 @@ namespace SchuseOnlineShop.ViewModels.Product
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public string Brand { get; set; }
+        public decimal DiscountPrice { get; set; }
+        public string BrandName { get; set; }
         public string Sku { get; set; }
-        public string Category { get; set; }
-        public ICollection<ProductImage>? ProductImages { get; set; }
+        public string CategoryName { get; set; }
+        public string Image { get; set; }
 
     }
 }

@@ -51,9 +51,9 @@ namespace SchuseOnlineShop.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? subcategoryId = null, int? colorId = null, int? brandId = null,int? sizeId = null)
+        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? subcategoryId = null, int? colorId = null, int? brandId = null,int? sizeId = null, int? value1 = null, int? value2 = null)
         {
-            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId, subcategoryId, colorId, brandId,sizeId);
+            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId, subcategoryId, colorId, brandId,sizeId,value1,value2);
             List<ProductVM> mappedDatas = GetDatas(datas);
             int pageCount = 0;
             ViewBag.catId = categoryId;
@@ -137,6 +137,9 @@ namespace SchuseOnlineShop.Controllers
             {
                 prodCount = await _productService.GetCountAsync();
             }
+
+
+
 
             return (int)Math.Ceiling((decimal)prodCount / take);
         }
@@ -377,7 +380,6 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
-
         [HttpGet]
         public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 6)
         {
@@ -394,38 +396,48 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
+        //[HttpPost]
+        //public async Task<IActionResult> GetDataProductModal(int? id)
+        //{
+        //    try
+        //    {
+        //        if (id is null) return BadRequest();
+        //        var dbProduct = await _productService.GetDatasModalProductByIdAsyc((int)id);
+        //        if (dbProduct is null) return NotFound();
 
-        [HttpPost]
-        public async Task<IActionResult> GetDataProductModal(int? id)
+        //        ModalVM model = new()
+        //        {
+        //            Id = dbProduct.Id,
+        //            Name = dbProduct.Name,
+        //            Price = dbProduct.Price,
+        //            Description = dbProduct.Description,
+        //            Brand = dbProduct.Brand.Name,
+        //            Sku = dbProduct.SKU,
+        //            Category = dbProduct.Category.Name,
+        //            ProductImages = dbProduct.ProductImages,
+        //        };
+
+        //        return PartialView("_ModalListPartial",model);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ViewBag.error = ex.Message;
+        //        return View();
+        //    }
+        //}
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetRangeProducts(int value1, int value2, int page = 1, int take = 6)
         {
-            try
-            {
-                if (id is null) return BadRequest();
-                var dbProduct = await _productService.GetDatasModalProductByIdAsyc((int)id);
-                if (dbProduct is null) return NotFound();
-
-                ModalVM model = new()
-                {
-                    Id = dbProduct.Id,
-                    Name = dbProduct.Name,
-                    Price = dbProduct.Price,
-                    Description = dbProduct.Description,
-                    Brand = dbProduct.Brand.Name,
-                    Sku = dbProduct.SKU,
-                    Category = dbProduct.Category.Name,
-                    ProductImages = dbProduct.ProductImages,
-                };
-
-                return Ok(model);
-            }
-            catch (Exception ex)
-            {
-                ViewBag.error = ex.Message;
-                return View();
-            }
+            List<Product> products = await _context.Products.Where(x => x.DiscountPrice >= value1 && x.DiscountPrice <= value2).Include(m => m.ProductImages).ToListAsync();
+            var productCount = products.Count();
+            var pageCount = (int)Math.Ceiling((decimal)productCount / take);
+            List<ProductVM> mappedDatas = GetDatas(products);
+            Paginate<ProductVM> paginatedDatas = new(mappedDatas, page, pageCount);
+            return PartialView("_ProductListPartial", paginatedDatas);
         }
-
-
 
     }
 }

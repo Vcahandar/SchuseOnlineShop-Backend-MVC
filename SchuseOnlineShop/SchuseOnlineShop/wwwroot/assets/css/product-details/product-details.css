@@ -564,6 +564,12 @@ main #product-details-wrapper .product-details-inner .product-details-des .pro-t
 main #product-details-wrapper .product-details-inner .product-details-des .pro-type-size .shoes-size {
   width: 58%;
 }
+
+    main #product-details-wrapper .product-details-inner .product-details-des .pro-type-size .shoes-size select {
+        border-radius: 5px;
+        border: 1px solid #bfc5bf;
+        outline: none;
+    }
 main #product-details-wrapper .product-details-inner .product-details-des .pro-type-size .shoes-size .size-number {
   font-size: 16px;
   border: 1px solid;

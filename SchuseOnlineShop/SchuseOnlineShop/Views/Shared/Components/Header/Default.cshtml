@@ -153,7 +153,9 @@
                             {
                                 <span>@User.Identity.Name</span>
                                 <form method="post" asp-controller="Account" asp-action="Logout" asp-route-userId="@userManager.Users.Where(u=>u.UserName==User.Identity.Name).FirstOrDefault().Id">
-                                    <button type="submit" class="dropdown-item">Logout</button>
+                                    <button type="submit" class="dropdown-item">
+                                        <span>Logout</span>
+                                    </button>
                                 </form>
                             }
                             else
@@ -208,10 +210,6 @@
                                 onfocus="if(this.value=='Search...'){this.value=''}"
                                 autocomplete="off"
                                 placeholder="Search here" />
-                                <button type="submit">
-                                    <i class="bx bx-search search-icon"></i>
-                                </button>
-
                             </form>
                         
                         </div>
@@ -232,12 +230,10 @@
                         <li>
                             <a asp-controller="Shop" asp-action="Index">Shoes</a>
                         </li>
-                        <li>
-                            <a href="">Men Shoes</a>
-                        </li>
-                        <li>
-                            <a href="">Women Shoes</a>
-                        </li>
+                        @foreach (var item in layout.GetCategorysByName().Result)
+                        {
+                            <li><a asp-controller="Shop" asp-action="Index" asp-route-categoryId="@item.Id">@item.Name</a></li>
+                        }
                         <li>
                             <a asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
