@@ -1,3 +1,11 @@
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.csproj.AssemblyReference.cache
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.AssemblyInfo.cs
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.RazorAssemblyInfo.cache
+C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.RazorAssemblyInfo.cs
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\bin\Debug\net6.0\appsettings.json
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\bin\Debug\net6.0\SchuseOnlineShop.staticwebassets.runtime.json
@@ -233,14 +241,6 @@ C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnli
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.csproj.AssemblyReference.cache
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.AssemblyInfoInputs.cache
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.AssemblyInfo.cs
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.csproj.CoreCompileInputs.cache
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.RazorAssemblyInfo.cache
-C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\SchuseOnlineShop.RazorAssemblyInfo.cs
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\staticwebassets\msbuild.SchuseOnlineShop.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\staticwebassets\msbuild.build.SchuseOnlineShop.props
 C:\Users\user\OneDrive\Masaüstü\End-lahiye\SchuseOnlineShop-Backend\SchuseOnlineShop\SchuseOnlineShop\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SchuseOnlineShop.props

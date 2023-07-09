@@ -50,8 +50,8 @@ namespace SchuseOnlineShop.Controllers
                     Image = dbCartProducts.Product.ProductImages.FirstOrDefault(m => m.IsMain)?.ImgName,
                     Brand = dbCartProducts.Product.Brand,
                     Count = dbCartProducts.Count,
-                    Price = dbCartProducts.Product.Price,
-                    Total = (dbCartProducts.Product.Price * dbCartProducts.Count),
+                    Price = dbCartProducts.Product.DiscountPrice,
+                    Total = (dbCartProducts.Product.DiscountPrice * dbCartProducts.Count),
                 };
                 model.CartDetails.Add(basketProduct);
 
@@ -61,18 +61,7 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
-        //[HttpPost]
-        //public IActionResult DeleteDataFromBasket(int? id)
-        //{
-        //    if (id is null) return BadRequest();
 
-        //    _cartService.DeleteData((int)id);
-        //    List<CartVM> baskets = _cartService.GetDatasFromCookie();
-
-
-        //    return Ok(baskets.Count);
-
-        //}
 
 
         [HttpPost]
@@ -149,32 +138,32 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
-        public IActionResult IncrementProductCount(int? id)
-        {
-            if (id is null) return BadRequest();
-            var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
-            var count = baskets.FirstOrDefault(b => b.ProductId == id).Count++;
+        //public IActionResult IncrementProductCount(int? id)
+        //{
+        //    if (id is null) return BadRequest();
+        //    var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
+        //    var count = baskets.FirstOrDefault(b => b.ProductId == id).Count++;
 
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
+        //    Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
 
-            return Ok(count);
-        }
+        //    return Ok(count);
+        //}
 
-        [HttpPost]
-        public IActionResult DecrementProductCount(int? id)
-        {
-            if (id is null) return BadRequest();
-            var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
-            var product = (baskets.FirstOrDefault(b => b.ProductId == id));
-            if (product.Count == 1)
-            {
-                return Ok();
-            }
-            var count = product.Count--;
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
+        //[HttpPost]
+        //public IActionResult DecrementProductCount(int? id)
+        //{
+        //    if (id is null) return BadRequest();
+        //    var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
+        //    var product = (baskets.FirstOrDefault(b => b.ProductId == id));
+        //    if (product.Count == 1)
+        //    {
+        //        return Ok();
+        //    }
+        //    var count = product.Count--;
+        //    Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
 
-            return Ok(count);
-        }
+        //    return Ok(count);
+        //}
 
 
 

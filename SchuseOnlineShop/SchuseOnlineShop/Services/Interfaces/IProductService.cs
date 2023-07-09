@@ -22,7 +22,7 @@ namespace SchuseOnlineShop.Services.Interfaces
         Task<List<ProductVM>> GetProductsBySubCategoryIdAsync(int? id, int page, int take);
         Task<List<ProductVM>> GetProductsByColorIdAsync(int? id);
         Task<List<ProductVM>> GetProductsBySizeIdAsync(int? id);
-        Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id);
+        Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id, int page, int take);
 
         Task<int> GetProductsCountByColorAsync(int? colorId);
         Task<int> GetProductsCountBySizeAsync(int? sizeId);

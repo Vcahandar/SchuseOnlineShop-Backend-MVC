@@ -52,6 +52,7 @@
                         </div>
                         <div class="line"></div>
                             <div class="product-price">
+                            <form id="filterForm" method="get" asp-controller="Shop" asp-action="Index">
                                 <div class="price-title">
                                     <h3>Filter By Price</h3>
                                 </div>
@@ -75,8 +76,12 @@
                                             <input type="range" class="max-price" value="250" min="10" max="500"
                                                    step="10">
                                         </div>
+                                        <button type="submit">FILTER</button>
                                     </div>
                                 </div>
+
+                                </form>
+
                             </div>
 
                         <div class="product-color">

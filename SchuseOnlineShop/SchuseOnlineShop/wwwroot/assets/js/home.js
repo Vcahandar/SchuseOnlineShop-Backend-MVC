@@ -318,11 +318,12 @@ $(function () {
 $(function () {
 
     //add wishlist
-    AddToCart(".add-to-wishlist-btn", "/Shop/AddToWishlist");
+    AddToCart(".add-to-wishlist-btn", "/wishlist/AddWishlist");
 
     function AddToCart(clickedElem, url) {
         $(document).on("click", clickedElem, function (e) {
             let id = $(this).attr("data-id");
+            
             let data = { id: id };
             let count = (".count-whislist");
             $.ajax({

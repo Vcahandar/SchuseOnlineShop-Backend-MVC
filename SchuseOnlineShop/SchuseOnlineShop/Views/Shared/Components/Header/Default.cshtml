@@ -149,7 +149,18 @@
                 <div class="col-12">
                     <div class="mobil-down-navbar">
                         <div class="account-mob-icon">
-                            <a asp-controller="Account" asp-action="Login"><i class="fa-regular fa-user"></i></a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <span>@User.Identity.Name</span>
+                                <form method="post" asp-controller="Account" asp-action="Logout" asp-route-userId="@userManager.Users.Where(u=>u.UserName==User.Identity.Name).FirstOrDefault().Id">
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <a asp-controller="Account" asp-action="Login"><i class="fa-regular fa-user"></i></a>
+
+                            }
                         </div>
                         <div class="line"></div>
                         <div class="basket-mob-icon">

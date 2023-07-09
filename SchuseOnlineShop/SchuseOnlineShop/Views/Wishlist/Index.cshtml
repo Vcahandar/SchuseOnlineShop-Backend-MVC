@@ -1,4 +1,4 @@
-﻿@model List<WishlistDetailVM>
+﻿@model WishlistIndexVM
 @inject ILayoutService layout
 
 
@@ -42,7 +42,7 @@
 
                 </div>
                 <form>
-                    @if (Model.Count > 0)
+                    @if (Model.WishlistDetails.Count > 0)
                     {
                         <table class="table product-table">
                             <thead>
@@ -55,9 +55,9 @@
                             </thead>
 
                             <tbody class="tbody">
-                                @foreach (var item in Model)
+                                @foreach (var item in Model.WishlistDetails)
                                 {
-                                    <tr data-id="@item.Id">
+                                    <tr class="wishlist-product" data-id="@item.Id">
                                         <td class="td-img">
                                             <div class="prdct-img">
                                                 <img src="~/assets/img/shoes/product-img/@item.Image" alt="">
@@ -68,7 +68,7 @@
                                         </td>
                                         <td class="td-total">@item.Price.ToString("0.00") $</td>
                                         <td>
-                                            <a class="delete-product">
+                                            <a data-quantity="@item.Count" data-id="@item.Id" class="delete-product">
                                                 <i class="fa-solid fa-trash delete"></i>
                                             </a>
                                         </td>

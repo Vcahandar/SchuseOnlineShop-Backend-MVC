@@ -58,6 +58,7 @@ namespace SchuseOnlineShop.Controllers
             int pageCount = 0;
             ViewBag.catId = categoryId;
             ViewBag.subCatId = subcategoryId;
+            ViewBag.colorId = colorId;
             ViewBag.branId = brandId;
             ViewBag.sizeId = sizeId;
 
@@ -86,7 +87,7 @@ namespace SchuseOnlineShop.Controllers
                 pageCount = await GetPageCountAsync(take, null,null, null, null, sizeId);
             }
 
-            if (categoryId == null && subcategoryId == null && brandId == null && colorId == null)
+            if (categoryId == null && subcategoryId == null && brandId == null && colorId == null && sizeId == null)
             {
                 pageCount = await GetPageCountAsync(take, null,null, null, null, null);
             }
@@ -181,7 +182,7 @@ namespace SchuseOnlineShop.Controllers
         {
             if (id is null) return BadRequest();
             ViewBag.brandId = id;
-            var products = await _productService.GetProductsByBrandIdAsync(id);
+            var products = await _productService.GetProductsByBrandIdAsync(id, page, take);
             int pageCount = await GetPageCountAsync(take, null, null, null, (int)id, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);

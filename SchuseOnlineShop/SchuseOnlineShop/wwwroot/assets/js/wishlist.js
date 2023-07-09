@@ -131,29 +131,62 @@ $(function(){
 $(function () {
     //-----------Delete-Wishlist
 
+    //$(document).on("click", ".delete-product", function () {
+
+    //    let id = $(this).parent().parent().attr("data-id");
+    //    console.log(id)
+    //    let prod = $(this).parent().parent();
+    //    let tbody = $(".tbody").children();
+    //    let data = { id: id };
+
+    //    $.ajax({
+    //        type: "Post",
+    //        url: `Wishlist/DeleteDataFromWishlist`,
+    //        data: data,
+    //        success: function () {
+    //            if ($(tbody).length == 1) {
+    //                $(".product-table").addClass("d-none");
+    //                //$(".footer-alert").removeClass("d-none")
+    //            }
+    //            $(prod).remove();
+    //        }
+    //    })
+    //    return false;
+    //})
+
+
+
+
     $(document).on("click", ".delete-product", function () {
 
-        let id = $(this).parent().parent().attr("data-id");
-        console.log(id)
-        let prod = $(this).parent().parent();
+        var id = $(this).data('id')
+        var basketCount = $('.count-whislist')
+        var basketCurrentCount = $('.count-whislist').html()
         let tbody = $(".tbody").children();
-        let data = { id: id };
+        var quantity = $(this).data('quantity')
+        var sum = basketCurrentCount - quantity
 
         $.ajax({
-            type: "Post",
-            url: `Wishlist/DeleteDataFromWishlist`,
-            data: data,
-            success: function () {
+            method: 'POST',
+            url: "/wishlist/delete",
+            data: {
+                id: id
+            },
+            success: function (res) {
                 if ($(tbody).length == 1) {
                     $(".product-table").addClass("d-none");
                     //$(".footer-alert").removeClass("d-none")
                 }
-                $(prod).remove();
+
+
+                $(`.wishlist-product[data-id=${id}]`).remove();
+                basketCount.html("")
+                basketCount.append(sum)
+
+
+
             }
         })
-        return false;
     })
-
-
 
 })

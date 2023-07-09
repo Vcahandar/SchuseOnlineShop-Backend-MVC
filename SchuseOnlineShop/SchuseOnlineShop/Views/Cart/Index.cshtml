@@ -92,12 +92,15 @@
                                                 <span> $</span>
                                             </td>
                                             <td>
-                                                <a class="delete-product">
+                                                <a data-quantity="@item.Count" data-id="@item.Id" class="delete-product">
                                                     <i class="fa-solid fa-trash delete"></i>
                                                 </a>
                                                 
                                             </td>
                                         </tr>
+
+                                        grandTotal = grandTotal + item.Total;
+
                                     }
                                    
                                 </tbody>
@@ -112,18 +115,13 @@
                             <div class="total d-flex">
                                 <div class="total-price">
                                     <span class="title">Subtotal: $</span>
-                                    @foreach (var item in Model.CartDetails)
+                                 @*@foreach (var item in Model.CartDetails)
                                     {
                                         grandTotal += item.Total;
-                                    }
+                                    }*@
                                     <span class="grand-total">@grandTotal.ToString("0.00")</span>
                                 </div>
-                                <a href="./checkout.html">
-                                    <button class="btn btn-warning">
-                                        Proceed To
-                                        Checkout
-                                    </button>
-                                </a>
+                      
                             </div>
                         </div>
                     </div>
@@ -149,7 +147,7 @@
                         <tbody class="tbody">
                             @foreach (var item in Model.CartDetails)
                             {
-                                <tr class="cart-item" data-id="2">
+                                <tr class="cart-item" class="basket-product" data-id="@item.Id">
                                     <td class="cart-item__media">
                                         <div class="prdct-img">
                                             <img src="~/assets/img/shoes/product-img/@item.Image" alt="">
@@ -158,13 +156,10 @@
                                     <td class="cart-item__details">
                                         <a class="cart-item__name break" href="">@item.Name</a>
                                         <div class="product-option">
-                                            <span>Size:</span>
-                                            <span>42</span>
+                                            <span>Brand:</span>
+                                            <span>@item.Brand.Name</span>
                                         </div>
-                                        <div class="product-option">
-                                            <span>Color:</span>
-                                            <span></span>
-                                        </div>
+       
                                     </td>
                                     <td class="cart-item__prices right">
                                         <div class="cart-item__price-wrapper">
@@ -182,7 +177,7 @@
                                         </div>
                                     </td>
                                     <td class="delete-icon">
-                                        <a class="delete-product">
+                                        <a data-quantity="@item.Count" data-id="@item.Id" class="delete-product">
                                             <i class="fa-solid fa-trash delete"></i>
                                         </a>
                                     </td>

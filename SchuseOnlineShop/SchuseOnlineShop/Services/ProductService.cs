@@ -452,5 +452,6 @@ namespace SchuseOnlineShop.Services
             .Include(m => m.Brand)
             .FirstOrDefaultAsync(m => m.Id == id);
         }
+
     }
 }

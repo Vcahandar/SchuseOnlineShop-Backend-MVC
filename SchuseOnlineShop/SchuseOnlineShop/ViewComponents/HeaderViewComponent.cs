@@ -39,6 +39,14 @@ namespace SchuseOnlineShop.ViewComponents
             return basketProductCount;
         }
 
+        public async Task<int> GetUserWihslistProductsCount(ClaimsPrincipal userClaims)
+        {
+            var user = await _userManager.GetUserAsync(userClaims);
+            if (user == null) return 0;
+            var wishlistProductCount = await _context.WishlistProducts.Where(bp => bp.Wishlist.AppUserId == user.Id).SumAsync(bp => bp.Count);
+            return wishlistProductCount;
+        }
+
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
@@ -46,7 +54,7 @@ namespace SchuseOnlineShop.ViewComponents
             {
                 GetSettingDatas = _layoutService.GetSettings(),
                 BasketCount = await GetUserBasketProductsCount(_httpContextAccessor.HttpContext.User),
-                WishlistCount = _wishlistService.GetDatasFromCookie().Count,
+                WishlistCount = await GetUserWihslistProductsCount(_httpContextAccessor.HttpContext.User),
                 Categories = await _layoutService.GetCategorysByName()
             };
             return await Task.FromResult(View(model));

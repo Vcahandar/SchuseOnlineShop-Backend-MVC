@@ -78,31 +78,38 @@ $(document).ready(function () {
 });
 
 
-// -----------
+// -----------delete-cart-----------
 
 $(function () {
 
     $(document).on("click", ".delete-product", function () {
 
-        let id = $(this).parent().parent().attr("data-id");
-        let prod = $(this).parent().parent();
+        var id = $(this).data('id')
+        var basketCount = $('.count-bask')
+        var basketCurrentCount = $('.count-bask').html()
         let tbody = $(".tbody").children();
-        let data = { id: id };
+        var quantity = $(this).data('quantity')
+        var sum = basketCurrentCount - quantity
 
         $.ajax({
-            type: "Post",
-            url: `Cart/Delete`,
-            data: data,
-            success: function () {
+            method: 'POST',
+            url: "/cart/delete",
+            data: {
+                id: id
+            },
+            success: function (res) {
+                grandTotal();
                 if ($(tbody).length == 1) {
-                    $(".empty-continue").removeClass("d-none");
+                    $(".product-table").addClass("d-none");
                     //$(".footer-alert").removeClass("d-none")
                 }
-                $(prod).remove();
-                grandTotal();
+
+                $(`.basket-product[data-id=${id}]`).remove();
+                basketCount.html("")
+                basketCount.append(sum)
+                
             }
         })
-        return false;
     })
 
 
@@ -111,32 +118,12 @@ $(function () {
 
 
 
-    $(".plus").click(function () {
-
-        let id = $(this).parent().parent().parent().attr("data-id");
-        let nativePrice = parseFloat($(this).parent().parent().prev().children().eq(0).text());
-        let total = $(this).parent().parent().next().children().eq(0);
-        let count = $(this).prev();
-
-        $.ajax({
-            type: "Post",
-            url: `Cart/IncrementProductCount?id=${id}`,
-            success: function (res) {
-                res++;
-                subTotal(res, nativePrice, total, count)
-                grandTotal();
-            }
-        })
-    });
-
-
-
     function grandTotal() {
         let tbody = $(".tbody").children()
         let sum = 0;
         for (var prod of tbody) {
-            let price = parseFloat($(prod).children().eq(4).text())
-            //let price = parseFloat($(prod).children().eq(2).text())
+            let price = parseFloat($(prod).children().eq(4).children().eq(0).text())
+     
             console.log(price)
             sum += price
         }
