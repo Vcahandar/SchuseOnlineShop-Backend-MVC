@@ -36,19 +36,6 @@ $(function(){
 })
 
 
-// Product-size-select----
-
-let selectSize = document.querySelectorAll(".shoes-size label")
-let inputRadio = document.querySelectorAll(".shoes-size input")
-
-
-for(let selectSizes of selectSize) {
-  selectSizes.addEventListener("click",function(){
-      
-    
-  })
-}
-
 
 
 // ----Carusel-mini--------
@@ -249,6 +236,11 @@ $(function () {
         })
     }
 
+
+        
+
 })
+
+
 
 

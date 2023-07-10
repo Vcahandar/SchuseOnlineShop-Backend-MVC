@@ -1,13 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using SchuseOnlineShop.Helpers.Enums;
 
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles = "SuperAdmin,Admin")]
+
     public class DashboardController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string viewName, string controllerName)
         {
-            return View();
+            if (viewName == "Index" && controllerName == "Dashboard")
+            {
+                return View();
+            }
+            return RedirectToAction("AdminLogin", "Account");
         }
     }
 }

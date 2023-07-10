@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿
+
+﻿
+@inject UserManager<AppUser> userManager;
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,14 +50,30 @@
 					<div class="main-menu-header">
 						<img class="img-radius" src="~/admin/assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
 						<div class="user-details">
-							<span>Admin</span>
-							<div id="more-details">UX Designer<i class="fa fa-chevron-down m-l-5"></i></div>
+							@if (!User.Identity.IsAuthenticated)
+							{
+								<button type="submit">
+									<span>Login</span>
+								</button>
+
+							}
+							else
+							{
+								<span>
+									@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).FirstName.ToUpper() @userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).LastName
+								</span>
+							}
+
+							<div id="more-details">Developer<i class="fa fa-chevron-down m-l-5"></i></div>
 						</div>
 					</div>
 					<div class="collapse" id="nav-user-link">
 						<ul class="list-unstyled">
-
-							<li class="list-group-item"><a href="auth-normal-sign-in.html"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
+							<form asp-controller="Account" asp-action="AdminLogin" asp-route-userId="@userManager.Users.Where(u=>u.UserName==User.Identity.Name).FirstOrDefault().Id" method="post">
+								<div class="logout">
+									<button style="border: none; color: #ffffff; background: transparent; margin-left: 15px; font-size: 15px;" type="submit">Logout</button>
+								</div>
+							</form>
 						</ul>
 					</div>
 				</div>
@@ -136,34 +158,6 @@
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav mr-auto">
 		
-			</ul>
-			<ul class="navbar-nav ml-auto">
-				<li>
-					<div class="dropdown">
-				
-					</div>
-				</li>
-				<li>
-					<div class="dropdown drp-user">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="feather icon-user"></i>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right profile-notification">
-							<div class="pro-head">
-								<img src="~/admin/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-								<span>John Doe</span>
-								<a href="auth-signin.html" class="dud-logout" title="Logout">
-									<i class="feather icon-log-out"></i>
-								</a>
-							</div>
-							<ul class="pro-body">
-								<li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-								<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-								<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
-							</ul>
-						</div>
-					</div>
-				</li>
 			</ul>
 		</div>
 

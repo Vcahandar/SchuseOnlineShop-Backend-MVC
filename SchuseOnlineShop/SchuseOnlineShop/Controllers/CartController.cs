@@ -138,35 +138,25 @@ namespace SchuseOnlineShop.Controllers
         }
 
 
-        //public IActionResult IncrementProductCount(int? id)
-        //{
-        //    if (id is null) return BadRequest();
-        //    var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
-        //    var count = baskets.FirstOrDefault(b => b.ProductId == id).Count++;
 
-        //    Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
+        public async Task<IActionResult> CartProductCountChange(int basketId, int quantity)
+        {
+            if (basketId < 1) return NotFound();
+            CartProduct item = _context.CartProducts.FirstOrDefault(m => m.Id == basketId);
+            if (item is null) return NotFound();
 
-        //    return Ok(count);
-        //}
+            item.Count = item.Count + quantity;
 
-        //[HttpPost]
-        //public IActionResult DecrementProductCount(int? id)
-        //{
-        //    if (id is null) return BadRequest();
-        //    var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
-        //    var product = (baskets.FirstOrDefault(b => b.ProductId == id));
-        //    if (product.Count == 1)
-        //    {
-        //        return Ok();
-        //    }
-        //    var count = product.Count--;
-        //    Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
+            if (item.Count == 0) return RedirectToAction("Index", "Cart");
 
-        //    return Ok(count);
-        //}
+            Product product = await _productService.GetFullDataByIdAsync(item.ProductId);
+
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Cart");
+        }
 
 
 
-   
     }
 }

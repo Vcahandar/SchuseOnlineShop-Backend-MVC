@@ -40,7 +40,7 @@
 
                     <nav class="paginate-area mt-5" aria-label="...">
                         <ul class="pagination">
-                            <li class="page-item @(Model.PaginateDatas.HasPrevious ? " " : "disabled")">
+                            <li class="page-item @(Model.PaginateDatas.HasPrevious ? " " : "d-none")">
                                 <a asp-action="Index" asp-route-page="@(Model.PaginateDatas.CurrentPage - 1)">
                                     <span class="page-link @(Model.PaginateDatas.HasNext ? " " : "disabled")">Previous</span>
                                 </a>

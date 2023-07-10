@@ -76,9 +76,11 @@
                                             <input type="range" class="max-price" value="250" min="10" max="500"
                                                    step="10">
                                         </div>
-                                        <button type="submit">FILTER</button>
+                                        <button style="border: 1px solid orange;" type="submit">FILTER</button>
                                     </div>
                                 </div>
+
+                                
 
                                 </form>
 
@@ -136,23 +138,6 @@
 
                         </div>
 
-                        <div class="product-size">
-                            <div class="tags-title">
-                                <h3>Size</h3>
-                            </div>
-                            <div class="sidebar-body">
-                                <ul>
-                                    @foreach (var size in Model.Sizes)
-                                    {
-                                        <li>
-                                            <input type="checkbox" class="cbox sizee" name="@size.Number" id="@size.Id" value="@size.Number">
-                                            <label class="cbox-label" for="@size.Id">@size.Number <span>(@size.ProductSizes?.Count())</span></label>
-                                        </li>
-                                    }
-
-                                </ul>
-                            </div>
-                        </div>
 
                         <div class="product-sale-banner d-lg-block d-none">
                             <a href="">

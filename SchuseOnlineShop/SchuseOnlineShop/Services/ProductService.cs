@@ -103,11 +103,11 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? subCategoryId, int? colorId, int? brandId, int? sizeId,int? value1,int? value2)
+        public async Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId, int? subCategoryId, int? colorId, int? brandId,int? value1,int? value2)
         {
             List<Product> products = new List<Product>();
 
-            if(categoryId == null && subCategoryId == null && colorId == null && brandId == null && sizeId == null )
+            if(categoryId == null && subCategoryId == null && colorId == null && brandId == null)
             {
                 products = await _context.Products
                     .Include(m => m.SubCategory)
@@ -188,17 +188,6 @@ namespace SchuseOnlineShop.Services
                     .ToListAsync();
             }
 
-            if(sizeId != null)
-            {
-                products = await _context.ProductSizes
-                    .Include(m => m.Product)
-                    .ThenInclude(m=>m.ProductImages)
-                    .Where(m=>m.SizeId== sizeId)
-                    .Skip((page*take) - take)
-                    .Take(take)
-                    .Select(m=>m.Product)
-                    .ToListAsync();
-            }
 
             if(brandId != null)
             {
@@ -270,30 +259,6 @@ namespace SchuseOnlineShop.Services
             return model;
         }
 
-        public async Task<List<ProductVM>> GetProductsBySizeIdAsync(int? id)
-        {
-            List<ProductVM> model = new();
-            var products = await _context.ProductSizes
-                .Include(m => m.Product)
-                .ThenInclude(m => m.ProductImages)
-                .Where(m => m.Size.Id == id)
-                .Select(m => m.Product)
-                .ToListAsync();
-
-            foreach (var item in products)
-            {
-                model.Add(new ProductVM
-                {
-                    Id = item.Id,
-                    Price = item.Price,
-                    DiscountPrice = item.DiscountPrice,
-                    Name = item.Name,
-                    ProductImages = item.ProductImages,
-                    Rating = item.Rating
-                });
-            }
-            return model;
-        }
 
 
         public async Task<List<ProductVM>> GetProductsByBrandIdAsync(int? id, int page = 1, int take = 6)
@@ -352,16 +317,6 @@ namespace SchuseOnlineShop.Services
         }
 
 
-
-        public async Task<int> GetProductsCountBySizeAsync(int? sizeId)
-        {
-            return await _context.ProductSizes
-          .Include(m => m.Product)
-          .ThenInclude(m => m.ProductImages)
-          .Where(m => m.Size.Id == (int)sizeId)
-          .Select(m => m.Product)
-          .CountAsync();
-        }
 
 
         public async Task<int> GetProductsCountByBrandAsync(int? brandId)

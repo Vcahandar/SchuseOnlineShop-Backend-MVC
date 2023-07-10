@@ -98,7 +98,6 @@ $(function () {
                 id: id
             },
             success: function (res) {
-                grandTotal();
                 if ($(tbody).length == 1) {
                     $(".product-table").addClass("d-none");
                     //$(".footer-alert").removeClass("d-none")
@@ -107,14 +106,11 @@ $(function () {
                 $(`.basket-product[data-id=${id}]`).remove();
                 basketCount.html("")
                 basketCount.append(sum)
-                
+                grandTotal();
+
             }
         })
     })
-
-
-
-
 
 
 
