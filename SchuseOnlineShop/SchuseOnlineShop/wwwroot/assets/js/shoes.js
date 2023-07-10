@@ -122,11 +122,11 @@ for (const icon of icons) {
     document.querySelector("#overlay").style.display = "block";
     document.body.style.overflow = "hidden"
 
-    let prodImg = this.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.getAttribute("src");
+      let prodImg = this.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
 
-    let prodName = this.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.innerText;
-    let prodPrice = this.parentNode.parentNode.nextElementSibling.nextElementSibling.children[1].innerText;
-    let proDiscount = this.parentNode.parentNode.nextElementSibling.nextElementSibling.lastElementChild.innerText;
+      let prodName = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.innerText;
+      let prodPrice = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.children[1].innerText;
+      let proDiscount = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.lastElementChild.innerText;
 
 
     document.querySelector(".product-modal .img img").setAttribute("src", prodImg);
@@ -225,43 +225,26 @@ bookIcons.forEach(icons => {
 
 $(function () {
 
-    //GetProducts(".all", "/Shop/GetProducts")
+    $(document).on("click", ".add-to-eye-btn", function (e) {
+        debugger
+        let id = $(this).attr("data-id");
+        let desc = $(".product-modal .pro-description p ")
+        let category = $(".product-modal .pro-category .category-name .type-name ")
+        let brand = $(".product-modal .pro-category .vendor-name .type-name ")
+        let sku = $(".product-modal .pro-category .sku-name .type-name ")
 
-    //function GetProducts(clickedElem, url) {
-    //    $(document).on("click", clickedElem, function (e) {
-    //        console.log("test")
-    //        e.preventDefault();
-    //        let parent = $(".pro-list")
-    //        console.log(parent)
-    //        $.ajax({
-    //            url: url,
-    //            type: "Get",
-    //            success: function (res) {
-    //                $(parent).html(res);
-    //            }
-    //        })
-    //    })
-
-    //}
-
-    //$(document).on("click", ".all", function (e) {
-    //    e.preventDefault();
-    //    let parent = $(".pro-list")
-
-    //    $.ajax({
-
-    //        url: "shop/GetAllProduct",
-    //        type: "Get",
-
-    //        success: function (res) {
-
-    //            $(parent).html(res)
-    //        }
-    //    })
-
-
-
-    //})
+        $.ajax({
+            type: "Get",
+            url: `/Home/GetDataProductModal/${id}`,
+            success: function (res) {
+                desc.text(res.description)
+                category.text(res.categoryName)
+                brand.text(res.brandName)
+                sku.text(res.sku)
+            }
+        })
+        return false;
+    })
 
 
 })

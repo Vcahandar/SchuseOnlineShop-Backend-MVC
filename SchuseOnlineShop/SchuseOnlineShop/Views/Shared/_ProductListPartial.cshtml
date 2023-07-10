@@ -33,7 +33,9 @@
                     </button>
                 }
                 <button type="submit" class="d-lg-block d-none">
-                    <i class="fa-regular fa-eye"></i>
+                    <a class="add-to-eye-btn" data-id="@product.Id">
+                        <i class="fa-regular fa-eye"></i>
+                    </a>
                 </button>
                 @if (User.Identity.IsAuthenticated)
                 {

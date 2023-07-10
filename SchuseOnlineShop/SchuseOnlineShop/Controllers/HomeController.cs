@@ -87,7 +87,6 @@ namespace SchuseOnlineShop.Controllers
                     Sku = dbProduct.SKU,
                     CategoryName = cateName,
                     Image = mainImage,
-                    
 
                 };
 

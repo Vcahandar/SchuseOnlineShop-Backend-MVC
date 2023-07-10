@@ -815,7 +815,7 @@ main #shoes-main .product-shops .product-modal .pro-category {
 main #shoes-main .product-shops .product-modal .pro-category .category-name {
   margin-bottom: 5px;
 }
-main #shoes-main .product-shops .product-modal .pro-category .category-name .type {
+main #shoes-main .product-shops .product-modal .pro-category .type {
   text-transform: capitalize;
   display: inline-block;
   min-width: 90px;
@@ -823,9 +823,10 @@ main #shoes-main .product-shops .product-modal .pro-category .category-name .typ
   color: black;
   font-size: 17px;
 }
-main #shoes-main .product-shops .product-modal .pro-category .category-name .type-name {
-  color: #000;
-}
+    main #shoes-main .product-shops .product-modal .pro-category .type-name {
+        color: #000;
+        font-size: 18px;
+    }
 main #shoes-main .product-shops .product-modal .pro-category .category-name #size {
   width: 140px;
   background-color: lightgray;

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using SchuseOnlineShop.Areas.Admin.ViewModels.User;
 using SchuseOnlineShop.Helpers.Enums;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
@@ -64,25 +65,6 @@ namespace SchuseOnlineShop.Controllers
                 {
                     ModelState.AddModelError(string.Empty, "Email or password is wrong");
                     return View(model);
-                }
-
-                List<CartVM> cartVMs = new();
-
-                Cart dbCart = await _cartService.GetByUserIdAsync(user.Id);
-
-                if (dbCart is not null)
-                {
-                    List<CartProduct> cartProducts = await _cartService.GetAllByCartIdAsync(dbCart.Id);
-                    foreach (var cartProduct in cartProducts)
-                    {
-                        cartVMs.Add(new CartVM
-                        {
-                            ProductId = cartProduct.ProductId,
-                            Count = cartProduct.Count
-                        });
-                    }
-
-                    Response.Cookies.Append("basket", JsonConvert.SerializeObject(cartVMs));
                 }
 
 
@@ -171,35 +153,15 @@ namespace SchuseOnlineShop.Controllers
 
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
-            if (userId is null || token is null) return BadRequest();
+            if (userId == null || token == null) return BadRequest();
+
             AppUser user = await _userManager.FindByIdAsync(userId);
-            if (user is null) return NotFound();
+
+            if (user == null) return NotFound();
 
             await _userManager.ConfirmEmailAsync(user, token);
 
-            await _signInManager.SignInAsync(user, user.IsRemember);
-
-            List<CartVM> cartVMs = new();
-            Cart dbCart = await _cartService.GetByUserIdAsync(userId);
-
-            if (dbCart is not null)
-            {
-                List<CartProduct> cartProducts = await _cartService.GetAllByCartIdAsync(dbCart.Id);
-                foreach (var cartProduct in cartProducts)
-                {
-                    cartVMs.Add(new CartVM
-                    {
-                        ProductId = cartProduct.ProductId,
-                        Count = cartProduct.Count
-                    });
-                }
-
-                Response.Cookies.Append("basket", JsonConvert.SerializeObject(cartVMs));
-            }
-
-
-
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(cartVMs));
+            await _signInManager.SignInAsync(user, false);
 
             return RedirectToAction("Index", "Home");
         }
@@ -227,8 +189,6 @@ namespace SchuseOnlineShop.Controllers
         {
             await _signInManager.SignOutAsync();
 
-
-
             return RedirectToAction("Index", "Home");
         }
 
@@ -246,20 +206,23 @@ namespace SchuseOnlineShop.Controllers
         {
             if (!ModelState.IsValid) return View();
 
+
             AppUser existUser = await _userManager.FindByEmailAsync(forgotPassword.Email);
 
-            if (existUser is null)
+            if (existUser == null)
             {
                 ModelState.AddModelError("Email", "User not found");
                 return View();
             }
 
+
             string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
 
-            string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = existUser.Id, token }, Request.Scheme, Request.Host.ToString());
+            string link = Url.Action(nameof(ResetPassword), "Account", new { userId = existUser.Id, token },
+
+                Request.Scheme, Request.Host.ToString());
 
 
-            string subject = "Verify password reset email";
 
             string html = string.Empty;
 
@@ -267,12 +230,17 @@ namespace SchuseOnlineShop.Controllers
             {
                 html = reader.ReadToEnd();
             }
+            string subject = "Verify Password Reset Email";
 
             html = html.Replace("{{link}}", link);
-            html = html.Replace("{{headerText}}", "Hi");
+            html = html.Replace("{{headerText}}", existUser.FirstName);
 
             _emailService.Send(existUser.Email, subject, html);
+
+
             return RedirectToAction(nameof(VerifyEmail));
+
+
         }
 
 
@@ -288,15 +256,14 @@ namespace SchuseOnlineShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
         {
-            if (!ModelState.IsValid) return View(resetPassword);
+             if (!ModelState.IsValid) return View(resetPassword);
+
             AppUser existUser = await _userManager.FindByIdAsync(resetPassword.UserId);
+
             if (existUser == null) return NotFound();
-            if (await _userManager.CheckPasswordAsync(existUser, resetPassword.Password))
-            {
-                ModelState.AddModelError("", "New password cant be same with old password");
-                return View(resetPassword);
-            }
+
             await _userManager.ResetPasswordAsync(existUser, resetPassword.Token, resetPassword.Password);
+
             return RedirectToAction(nameof(Login));
         }
     }

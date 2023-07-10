@@ -147,8 +147,22 @@ for (const icon of icons) {
         document.querySelector("#overlay").style.display = "block";
         document.body.style.overflow = "hidden"
 
-       let prodImg = this.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
-       document.querySelector(".product-modal .img img").setAttribute("src", prodImg);
+        let prodImg = this.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
+
+        let prodName = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.innerText;
+        let prodPrice = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.children[1].innerText;
+        let proDiscount = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.lastElementChild.innerText;
+        let proId = this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id");
+
+        console.log(proId)
+
+        document.querySelector(".product-modal .img img").setAttribute("src", prodImg);
+        document.querySelector(".product-modal .prod-detail a").setAttribute("asp-route-id", proId);
+
+        document.querySelector(".prod-tittle h2").innerText = prodName;
+        document.querySelector(".price-discount .discount del").innerText = proDiscount;
+        document.querySelector(".price-discount  .pro-price p").innerText = prodPrice;
+
     })
 }
 
@@ -210,15 +224,7 @@ $(function () {
     //AddToModal(".add-to-eye-btn", "/Home/GetDataProductModal/");
 
     $(document).on("click", ".add-to-eye-btn", function (e) {
-        debugger
         let id = $(this).attr("data-id");
-        let data = { id: id };
-        let productModal = $(".product-modal")
-        //let photo = $(".produc-imgs .basic").attr("src")
-        //let img = $(".product-modal .img img").attr("src", photo)
-        let name = $(".product-modal .prod-tittle h2 ")
-        let price = $(".product-modal .price-discount .discount del ")
-        let discountPrice = $(".product-modal .price-discount .pro-price p ")
         let desc = $(".product-modal .pro-description p ")
         let category = $(".product-modal .pro-category .category-name .type-name ")
         let brand = $(".product-modal .pro-category .vendor-name .type-name ")
@@ -227,12 +233,7 @@ $(function () {
         $.ajax({
             type: "Get",
             url: `/Home/GetDataProductModal/${id}`,
-            //data: data,
             success: function (res) {
-                //$(img).attr("src",res.image)
-                name.text(res.name)
-                price.text(res.price)
-                discountPrice.text(res.discountPrice)
                 desc.text(res.description)
                 category.text(res.categoryName)
                 brand.text(res.brandName)
