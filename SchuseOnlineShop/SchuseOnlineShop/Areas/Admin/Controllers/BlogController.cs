@@ -7,12 +7,13 @@ using SchuseOnlineShop.Helpers;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Slider;
 using SchuseOnlineShop.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class BlogController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class BlogController : Controller
     {
         private readonly IWebHostEnvironment _env;
         private readonly IBlogService _blogService;

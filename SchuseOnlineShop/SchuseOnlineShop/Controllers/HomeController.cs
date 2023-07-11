@@ -35,24 +35,7 @@ namespace SchuseOnlineShop.Controllers
 
         public async Task<IActionResult> Index(int? id)
         {
-            //Product dbProduct = new();
-            //ModalVM modal = new();
-            //if (id != null)
-            //{
-            //    dbProduct = await _productService.GetDatasModalProductByIdAsyc((int)id);
-            //    if (dbProduct is null) return NotFound();
-            //     modal = new()
-            //    {
-            //        Id = dbProduct.Id,
-            //        Name = dbProduct.Name,
-            //        Price = dbProduct.Price,
-            //        Description = dbProduct.Description,
-            //        Brand = dbProduct.Brand.Name,
-            //        Sku = dbProduct.SKU,
-            //        Category = dbProduct.Category.Name,
-            //        ProductImages = dbProduct.ProductImages,
-            //    };
-            //}
+           
 
             HomeVM model = new()
             {

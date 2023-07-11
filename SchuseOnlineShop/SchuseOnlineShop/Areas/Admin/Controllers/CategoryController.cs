@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Blog;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Category;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Slider;
@@ -11,7 +12,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class CategoryController : Controller
     {
         private readonly AppDbContext _context;
         private readonly ICategoryService _category;

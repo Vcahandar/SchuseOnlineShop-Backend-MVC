@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Blog;
 using SchuseOnlineShop.Areas.Admin.ViewModels.HomeCategory;
 using SchuseOnlineShop.Data;
@@ -10,7 +11,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class HomeCategoryController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class HomeCategoryController : Controller
     {
         private readonly IWebHostEnvironment _env;
         private readonly IHomeCategoryService _homeCategory;

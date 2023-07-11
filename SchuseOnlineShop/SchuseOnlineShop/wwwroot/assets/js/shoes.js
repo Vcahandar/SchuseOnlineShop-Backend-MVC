@@ -177,28 +177,7 @@ $(document).ready(function () {
   });
 });
 
-// --------------- Modul END --------------------
 
-
-//$(document).on("click", ".category", function (e) {
-//    e.preventDefault();
-//    let categoryId = $(this).attr("data-id");
-//    let parent = $(".pro-list")
-
-
-//    $.ajax({
-//        type: "Get",
-//        url: `shop/GetProductCategory?id=${categoryId}`,
-//        success: function (res) {
-//            $(parent).html(res);
-//        }
-
-//    })
-//})
-
-
-
-//----------icon-whislist-start------------
 
 let bookIcons = document.querySelectorAll(" .card .product-hover .fa-bookmark")
 
@@ -212,10 +191,7 @@ bookIcons.forEach(icons => {
             icons.classList.remove("fa-solid");
             icons.classList.add("fa-regular");
         }
-
-
     })
-
 
 });
 
@@ -329,6 +305,26 @@ $(function () {
         })
     }
 
+
+    //SORT
+    $(document).on("change", "#sort", function (e) {
+        e.preventDefault();
+        let sortValue = $(this).val();
+        console.log(sortValue)
+        let data = { sortValue: sortValue };
+        let parent = $(".pro-list");
+
+        $.ajax({
+            url: "/Shop/ProductSort",
+            type: "Get",
+            data: data,
+            success: function (res) {
+                $(parent).html(res);
+
+            }
+
+        })
+    })
 
 
 })

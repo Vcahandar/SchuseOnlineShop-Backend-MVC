@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Brand;
 using SchuseOnlineShop.Areas.Admin.ViewModels.SubCategory;
 using SchuseOnlineShop.Data;
@@ -11,7 +12,8 @@ using System.Data;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class BrandController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class BrandController : Controller
     {
         private readonly AppDbContext _context;
         private readonly IBrandService _brandService;

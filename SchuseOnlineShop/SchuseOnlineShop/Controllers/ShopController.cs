@@ -51,41 +51,54 @@ namespace SchuseOnlineShop.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? subcategoryId = null, int? colorId = null, int? brandId = null, int? value1 = null, int? value2 = null)
+        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? subcategoryId = null, int? colorId = null, int? brandId = null, int? minValue = null, int? maxValue = null)
         {
-            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId, subcategoryId, colorId, brandId,value1,value2);
+            List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId, subcategoryId, colorId, brandId, minValue, maxValue);
             List<ProductVM> mappedDatas = GetDatas(datas);
             int pageCount = 0;
             ViewBag.catId = categoryId;
             ViewBag.subCatId = subcategoryId;
             ViewBag.colorId = colorId;
             ViewBag.branId = brandId;
+            ViewBag.minValue = minValue;
+            ViewBag.maxValue = maxValue;
 
 
 
             if (categoryId != null)
             {
-                pageCount = await GetPageCountAsync(take, categoryId, null, null, null);
+                pageCount = await GetPageCountAsync(take, categoryId, null, null, null, null, null);
             }
             if (subcategoryId != null)
             {
-                pageCount = await GetPageCountAsync(take, null, subcategoryId, null, null);
+                pageCount = await GetPageCountAsync(take, null, subcategoryId, null, null , null, null);
             }
             if (colorId != null)
             {
-                pageCount = await GetPageCountAsync(take, null, null, colorId, null);
+                pageCount = await GetPageCountAsync(take, null, null, colorId, null, null, null);
             }
 
             if (brandId != null)
             {
-                pageCount = await GetPageCountAsync(take, null, null, null, brandId);
+                pageCount = await GetPageCountAsync(take, null, null, null, brandId, null, null);
+            }
+
+            if (minValue != null)
+            {
+                pageCount = await GetPageCountAsync(take, null, null, null, null, minValue, null);
+            }
+
+
+            if (maxValue != null)
+            {
+                pageCount = await GetPageCountAsync(take, null, null, null, null, null, maxValue);
             }
 
 
 
-            if (categoryId == null && subcategoryId == null && brandId == null && colorId == null)
+            if (categoryId == null && subcategoryId == null && brandId == null && colorId == null && minValue == null && maxValue == null)
             {
-                pageCount = await GetPageCountAsync(take, null,null, null, null);
+                pageCount = await GetPageCountAsync(take, null, null, null, null, null, null);
             }
 
             Paginate<ProductVM> paginatedDatas = new(mappedDatas, page, pageCount);
@@ -102,7 +115,10 @@ namespace SchuseOnlineShop.Controllers
             return View(model);
         }
 
-        private async Task<int> GetPageCountAsync(int take, int? catId, int? subCatId, int? colorId, int? branId)
+
+
+
+        private async Task<int> GetPageCountAsync(int take, int? catId, int? subCatId, int? colorId, int? branId, int? minValue, int? maxValue)
         {
             int prodCount = 0;
             if (catId is not null)
@@ -123,8 +139,13 @@ namespace SchuseOnlineShop.Controllers
                 prodCount = await _productService.GetProductsCountByBrandAsync(branId);
 
             }
+            if (minValue != null && maxValue != null)
+            {
+                prodCount = await _productService.GetProductsCountByRangeAsync(minValue,maxValue);
 
-            if (catId == null && subCatId == null && branId == null && colorId == null)
+            }
+
+            if (catId == null && subCatId == null && branId == null && colorId == null && minValue == null && maxValue == null)
             {
                 prodCount = await _productService.GetCountAsync();
             }
@@ -163,7 +184,7 @@ namespace SchuseOnlineShop.Controllers
 
             var products = await _productService.GetProductsBySubCategoryIdAsync(id, page, take);
 
-            int pageCount = await GetPageCountAsync(take, null, (int)id, null, null);
+            int pageCount = await GetPageCountAsync(take, null, (int)id, null, null, null ,null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -177,7 +198,7 @@ namespace SchuseOnlineShop.Controllers
             if (id is null) return BadRequest();
             ViewBag.brandId = id;
             var products = await _productService.GetProductsByBrandIdAsync(id, page, take);
-            int pageCount = await GetPageCountAsync(take, null, null, null, (int)id);
+            int pageCount = await GetPageCountAsync(take, null, null, null, (int)id , null ,null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -190,9 +211,9 @@ namespace SchuseOnlineShop.Controllers
             if (id is null) return BadRequest();
             ViewBag.colorId = id;
 
-            var products = await _productService.GetProductsByColorIdAsync(id);
+            var products = await _productService.GetProductsByColorIdAsync(id ,page, take);
 
-            int pageCount = await GetPageCountAsync(take, null, null, (int)id, null);
+            int pageCount = await GetPageCountAsync(take, null, null, (int)id, null ,null ,null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -303,25 +324,6 @@ namespace SchuseOnlineShop.Controllers
 
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> AddToCart(int? id)
-        //{
-        //    if (id is null) return BadRequest();
-
-        //    Product dbProduct = await _productService.GetByIdAsync((int)id);
-
-        //    if (dbProduct == null) return NotFound();
-
-        //    List<CartVM> carts = _cartService.GetDatasFromCookie();
-
-        //    CartVM existProduct = carts.FirstOrDefault(p => p.ProductId == id);
-
-        //    _cartService.SetDatasToCookie(carts, dbProduct, existProduct);
-
-        //    int cartCount = carts.Count;
-
-        //    return Ok(cartCount);
-        ////}
 
 
         public async Task<IActionResult> Search(string searchText)
@@ -347,12 +349,54 @@ namespace SchuseOnlineShop.Controllers
 
             var products = await _productService.GetProductsByCategoryIdAsync(id, page, take);
 
-            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null);
+            int pageCount = await GetPageCountAsync(take, (int)id, null, null, null, null, null);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
             return PartialView("_ProductListPartial", model);
         }
+
+
+        public async Task<IActionResult> ProductSort(string? sortValue, int page = 1, int take = 6)
+        {
+            ViewBag.sortValue = sortValue;
+
+            List<Product> products = new();
+
+            if (sortValue == "1")
+            {
+                products = await _context.Products.Include(m => m.ProductImages).ToListAsync();
+            };
+            if (sortValue == "2")
+            {
+                products = await _context.Products.Include(m => m.ProductImages).OrderByDescending(p => p.Rating).ToListAsync();
+
+            };
+            if (sortValue == "3")
+            {
+                products = await _context.Products.Include(m => m.ProductImages).OrderByDescending(p => p.CreatedDate).ToListAsync();
+
+            };
+            if (sortValue == "4")
+            {
+                products = await _context.Products.Include(m => m.ProductImages).OrderByDescending(p => p.Price).ToListAsync();
+
+            };
+            if (sortValue == "5")
+            {
+                products = await _context.Products.Include(m => m.ProductImages).OrderBy(p => p.Price).ToListAsync();
+
+            };
+            int productCount = products.Count();
+            var pageCount = (int)Math.Ceiling((decimal)productCount / take);
+            List<ProductVM> mappedDatas = GetDatas(products);
+            Paginate<ProductVM> model = new(mappedDatas, page, pageCount);
+
+            return PartialView("_ProductListPartial", model);
+        }
+
+
+
 
 
         //[HttpPost]
@@ -390,7 +434,7 @@ namespace SchuseOnlineShop.Controllers
         [HttpGet]
         public async Task<IActionResult> GetRangeProducts(int value1, int value2, int page = 1, int take = 6)
         {
-            List<Product> products = await _context.Products.Where(x => x.DiscountPrice >= value1 && x.DiscountPrice <= value2).Include(m => m.ProductImages).ToListAsync();
+            List<Product> products = await _context.Products.Where(m => m.DiscountPrice >= value1 && m.DiscountPrice <= value2).Include(m => m.ProductImages).ToListAsync();
             var productCount = products.Count();
             var pageCount = (int)Math.Ceiling((decimal)productCount / take);
             List<ProductVM> mappedDatas = GetDatas(products);

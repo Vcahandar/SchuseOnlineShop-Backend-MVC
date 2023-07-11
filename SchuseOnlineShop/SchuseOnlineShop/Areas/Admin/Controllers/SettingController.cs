@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Helpers;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
@@ -6,7 +7,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class SettingController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class SettingController : Controller
     {
         private readonly IWebHostEnvironment _env;
         private readonly ICrudService<Slider> _crudService;

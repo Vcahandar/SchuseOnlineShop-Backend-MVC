@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Areas.Admin.ViewModels.User;
 using SchuseOnlineShop.Data;
@@ -9,8 +10,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class UserController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class UserController : Controller
     {
         private readonly IUserService _userService;
         private readonly AppDbContext _context;

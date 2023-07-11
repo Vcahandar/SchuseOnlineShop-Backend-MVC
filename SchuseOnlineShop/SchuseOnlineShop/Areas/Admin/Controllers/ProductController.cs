@@ -5,11 +5,13 @@ using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
 using SchuseOnlineShop.ViewModels.Product;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProductController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class ProductController : Controller
     {
 
         private readonly IWebHostEnvironment _env;

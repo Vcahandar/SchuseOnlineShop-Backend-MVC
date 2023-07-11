@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Slider;
 using SchuseOnlineShop.Data;
@@ -9,7 +10,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class SliderController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class SliderController : Controller
     {
         private readonly IWebHostEnvironment _env;
         private readonly ISliderService _sliderService;
@@ -30,10 +32,13 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
 
         }
 
-        public async Task<IActionResult> Index()
+
+
+        public async Task<IActionResult> Index(string viewName, string controllerName)
         {
             IEnumerable<Slider> dbSlider = await _sliderService.GetAllAsync();
             return View(dbSlider);
+
         }
 
         [HttpGet]

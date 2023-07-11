@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Blog;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Team;
@@ -11,8 +12,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class TeamController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class TeamController : Controller
     {
         private readonly AppDbContext _context;
         private readonly ITeamService _teamService;

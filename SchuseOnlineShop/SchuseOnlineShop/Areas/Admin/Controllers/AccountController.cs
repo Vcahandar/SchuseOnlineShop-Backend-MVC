@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Account;
 using SchuseOnlineShop.Models;
@@ -7,8 +8,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class AccountController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class AccountController : Controller
     {
         private readonly IEmailService _emailService;
         private readonly SignInManager<AppUser> _signInManager;

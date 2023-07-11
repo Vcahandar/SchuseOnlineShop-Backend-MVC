@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Size;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
@@ -6,7 +7,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class SizeController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class SizeController : Controller
     {
         private readonly ISizeService _sizeService;
         private readonly ICrudService<Size> _crudService;

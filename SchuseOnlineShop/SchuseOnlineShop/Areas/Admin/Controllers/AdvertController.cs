@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Advert;
 using SchuseOnlineShop.Data;
 using SchuseOnlineShop.Helpers;
@@ -8,7 +9,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class AdvertController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class AdvertController : Controller
     {
         private readonly IWebHostEnvironment _env;
         private readonly ICrudService<Advert> _crudService;
@@ -24,6 +26,9 @@ namespace SchuseOnlineShop.Areas.Admin.Controllers
         {
             return View(await _advertService.GetAllAsync());
         }
+
+
+
         [HttpGet]
         public IActionResult Create()
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Brand;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Color;
 using SchuseOnlineShop.Data;
@@ -10,8 +11,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class ColorController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class ColorController : Controller
     {
 
         private readonly AppDbContext _context;

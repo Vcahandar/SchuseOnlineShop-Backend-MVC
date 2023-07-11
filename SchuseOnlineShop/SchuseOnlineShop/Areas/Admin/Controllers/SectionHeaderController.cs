@@ -2,13 +2,13 @@
 using SchuseOnlineShop.Data;
 using SchuseOnlineShop.Services.Interfaces;
 using SchuseOnlineShop.Models;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class SectionHeaderController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class SectionHeaderController : Controller
     {
         private readonly ICrudService<SectionHeader> _crudService;
         private readonly ILayoutService _layoutService;

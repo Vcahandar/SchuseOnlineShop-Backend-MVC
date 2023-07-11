@@ -8,7 +8,7 @@
 <html lang="en">
 
 <head>
-	<title>Flat Able - Premium Admin Template by Phoenixcoded</title>
+	<title>Schuse - Admin Panel</title>
 	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 11]>
@@ -62,6 +62,8 @@
 								<span>
 									@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).FirstName.ToUpper() @userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).LastName
 								</span>
+
+
 							}
 
 							<div id="more-details">Developer<i class="fa fa-chevron-down m-l-5"></i></div>
@@ -148,7 +150,9 @@
 			<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 			<a href="#!" class="b-brand">
 				<!-- ========   change your logo hear   ============ -->
-				<img src="~/admin/assets/images/logo_200x.webp" alt="" class="logo">
+				<a asp-area="null" asp-controller="Home" asp-action="Index">
+					<img src="~/admin/assets/images/logo_200x.webp" alt="" class="logo">
+				</a>
 				<img src="~/admin/assets/images/logo-icon.png" alt="" class="logo-thumb">
 			</a>
 			<a href="#!" class="mob-toggler">

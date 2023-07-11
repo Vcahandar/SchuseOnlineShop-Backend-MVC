@@ -2986,6 +2986,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary {
     color: #1abc9c;
     border-color: #1abc9c;
+    display: flex;
+    align-items: center;
 }
 
 .btn-outline-primary:hover {
@@ -3082,6 +3084,8 @@ fieldset:disabled a.btn {
 .btn-outline-info {
     color: #00acc1;
     border-color: #00acc1;
+    display: flex;
+    align-items: center;
 }
 
 .btn-outline-info:hover {

@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchuseOnlineShop.Models;
 using SchuseOnlineShop.Services.Interfaces;
 
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class ProductCommentController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class ProductCommentController : Controller
     {
         private readonly IProductService _productService;
         private readonly ICrudService<ProductComment> _crudService;

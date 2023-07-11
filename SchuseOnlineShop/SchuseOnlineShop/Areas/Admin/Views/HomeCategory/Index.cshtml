@@ -38,10 +38,10 @@
                                             </td>
                                             <td style="font-weight:800">@homeCategory.Name</td>
                                             <td style="display:flex;gap:7px;">
-                                                <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@homeCategory.Id">Info</a>
-                                                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@homeCategory.Id">Edit</a>
+                                                <a class="btn btn-outline-info mybtn" asp-action="Detail" asp-route-id="@homeCategory.Id"><span>Info</span></a>
+                                                <a class="btn btn-outline-primary mybtn" asp-action="Edit" asp-route-id="@homeCategory.Id"><span>Edit</span></a>
                                                 <form asp-action="Delete" method="post" asp-route-id="@homeCategory.Id">
-                                                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                                    <button type="submit" class="btn btn-outline-danger mybtn"><span>Delete</span></button>
                                                 </form>
                                             </td>
                                         </tr>

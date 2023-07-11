@@ -234,7 +234,7 @@ namespace SchuseOnlineShop.Services
         }
 
 
-        public async Task<List<ProductVM>> GetProductsByColorIdAsync(int? id)
+        public async Task<List<ProductVM>> GetProductsByColorIdAsync(int? id, int page = 1, int take = 6)
         {
             List<ProductVM> model = new();
             var products = await _context.ProductColors
@@ -430,6 +430,37 @@ namespace SchuseOnlineShop.Services
             return await _context.Products.Where(p => p.DiscountPrice >= value1 && p.DiscountPrice <= value2)
                          .Include(p => p.ProductImages)
                          .CountAsync();
+        }
+
+        public async Task<int> GetProductsCountBySortTextAsync(string sortValue)
+        {
+            int count = 0;
+            if (sortValue == "1")
+            {
+                return await _context.Products.Include(m => m.ProductImages).CountAsync();
+            };
+            if (sortValue == "2")
+            {
+                count = await _context.Products.Include(m => m.ProductImages).OrderByDescending(p => p.Rating).CountAsync();
+
+            };
+            if (sortValue == "3")
+            {
+                count = await _context.Products.Include(m => m.ProductImages).OrderByDescending(p => p.CreatedDate).CountAsync();
+
+            };
+            if (sortValue == "4")
+            {
+                count = await _context.Products.Include(m => m.ProductImages).OrderByDescending(p => p.DiscountPrice).CountAsync();
+
+            };
+            if (sortValue == "5")
+            {
+                count = await _context.Products.Include(m => m.ProductImages).OrderBy(p => p.DiscountPrice).CountAsync();
+
+            };
+
+            return count;
         }
     }
 }

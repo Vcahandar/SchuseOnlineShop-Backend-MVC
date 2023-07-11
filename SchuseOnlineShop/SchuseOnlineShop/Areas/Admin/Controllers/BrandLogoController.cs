@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SchuseOnlineShop.Areas.Admin.ViewModels.BrandLogo;
 using SchuseOnlineShop.Areas.Admin.ViewModels.Slider;
@@ -11,7 +12,8 @@ using SchuseOnlineShop.Services.Interfaces;
 namespace SchuseOnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class BrandLogoController : Controller
+	[Authorize(Roles = "SuperAdmin,Admin")]
+	public class BrandLogoController : Controller
     {
         private readonly AppDbContext _context;
         private readonly IBrandLogoService _brandLogo;
