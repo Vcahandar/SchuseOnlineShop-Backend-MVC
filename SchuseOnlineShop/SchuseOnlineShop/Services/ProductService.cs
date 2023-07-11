@@ -351,7 +351,6 @@ namespace SchuseOnlineShop.Services
         }
 
 
-
         public async Task<ProductComment> GetCommentById(int? id)
         {
             return await _context.ProductComments.FirstOrDefaultAsync(m => m.Id == id);
@@ -374,7 +373,6 @@ namespace SchuseOnlineShop.Services
                 .Include(pr => pr.Brand)
                 .Where(pr => !string.IsNullOrEmpty(name) ? pr.Name.ToLower().Contains(name.ToLower()) : true);
         }
-
 
 
         public async Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page = 1, int take = 6)
@@ -422,7 +420,6 @@ namespace SchuseOnlineShop.Services
             .FirstOrDefaultAsync(m => m.Id == id);
             return data;
         }
-
 
 
         public async Task<int> GetProductsCountByRangeAsync(int? value1, int? value2)

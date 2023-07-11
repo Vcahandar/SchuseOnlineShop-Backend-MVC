@@ -3101,6 +3101,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\logo\\b1ff5b1c-8ec5-4f3a-b012-54db5e805a92logo_200x.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\logo\\icon.ico",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\icon.ico"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\logo\\logo_200x.webp",
       "PackagePath": "staticwebassets\\assets\\img\\logo\\logo_200x.webp"
     },
@@ -3117,6 +3121,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\021a86c6-8e73-4852-b9b4-39131f3faca94.5.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\02865e8a-1b2e-42f6-b2e0-40e21677d47be1.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\02865e8a-1b2e-42f6-b2e0-40e21677d47be1.2.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\0315f6e4-623f-4185-9e5d-35dd2acee683w4.3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\0315f6e4-623f-4185-9e5d-35dd2acee683w4.3.webp"
     },
@@ -3129,28 +3137,32 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\058ed6e8-a28a-4d2f-9614-3d4dc28463f63.5.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\09311ca8-b7bd-468c-a7e1-013e74a5bf03w1.5.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\09311ca8-b7bd-468c-a7e1-013e74a5bf03w1.5.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\061a21e0-c3b6-4d83-8901-132e0572cfffw4.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\061a21e0-c3b6-4d83-8901-132e0572cfffw4.5.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\09af135e-4881-40da-9640-fa4359de1c5a1.4.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\09af135e-4881-40da-9640-fa4359de1c5a1.4.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\09311ca8-b7bd-468c-a7e1-013e74a5bf03w1.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\09311ca8-b7bd-468c-a7e1-013e74a5bf03w1.5.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\0a922abb-18e3-4334-a9f6-2bd20b189717w2.2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\0a922abb-18e3-4334-a9f6-2bd20b189717w2.2.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\0c1d884a-3e14-4fde-9456-066f46cb6051w4.3.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\0c1d884a-3e14-4fde-9456-066f46cb6051w4.3.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\0c2973e1-a37d-4ffb-9141-63e4487c2e7dc4.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\0c2973e1-a37d-4ffb-9141-63e4487c2e7dc4.4.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\0ee1ccd8-2a86-49b3-8e60-fbeedcd8dffc3.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\0ee1ccd8-2a86-49b3-8e60-fbeedcd8dffc3.4.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\0f285a2a-f7cd-4932-9de2-966ec2fea9cf2.3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\0f285a2a-f7cd-4932-9de2-966ec2fea9cf2.3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\13e9e9df-d17b-4bed-9178-b5a10eee4d7fw4.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\13e9e9df-d17b-4bed-9178-b5a10eee4d7fw4.3.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\14cc2ec5-0b73-4963-a5eb-ab271aba6eb01.6.webp",
@@ -3171,6 +3183,10 @@
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\1db64c3e-d73e-4f93-85ba-6b3155d11483m6.2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\1db64c3e-d73e-4f93-85ba-6b3155d11483m6.2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\1dc64115-936b-4a60-ac24-9f9e6fe7906de1.1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\1dc64115-936b-4a60-ac24-9f9e6fe7906de1.1.jpg"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\1e034453-0bd0-4b40-b7c3-770e463bef8fw1.1.webp",
@@ -3197,8 +3213,12 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\299e6ac0-7ab4-4a38-9d56-632a13387aa6w2.3.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\2ce93169-e229-43b5-8109-47aadb763015w1.5.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\2ce93169-e229-43b5-8109-47aadb763015w1.5.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\29a77e72-7e9e-4574-8fd1-778a4a385493e1.1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\29a77e72-7e9e-4574-8fd1-778a4a385493e1.1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\2d21e9ea-ed43-4328-8f57-8a57c8c631522.1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\2d21e9ea-ed43-4328-8f57-8a57c8c631522.1.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\2f33a236-2952-46ec-a5ad-9a476a55051ec4.5.webp",
@@ -3209,6 +3229,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\302c63fc-6f02-41bc-975c-6f7ca4ca1054w3.1.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\30a0b928-d8ca-4239-a9e7-c673e3a14b9em1.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\30a0b928-d8ca-4239-a9e7-c673e3a14b9em1.2.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\31af6728-d118-4aa3-9879-d6da61862ff6m5.3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\31af6728-d118-4aa3-9879-d6da61862ff6m5.3.webp"
     },
@@ -3217,8 +3241,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\33af95e8-96d2-48f8-93b4-2a777e8982762.1.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\34efb95d-9db8-41a4-8244-754786c2e9a61.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\34efb95d-9db8-41a4-8244-754786c2e9a61.3.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\36f711c7-50ae-4b42-b7e3-1088067ba1fd3.1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\36f711c7-50ae-4b42-b7e3-1088067ba1fd3.1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\3798644e-d373-4c6d-97a8-32bb8d9e483am1.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\3798644e-d373-4c6d-97a8-32bb8d9e483am1.4.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\381175f1-b887-463d-b5db-0814ac4a6ac8w3.4.webp",
@@ -3229,16 +3261,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\3a147664-4ce3-45ca-862c-50031c3abc262.4.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\3bebcdfb-7bdf-4c58-907e-d7c7111e14561.3.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\3bebcdfb-7bdf-4c58-907e-d7c7111e14561.3.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\3d0b42a3-9300-4b7a-baa3-ba09f45f1f2cw5.1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\3d0b42a3-9300-4b7a-baa3-ba09f45f1f2cw5.1.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\3f773ceb-0bef-4d84-a1f2-f4db981821993.5.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\3f773ceb-0bef-4d84-a1f2-f4db981821993.5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4128ab64-a492-42f3-ae0d-af77f1fe0de2w4.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4128ab64-a492-42f3-ae0d-af77f1fe0de2w4.2.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4128e826-3dbb-46f8-86bb-1e35a5d191d41.1.webp",
@@ -3261,10 +3293,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\48fd17eb-c91b-4bb3-9425-7b225b90e1fd2.6.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\499bc563-1097-4d3a-8232-8ee2bc7bb09e2.3.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\499bc563-1097-4d3a-8232-8ee2bc7bb09e2.3.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4a0058b6-51cc-4692-87f8-63f50f35d1f0m6.5.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4a0058b6-51cc-4692-87f8-63f50f35d1f0m6.5.webp"
     },
@@ -3277,20 +3305,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4c11e03a-6680-44fe-b842-ecd9bbb238eb3.5.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4c220016-adfb-4a6e-bab8-bc60b02afd44w4.4.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4c220016-adfb-4a6e-bab8-bc60b02afd44w4.4.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4c9e3fce-746a-4dba-a2d3-c00d513ed8e03.2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4c9e3fce-746a-4dba-a2d3-c00d513ed8e03.2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4e0bea48-9916-409d-99fb-0ecda1af6804e1.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4e0bea48-9916-409d-99fb-0ecda1af6804e1.2.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4f38b452-cbe1-4d80-8da4-1c647b2676724.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4f38b452-cbe1-4d80-8da4-1c647b2676724.4.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\54c79bff-cb39-4a08-82f9-1989e6655f1cc2.4.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\54c79bff-cb39-4a08-82f9-1989e6655f1cc2.4.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\4fa6a7b2-54bb-4c10-8428-101472001ff1w4.1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\4fa6a7b2-54bb-4c10-8428-101472001ff1w4.1.jpg"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\56ed3b65-0472-4018-8211-bcd624ce69d01.1.webp",
@@ -3301,12 +3329,24 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\56f6fe2c-049a-4f06-b8f7-bfc4c885dacd1.3.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\582d6b6b-e8e1-49ff-8feb-15dcddc5a43c2.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\582d6b6b-e8e1-49ff-8feb-15dcddc5a43c2.2.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\5a12efc6-c3d9-44b9-84e4-7b9dbb6b973d1.2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\5a12efc6-c3d9-44b9-84e4-7b9dbb6b973d1.2.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\5b2d60dc-e548-4bea-a015-127cd03ede0ew4.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\5b2d60dc-e548-4bea-a015-127cd03ede0ew4.2.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\5c41f7e7-7c53-488a-aa9f-6b58151905631.5.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\5c41f7e7-7c53-488a-aa9f-6b58151905631.5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\5c75bfd3-b9c9-4248-984c-c4f12f4b230dw1.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\5c75bfd3-b9c9-4248-984c-c4f12f4b230dw1.3.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\5d7e3109-e439-4727-ad69-5d45c23150982.3.webp",
@@ -3337,16 +3377,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\64146b6a-310c-4e57-8b60-d7d1faa6f86a1.4.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\64acdece-377c-4abb-8bcd-3d7ed323af2e2.5.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\64acdece-377c-4abb-8bcd-3d7ed323af2e2.5.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\668741e3-e80f-41a7-b776-b4d62b0726063.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\668741e3-e80f-41a7-b776-b4d62b0726063.4.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\671608a4-93b7-4fc5-a504-f9db67ad0f2dw1.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\671608a4-93b7-4fc5-a504-f9db67ad0f2dw1.4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\67aeccf9-200a-469b-872a-5a4d4a2dec49c2.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\67aeccf9-200a-469b-872a-5a4d4a2dec49c2.5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\6b4e9582-e677-41a5-9972-f66f601e71bbw1.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\6b4e9582-e677-41a5-9972-f66f601e71bbw1.4.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\6b5e3b0d-2687-4e5d-8c23-3ca525e15d6aw4.1.webp",
@@ -3373,6 +3417,22 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\6ffbbe47-6b99-44f4-a1c7-9f3bf186546aw2.1.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\7108b05b-5ea2-4d54-9e6e-79fd22bbca3aw4.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\7108b05b-5ea2-4d54-9e6e-79fd22bbca3aw4.4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\73416c82-8ebd-454e-8b26-c9f83be853322.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\73416c82-8ebd-454e-8b26-c9f83be853322.5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\735b2a4c-0c6a-4ed1-994b-b3060d7e345aw4.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\735b2a4c-0c6a-4ed1-994b-b3060d7e345aw4.3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\738fae74-db68-4709-9390-13db112d6352m1.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\738fae74-db68-4709-9390-13db112d6352m1.3.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\75527460-0394-4f2c-a076-261027d92797m6.1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\75527460-0394-4f2c-a076-261027d92797m6.1.webp"
     },
@@ -3387,6 +3447,10 @@
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\79bbbb44-02a7-4291-8017-ef2b8ff874572.2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\79bbbb44-02a7-4291-8017-ef2b8ff874572.2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\79d4ef7e-ee3a-420d-b302-f35feca80feac2.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\79d4ef7e-ee3a-420d-b302-f35feca80feac2.3.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\7cef61ff-b902-44fd-82bf-3ba2f20fafe0c4.2.webp",
@@ -3405,20 +3469,32 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\7e231333-2399-4c9a-9af6-98687c7318492.2.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\7f2f4607-c8c2-4ecc-95f4-e22a21aecb64w1.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\7f2f4607-c8c2-4ecc-95f4-e22a21aecb64w1.5.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\7fece849-2843-45da-b156-59de57e8c213c4.1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\7fece849-2843-45da-b156-59de57e8c213c4.1.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\81368ce6-0888-422a-9d95-a138a1ca98e5m1.5.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\81368ce6-0888-422a-9d95-a138a1ca98e5m1.5.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\82f29c80-2ab9-4f2a-bf0a-ab9abb1a4db0c2.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\82f29c80-2ab9-4f2a-bf0a-ab9abb1a4db0c2.2.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\834fc8da-ba16-4205-a4bf-672b97fca214m6.3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\834fc8da-ba16-4205-a4bf-672b97fca214m6.3.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\855f63ae-6709-4b8b-a393-0dcf1a367c023.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\855f63ae-6709-4b8b-a393-0dcf1a367c023.2.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\868bd0d3-8f95-4c87-808b-3c6daa6a6531c2.1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\868bd0d3-8f95-4c87-808b-3c6daa6a6531c2.1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\88942e4b-99df-4c41-bf7a-2718d130d5643.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\88942e4b-99df-4c41-bf7a-2718d130d5643.5.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\89bb5823-b8a4-45e0-ab0a-46be592a8b13w2.5.webp",
@@ -3429,6 +3505,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\8ad70403-d35f-4f30-b6a1-50e6f9f6ff2f2.6.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\8bc6d34e-da32-4f7c-b79e-ee64b8086fe51.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\8bc6d34e-da32-4f7c-b79e-ee64b8086fe51.4.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\8cedfcd9-6d94-4706-9ae2-e2455aa571e31.3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\8cedfcd9-6d94-4706-9ae2-e2455aa571e31.3.webp"
     },
@@ -3437,12 +3517,12 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\8dae90c6-c5a5-4303-be2e-4ab6afeb433b4.3.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\8e068b74-259c-499f-8266-1bc312331c8ew4.5.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\8e068b74-259c-499f-8266-1bc312331c8ew4.5.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\8fcb6945-3843-4726-85eb-899a081915832.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\8fcb6945-3843-4726-85eb-899a081915832.4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\90c18867-8e4c-409a-8108-3317a75561282.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\90c18867-8e4c-409a-8108-3317a75561282.3.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\953a6c2b-1ffc-430e-ab37-a74a3a8c5c112.4.webp",
@@ -3497,8 +3577,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\a64cd9ca-49e8-4a00-88ad-2b5d787c8e67C3.2.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\a73ee909-7fbf-4cef-8676-0a075882436am1.3.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\a73ee909-7fbf-4cef-8676-0a075882436am1.3.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\a7812db2-97bd-44af-9397-1e21addb2f22w4.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\a7812db2-97bd-44af-9397-1e21addb2f22w4.5.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\a85d70a8-acbb-4a83-a2fb-c44bb05ba52bw2.2.webp",
@@ -3517,10 +3597,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\af9464b4-dc8d-4cad-9b55-99d9b6ea27453.1.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\b007a824-2032-4207-8dfa-e1b9eb787bbdw1.2.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\b007a824-2032-4207-8dfa-e1b9eb787bbdw1.2.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\b47d7b9f-7757-4264-bbf5-490924ed511ee1.1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\b47d7b9f-7757-4264-bbf5-490924ed511ee1.1.jpg"
     },
@@ -3533,8 +3609,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\b7802290-325b-42a3-a99e-5e67100782e02.5.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ba6e8108-bbaf-4cb1-b9ac-b5a26989733e3.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ba6e8108-bbaf-4cb1-b9ac-b5a26989733e3.3.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\bf01a209-455d-4903-8633-abb891657e69C3.3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\bf01a209-455d-4903-8633-abb891657e69C3.3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\bf630cd5-ad7d-4990-afbf-b2b2d8dbf21c1.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\bf630cd5-ad7d-4990-afbf-b2b2d8dbf21c1.5.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\bfd1348e-0300-46b9-ad5c-3baab90a788bC3.1.webp",
@@ -3557,16 +3641,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\c5e61dab-3732-4406-bb31-13b5e3419624w5.5.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c6f26f39-8955-4425-a0f5-a607fd9b7022c2.3.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\c6f26f39-8955-4425-a0f5-a607fd9b7022c2.3.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c77f1dd2-0859-495c-8938-0f85840942f8m5.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\c77f1dd2-0859-495c-8938-0f85840942f8m5.4.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c7c06c4c-cdc9-4484-9f7c-b54658ee3750w5.4.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\c7c06c4c-cdc9-4484-9f7c-b54658ee3750w5.4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c8fbd973-6afa-4455-8b59-6501fd2b1967m1.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\c8fbd973-6afa-4455-8b59-6501fd2b1967m1.5.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\c9458096-c9e5-4914-9881-7c1669894e5d2.4.webp",
@@ -3581,12 +3665,24 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\cadc960c-c6fa-4b75-80a0-ff34ba4b86b42.1.webp"
     },
     {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\cb03b74d-ff11-4d5c-9b0e-efe2027a2701m1.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\cb03b74d-ff11-4d5c-9b0e-efe2027a2701m1.2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\cd0b2c12-57b2-47e4-af5c-67f66280626cc2.1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\cd0b2c12-57b2-47e4-af5c-67f66280626cc2.1.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\cd0ef91f-68ed-42b8-aa57-e7c5bf2c85122.1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\cd0ef91f-68ed-42b8-aa57-e7c5bf2c85122.1.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ce5aed50-7b16-4651-ac83-6f768b053b7fw1.4.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ce5aed50-7b16-4651-ac83-6f768b053b7fw1.4.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ce5d2996-7958-4987-9c90-0ade83638c9dw1.1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ce5d2996-7958-4987-9c90-0ade83638c9dw1.1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ced1e60d-c1a6-4acd-b020-36be97f78c692.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ced1e60d-c1a6-4acd-b020-36be97f78c692.4.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\d1a402f6-df2e-4105-8947-867e8d6d58c54.1.webp",
@@ -3595,6 +3691,10 @@
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\d20b8596-d9c8-40b1-90a2-b9abf748313b3-1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\d20b8596-d9c8-40b1-90a2-b9abf748313b3-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\d26b6951-a083-4840-8a7b-a8f3a2b94e431.3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\d26b6951-a083-4840-8a7b-a8f3a2b94e431.3.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\d2860d05-729e-490a-8bc4-4e328730b16c2.2.webp",
@@ -3621,8 +3721,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\d8ff0987-2681-4f13-b7aa-51191be6d3362.5.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\dd26c068-5e89-4ede-a360-b84ced2ce4a8m1.4.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\dd26c068-5e89-4ede-a360-b84ced2ce4a8m1.4.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\dbabe49c-1bdc-459e-8b48-c2cc16944e0cw4.1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\dbabe49c-1bdc-459e-8b48-c2cc16944e0cw4.1.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ddd4257f-b1f7-4f61-b483-387fdf8de6962.4.webp",
@@ -3637,8 +3737,32 @@
       "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\df2e3ab9-b91a-49ff-8706-5fd6e8abf5dc2.5.webp"
     },
     {
-      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\e1b62ef8-69bb-4dd9-b632-73c229b4806e2.4.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\e1b62ef8-69bb-4dd9-b632-73c229b4806e2.4.webp"
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\e6a9e80b-b609-4a8c-b9f4-44139ea36c323.1.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\e6a9e80b-b609-4a8c-b9f4-44139ea36c323.1.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\e787f877-960a-4229-a171-30c8eff733ddw1.2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\e787f877-960a-4229-a171-30c8eff733ddw1.2.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ecce9e18-e781-4f05-becc-70a1d5ce37851.5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ecce9e18-e781-4f05-becc-70a1d5ce37851.5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ee0b25d0-49bc-473f-b74a-01bdeb685a4bw4.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ee0b25d0-49bc-473f-b74a-01bdeb685a4bw4.4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\ee134a2b-c4ff-4fde-92d8-7d990a815186c2.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\ee134a2b-c4ff-4fde-92d8-7d990a815186c2.4.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\f7ee49aa-b948-4368-811e-8469e750f979m1.1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\f7ee49aa-b948-4368-811e-8469e750f979m1.1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product-img\\f8a7758a-e450-4b9a-975b-e1eb2f43033f1.4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\shoes\\product-img\\f8a7758a-e450-4b9a-975b-e1eb2f43033f1.4.webp"
     },
     {
       "Id": "C:\\Users\\user\\OneDrive\\Masaüstü\\End-lahiye\\SchuseOnlineShop-Backend\\SchuseOnlineShop\\SchuseOnlineShop\\wwwroot\\assets\\img\\shoes\\product10-4.webp",
